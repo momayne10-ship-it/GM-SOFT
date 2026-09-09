@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GM SOFT — Build Platforms & Systems</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Google Fonts: Amiri (نفس الخط الأصلي) -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Font Awesome 6 (Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ============================================================
+    HEADER
+    ============================================================ -->
+    <header class="gm-header" id="gmHeader">
+        <div class="gm-header-inner">
+            <a href="#" class="gm-logo">
+                GM SOFT <span class="gm-logo-tag">agency</span>
+            </a>
+
+            <nav class="gm-nav" id="gmNav">
+                <ul class="gm-nav-list">
+                    <li><a href="#services" class="gm-nav-link">Services</a></li>
+                    <li><a href="#process" class="gm-nav-link">Process</a></li>
+                    <li><a href="#results" class="gm-nav-link">Results</a></li>
+                    <li><a href="#clients" class="gm-nav-link">Clients</a></li>
+                    <li><a href="#presence" class="gm-nav-link">Presence</a></li>
+                    <li><a href="#projects" class="gm-nav-link">Projects</a></li>
+                    <li><a href="#contact" class="gm-nav-link">Contact</a></li>
+                </ul>
+
+                <!-- Language switcher (mobile-only, shown inside the dropdown menu) -->
+                <div class="gm-nav-lang">
+                    <div class="lang-switcher">
+                        <a href="index-ar.html" class="lang-link" data-lang="ar">
+                            <span class="lang-flag">🇸🇦</span> AR
+                        </a>
+                        <span class="lang-divider">|</span>
+                        <a href="index.html" class="lang-link active" data-lang="en">
+                            <span class="lang-flag">🇬🇧</span> EN
+                        </a>
+                        <span class="lang-divider">|</span>
+                        <a href="index-fr.html" class="lang-link" data-lang="fr">
+                            <span class="lang-flag">🇫🇷</span> FR
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="gm-header-actions">
+                <div class="lang-switcher gm-header-lang">
+                    <a href="index-ar.html" class="lang-link" data-lang="ar">
+                        <span class="lang-flag">🇸🇦</span> AR
+                    </a>
+                    <span class="lang-divider">|</span>
+                    <a href="index.html" class="lang-link active" data-lang="en">
+                        <span class="lang-flag">🇬🇧</span> EN
+                    </a>
+                    <span class="lang-divider">|</span>
+                    <a href="index-fr.html" class="lang-link" data-lang="fr">
+                        <span class="lang-flag">🇫🇷</span> FR
+                    </a>
+                </div>
+                <button class="gm-header-menu" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    HERO — SWIPER SLIDER (بدون صور، خلفيات بسيطة)
+    ============================================================ -->
+    <section class="gm-hero" id="gmHero">
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+
+                <!-- Slide 1: Websites -->
+                <div class="swiper-slide slide-bg-1">
+                    <div class="gm-hero-overlay"></div>
+                    <!-- Orbs decoration -->
+                    <div class="gm-hero-orb gm-hero-orb--1"></div>
+                    <div class="gm-hero-orb gm-hero-orb--2"></div>
+
+                    <div class="gm-hero-content">
+                        <div class="gm-hero-tag">
+                            <span class="gm-hero-dot"></span>
+                            PROFESSIONAL WEBSITES
+                        </div>
+                        <h1 class="gm-hero-title">
+                            Build <span class="gm-hero-highlight">Websites</span><br>That Drive Results
+                        </h1>
+                        <p class="gm-hero-desc">
+                            We design and build professional websites that make a strong first impression, build trust in your brand, and turn visitors into loyal customers.
+                        </p>
+                        <div class="gm-hero-actions">
+                            <a href="#contact" class="gm-btn-primary">
+                                Start Your Website <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Platforms -->
+                <div class="swiper-slide slide-bg-2">
+                    <div class="gm-hero-overlay"></div>
+                    <div class="gm-hero-orb gm-hero-orb--1"></div>
+                    <div class="gm-hero-orb gm-hero-orb--2"></div>
+
+                    <div class="gm-hero-content">
+                        <div class="gm-hero-tag">
+                            <span class="gm-hero-dot"></span>
+                            DIGITAL PLATFORMS
+                        </div>
+                        <h1 class="gm-hero-title">
+                            Design <span class="gm-hero-highlight">Platforms</span><br>That Empower Growth
+                        </h1>
+                        <p class="gm-hero-desc">
+                            From online marketplaces to internal company portals — we build powerful platforms designed to scale with your business, stay reliable around the clock, and give every user a smooth, effortless experience.
+                        </p>
+                        <div class="gm-hero-actions">
+                            <a href="#contact" class="gm-btn-primary">
+                                Build Your Platform <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Systems -->
+                <div class="swiper-slide slide-bg-3">
+                    <div class="gm-hero-overlay"></div>
+                    <div class="gm-hero-orb gm-hero-orb--1"></div>
+                    <div class="gm-hero-orb gm-hero-orb--2"></div>
+
+                    <div class="gm-hero-content">
+                        <div class="gm-hero-tag">
+                            <span class="gm-hero-dot"></span>
+                            BUSINESS SYSTEMS
+                        </div>
+                        <h1 class="gm-hero-title">
+                            Engineer <span class="gm-hero-highlight">Systems</span><br>That Run Your Business
+                        </h1>
+                        <p class="gm-hero-desc">
+                            From daily operations to customer management — we build professional business systems that simplify your work, save you time, and give you clear insight into how your business is really performing.
+                        </p>
+                        <div class="gm-hero-actions">
+                            <a href="#contact" class="gm-btn-primary">
+                                Build Your System <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Swiper navigation & pagination -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    SECTION 2: WHAT WE BUILD
+    ============================================================ -->
+<section id="what-we-build" class="wwb-section">
+    <div class="wwb-container">
+
+        <!-- Header -->
+        <div class="wwb-header">
+            <span class="wwb-badge">✦ WHAT WE BUILD</span>
+            <h2 class="wwb-title">
+                Digital Products <span style="color: #10b981;">for Every</span> Need
+            </h2>
+            <p class="wwb-subtitle">
+                From simple websites to advanced business systems — we build professional digital solutions that deliver real, measurable value for your business.
+            </p>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper wwb-slider">
+            <div class="swiper-wrapper">
+
+                <!-- 1. Web Development -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-globe"></i></div>
+                        </div>
+                        <h3 class="wwb-name">Web Development</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> Looks perfect on every device</li>
+                            <li><i class="fas fa-check-circle"></i> Modern, fast, and easy to use</li>
+                            <li><i class="fas fa-check-circle"></i> Reliable and secure behind the scenes</li>
+                            <li><i class="fas fa-check-circle"></i> Online stores &amp; easy content management</li>
+                            <li><i class="fas fa-check-circle"></i> Built to rank well and load fast</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Mobile Development -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-mobile-alt"></i></div>
+                        </div>
+                        <h3 class="wwb-name">Mobile Development</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> Smooth experience on every phone</li>
+                            <li><i class="fas fa-check-circle"></i> Available on iPhone and Android</li>
+                            <li><i class="fas fa-check-circle"></i> Fast to build, easy to maintain</li>
+                            <li><i class="fas fa-check-circle"></i> Designed for how people actually use their phones</li>
+                            <li><i class="fas fa-check-circle"></i> We handle the full launch process for you</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. AI & Automation -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-robot"></i></div>
+                        </div>
+                        <h3 class="wwb-name">AI &amp; Automation</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> Smart assistants that talk to your customers 24/7</li>
+                            <li><i class="fas fa-check-circle"></i> Automate repetitive tasks and save valuable time</li>
+                            <li><i class="fas fa-check-circle"></i> Responds naturally, just like a real conversation</li>
+                            <li><i class="fas fa-check-circle"></i> Smarter decisions based on your own data</li>
+                            <li><i class="fas fa-check-circle"></i> Instantly find answers inside your documents</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. Desktop Applications -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-desktop"></i></div>
+                        </div>
+                        <h3 class="wwb-name">Desktop Applications</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> Works on Windows, Mac, and Linux</li>
+                            <li><i class="fas fa-check-circle"></i> Fast, stable, and safe to use</li>
+                            <li><i class="fas fa-check-circle"></i> Keeps working even without internet</li>
+                            <li><i class="fas fa-check-circle"></i> Designed around how your team works</li>
+                            <li><i class="fas fa-check-circle"></i> Connects smoothly with your other tools</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5. Cloud Platforms -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-cloud"></i></div>
+                        </div>
+                        <h3 class="wwb-name">Cloud-Based Platforms</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> Serve unlimited clients from one platform</li>
+                            <li><i class="fas fa-check-circle"></i> Simple billing &amp; subscription handling</li>
+                            <li><i class="fas fa-check-circle"></i> Grows with you, no matter how big you get</li>
+                            <li><i class="fas fa-check-circle"></i> Clear reports and dashboards at a glance</li>
+                            <li><i class="fas fa-check-circle"></i> Fully branded with your own company identity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 6. ERP Systems -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-network-wired"></i></div>
+                        </div>
+                        <h3 class="wwb-name">Business Management Systems</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> Manage your entire business from one place</li>
+                            <li><i class="fas fa-check-circle"></i> Track stock and supply chain with ease</li>
+                            <li><i class="fas fa-check-circle"></i> Organize customers and boost your sales</li>
+                            <li><i class="fas fa-check-circle"></i> Simplify HR and payroll management</li>
+                            <li><i class="fas fa-check-circle"></i> Live insights into your business performance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 7. Custom Software -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-code"></i></div>
+                        </div>
+                        <h3 class="wwb-name">Custom Software</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> Built entirely around your business</li>
+                            <li><i class="fas fa-check-circle"></i> Built to grow safely as your business grows</li>
+                            <li><i class="fas fa-check-circle"></i> Connects easily with the tools you already use</li>
+                            <li><i class="fas fa-check-circle"></i> We can modernize your existing systems</li>
+                            <li><i class="fas fa-check-circle"></i> Ongoing maintenance &amp; support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 8. UI/UX Design -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-pen-fancy"></i></div>
+                        </div>
+                        <h3 class="wwb-name">UI/UX Design</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> Designed around your real users</li>
+                            <li><i class="fas fa-check-circle"></i> Clear planning before we build anything</li>
+                            <li><i class="fas fa-check-circle"></i> A consistent look and feel across your brand</li>
+                            <li><i class="fas fa-check-circle"></i> Tested and refined until it feels right</li>
+                            <li><i class="fas fa-check-circle"></i> Easy to use for everyone, on every device</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Navigation & Pagination -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+    SECTION 3: HOW WE WORK (PROCESS)
+    ============================================================ -->
+<section id="how-we-work" class="process-section">
+    <div class="process-container">
+
+        <!-- Header -->
+        <div class="process-header">
+            <span class="process-badge">
+                <i class="fa-regular fa-gears"></i> HOW WE WORK
+            </span>
+            <h2 class="process-title">
+                Our <span style="color: #10b981;">Process</span>
+            </h2>
+            <p class="process-subtitle">
+                From idea to launch — a clear, collaborative journey to build your digital product.
+            </p>
+        </div>
+
+        <!-- Steps List -->
+        <div class="process-steps">
+
+            <!-- Step 1: Discovery -->
+            <div class="process-step">
+                <div class="process-step-icon">
+                    <i class="fa-solid fa-compass"></i>
+                    <span class="step-number">1</span>
+                </div>
+                <div class="process-step-content">
+                    <h3><i class="fa-solid fa-compass"></i> Discovery</h3>
+                    <p class="step-desc">We start by understanding your vision, goals, and audience. We ask the right questions to shape a clear product strategy.</p>
+                    <ul class="step-bullets">
+                        <li>Understand your vision &amp; goals</li>
+                        <li>Define target audience &amp; needs</li>
+                        <li>Competitive analysis</li>
+                        <li>Project roadmap &amp; timeline</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 2: Strategy -->
+            <div class="process-step">
+                <div class="process-step-icon">
+                    <i class="fa-solid fa-pen-ruler"></i>
+                    <span class="step-number">2</span>
+                </div>
+                <div class="process-step-content">
+                    <h3><i class="fa-solid fa-pen-ruler"></i> Strategy</h3>
+                    <p class="step-desc">We plan exactly how your product will be structured and how people will use it, building a solid foundation before any work begins.</p>
+                    <ul class="step-bullets">
+                        <li>Clear content &amp; navigation planning</li>
+                        <li>Mapping out the user journey</li>
+                        <li>Choosing the right approach for the job</li>
+                        <li>Defining your first version</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 3: Design -->
+            <div class="process-step">
+                <div class="process-step-icon">
+                    <i class="fa-solid fa-palette"></i>
+                    <span class="step-number">3</span>
+                </div>
+                <div class="process-step-content">
+                    <h3><i class="fa-solid fa-palette"></i> Design</h3>
+                    <p class="step-desc">We craft pixel-perfect UI designs that are not only beautiful but also intuitive and user-centric.</p>
+                    <ul class="step-bullets">
+                        <li>Wireframing &amp; prototyping</li>
+                        <li>High‑fidelity UI design</li>
+                        <li>Design system &amp; brand guidelines</li>
+                        <li>Usability testing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 4: Development -->
+            <div class="process-step">
+                <div class="process-step-icon">
+                    <i class="fa-solid fa-code"></i>
+                    <span class="step-number">4</span>
+                </div>
+                <div class="process-step-content">
+                    <h3><i class="fa-solid fa-code"></i> Development</h3>
+                    <p class="step-desc">We turn the design into a real, working product — built to be fast, reliable, and ready to grow with your business. We move quickly, without ever cutting corners on quality.</p>
+                    <ul class="step-bullets">
+                        <li>Building everything you see and everything behind the scenes</li>
+                        <li>Connecting your data and other tools smoothly</li>
+                        <li>Steady progress, with regular updates you can see</li>
+                        <li>Careful testing to make sure everything works perfectly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 5: Launch -->
+            <div class="process-step">
+                <div class="process-step-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                    <span class="step-number">5</span>
+                </div>
+                <div class="process-step-content">
+                    <h3><i class="fa-solid fa-rocket"></i> Launch</h3>
+                    <p class="step-desc">We deploy your product, set up monitoring, and ensure everything runs smoothly. We're with you every step of the way.</p>
+                    <ul class="step-bullets">
+                        <li>Deployment &amp; hosting setup</li>
+                        <li>Performance monitoring</li>
+                        <li>User onboarding &amp; training</li>
+                        <li>Post‑launch support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Step 6: Support -->
+            <div class="process-step">
+                <div class="process-step-icon">
+                    <i class="fa-solid fa-headset"></i>
+                    <span class="step-number">6</span>
+                </div>
+                <div class="process-step-content">
+                    <h3><i class="fa-solid fa-headset"></i> Support &amp; Growth</h3>
+                    <p class="step-desc">We provide ongoing maintenance, updates, and improvements. Your success is our priority — we grow together.</p>
+                    <ul class="step-bullets">
+                        <li>Ongoing maintenance &amp; updates</li>
+                        <li>Feature enhancements</li>
+                        <li>24/7 support</li>
+                        <li>Strategic growth consulting</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+    SECTION: TERMS & CONDITIONS (شروط العمل والتعهدات)
+    ============================================================ -->
+<section id="terms" class="terms-section">
+    <div class="container">
+
+        <!-- Header -->
+        <div class="section-header-enhanced">
+            <span class="section-badge">✦ OUR COMMITMENTS</span>
+            <h2 class="section-title-enhanced">Terms of <span style="color:#10b981;">Service</span></h2>
+            <p class="section-subtitle">We believe in transparency and professionalism. Here's how we work and what you can expect from us.</p>
+        </div>
+
+        <div class="swiper wwb-slider">
+            <div class="swiper-wrapper">
+                <!-- 1. Contract -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-file-contract"></i></div>
+                        </div>
+                        <h3 class="wwb-name">Signed Contract</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> Clear scope & deliverables</li>
+                            <li><i class="fas fa-check-circle"></i> Defined timelines & milestones</li>
+                            <li><i class="fas fa-check-circle"></i> Transparent pricing</li>
+                            <li><i class="fas fa-check-circle"></i> Legal protection for both sides</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Post-Sale Service -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-headset"></i></div>
+                        </div>
+                        <h3 class="wwb-name">Post-Sale Service</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> Free bug fixes for 3 months</li>
+                            <li><i class="fas fa-check-circle"></i> Priority support channel</li>
+                            <li><i class="fas fa-check-circle"></i> Regular security updates</li>
+                            <li><i class="fas fa-check-circle"></i> Performance monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. Training -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-graduation-cap"></i></div>
+                        </div>
+                        <h3 class="wwb-name">Employee Training</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> Custom training sessions</li>
+                            <li><i class="fas fa-check-circle"></i> User manuals & documentation</li>
+                            <li><i class="fas fa-check-circle"></i> Video tutorials library</li>
+                            <li><i class="fas fa-check-circle"></i> Ongoing learning support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. Milestone Payments -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-credit-card"></i></div>
+                        </div>
+                        <h3 class="wwb-name">Milestone Payments</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> 20% upfront payment to start the project</li>
+                            <li><i class="fas fa-check-circle"></i> Remaining balance paid after work completion</li>
+                            <li><i class="fas fa-check-circle"></i> No hidden fees</li>
+                            <li><i class="fas fa-check-circle"></i> Invoice for every payment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5. Quality Assurance -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-shield-halved"></i></div>
+                        </div>
+                        <h3 class="wwb-name">Quality Assurance</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> Automated & manual testing</li>
+                            <li><i class="fas fa-check-circle"></i> Cross-browser compatibility</li>
+                            <li><i class="fas fa-check-circle"></i> Performance optimization</li>
+                            <li><i class="fas fa-check-circle"></i> Security penetration testing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 6. Scalability -->
+                <div class="swiper-slide">
+                    <div class="wwb-card">
+                        <div class="wwb-card-top">
+                            <div class="wwb-icon"><i class="fas fa-chart-line"></i></div>
+                        </div>
+                        <h3 class="wwb-name">Future-Proof Scalability</h3>
+                        <ul class="wwb-features">
+                            <li><i class="fas fa-check-circle"></i> Scalable architecture</li>
+                            <li><i class="fas fa-check-circle"></i> Cloud-ready infrastructure</li>
+                            <li><i class="fas fa-check-circle"></i> Modular design for easy updates</li>
+                            <li><i class="fas fa-check-circle"></i> Growth-ready from day one</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Swiper navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================================
+    SECTION 4: CLIENT MESSAGES
+    ============================================================ -->
+<section class="section-messages" id="desktop-messages">
+    <div class="container-messages">
+
+        <!-- عنوان القسم -->
+        <div class="section-label">
+            CLIENT <span class="accent">MESSAGES</span>
+        </div>
+
+        <!-- شريط المهام (Menubar) -->
+        <div class="menubar">
+            <div class="brand">GM SOFT</div>
+            <div class="right">
+                <span><span class="dot-live"></span>Online</span>
+                <span class="clock">--:--</span>
+            </div>
+        </div>
+
+        <!-- نافذة الرسائل -->
+        <div class="msg-window" id="window-messages">
+            <div class="titlebar drag-handle">
+                <div class="traffic">
+                    <span class="r"></span>
+                    <span class="y"></span>
+                    <span class="g"></span>
+                </div>
+                <div class="title">Messages — Client Inbox</div>
+                <div class="spacer"></div>
+            </div>
+
+            <div class="body">
+                <!-- الشريط الجانبي (قائمة العملاء) -->
+                <div class="sidebar">
+                    <div class="sidebar-label" id="inbox-count">Inbox — 0 conversations</div>
+                    <div class="msg-list" id="msg-list"></div>
+                </div>
+
+                <!-- منطقة المحادثة -->
+                <div class="thread">
+                    <div class="thread-head">
+                        <div class="avatar" id="thread-avatar">N</div>
+                        <div style="flex:1;">
+                                <div class="name" id="thread-name">Nabil Saouchi</div>
+                            <div class="sub" id="thread-sub">via WhatsApp</div>
+                        </div>
+                        <div class="live-badge" id="live-badge">
+                            <span class="live-dot"></span> Auto-playing
+                        </div>
+                    </div>
+                    <div class="thread-body" id="thread-body"></div>
+                    <div class="thread-input">
+                        <input type="text" placeholder="Type a message…" id="thread-input" />
+                        <!-- زر الميكروفون (الإدخال الصوتي) -->
+                        <button class="gm-voice-btn" id="gm-voice-btn" title="Voice input (Speech-to-Text)" aria-label="Voice input">
+                            <i class="fa-solid fa-microphone"></i>
+                            <span class="voice-wave" id="voice-wave">
+                                <span></span><span></span><span></span><span></span>
+                            </span>
+                        </button>
+                        <button class="send" id="thread-send"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                    <!-- مؤشر حالة الصوت -->
+                    <div class="voice-status" id="voice-status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+    SECTION: CONTACT (نموذج فقط – مطابق للأصل)
+    ============================================================ -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="section-header-enhanced">
+            <span class="section-badge">GET IN TOUCH</span>
+            <h2 class="section-title-enhanced">Let's Build Something <span style="color:#10b981;">Great</span></h2>
+            <p class="section-subtitle">Tell us about your project — we typically reply within one business day.</p>
+        </div>
+
+        <div class="contact-grid">
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mzzanwoy" method="POST" novalidate>
+                <div class="contact-form-row">
+                    <div class="contact-field">
+                        <label for="cf-name">Full name</label>
+                        <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="contact-field">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" name="email" placeholder="you@company.com" required>
+                    </div>
+                </div>
+
+                <div class="contact-field">
+                    <label for="cf-subject">What do you need?</label>
+                    <select id="cf-subject" name="subject">
+                        <option>New website or web app</option>
+                        <option>Mobile app</option>
+                        <option>Ongoing maintenance &amp; support</option>
+                        <option>Something else</option>
+                    </select>
+                </div>
+
+                <div class="contact-field">
+                    <label for="cf-message">Project details</label>
+                    <textarea id="cf-message" name="message" rows="5" placeholder="Tell us a bit about what you're building..." required></textarea>
+                </div>
+
+                <input type="text" name="_gotcha" style="display:none">
+                <button type="submit" class="contact-submit-btn">
+                    Send Message <i class="fa-solid fa-paper-plane"></i>
+                </button>
+                <p class="contact-form-note" id="contactFormNote"></p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+    SECTION: DIRECT CONTACT (وسائل التواصل المباشر)
+    ============================================================ -->
+<section id="direct-contact" class="direct-contact-section">
+    <div class="container">
+
+        <!-- Header -->
+        <div class="section-header-enhanced">
+            <span class="section-badge">✦ DIRECT CONTACT</span>
+            <h2 class="section-title-enhanced">Let's Connect <span style="color:#10b981;">Instantly</span></h2>
+            <p class="section-subtitle">Reach us directly through your favorite messaging app — we're always a tap away.</p>
+        </div>
+
+        <!-- أيقونات التواصل -->
+        <div class="direct-contact-grid">
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/213667123987" target="_blank" rel="noopener" class="direct-contact-card">
+                <div class="direct-contact-icon" style="background: #25D366; color: #fff;">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h3 class="direct-contact-name">WhatsApp</h3>
+                <p class="direct-contact-desc">Chat with us instantly</p>
+                <span class="direct-contact-action">Start Chat <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <!-- Telegram -->
+            <a href="https://t.me/gmsoft" target="_blank" rel="noopener" class="direct-contact-card">
+                <div class="direct-contact-icon" style="background: #0088cc; color: #fff;">
+                    <i class="fa-brands fa-telegram"></i>
+                </div>
+                <h3 class="direct-contact-name">Telegram</h3>
+                <p class="direct-contact-desc">Quick messages &amp; updates</p>
+                <span class="direct-contact-action">Message Us <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:+213667123987" target="_blank" rel="noopener" class="direct-contact-card">
+                <div class="direct-contact-icon" style="background: #10b981; color: #fff;">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <h3 class="direct-contact-name">Phone</h3>
+                <p class="direct-contact-desc">Call us directly</p>
+                <span class="direct-contact-action">Call Now <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:momayne10@gmail.com" target="_blank" rel="noopener" class="direct-contact-card">
+                <div class="direct-contact-icon" style="background: #ea4335; color: #fff;">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h3 class="direct-contact-name">Email</h3>
+                <p class="direct-contact-desc">Send us a detailed message</p>
+                <span class="direct-contact-action">Send Email <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+    SECTION: TEAM (فريق العمل)
+    ============================================================ -->
+<section id="team" class="team-section">
+    <div class="container-team">
+
+        <!-- Header -->
+        <div class="section-header-enhanced">
+            <span class="section-badge">✦ OUR TEAM</span>
+            <h2 class="section-title-enhanced">Meet the <span style="color:#10b981;">Minds</span> Behind GM SOFT</h2>
+            <p class="section-subtitle">Passionate experts dedicated to turning your ideas into exceptional digital products.</p>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper team-slider">
+            <div class="swiper-wrapper">
+
+                <!-- 1. CEO -->
+                <div class="swiper-slide">
+                    <div class="team-card">
+                        <div class="team-card-image" style="background-image: url('sassasd.png');"></div>
+                        <div class="team-card-content">
+                            <h3 class="team-name">Boussag Abdelmoumin</h3>
+                            <span class="team-role">CEO &amp; software engineer</span>
+                            <p class="team-quote"> software engineer with high-level expertise in delivering the best digital solutions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Head of Design -->
+                <div class="swiper-slide">
+                    <div class="team-card team-card-icon">
+                        <div class="team-card-avatar" style="background: linear-gradient(135deg, #10b981, #06b6d4);">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <div class="team-card-content">
+                            <h3 class="team-name">lina DS</h3>
+                            <span class="team-role">Head of Design</span>
+                            <p class="team-quote">"Design is not just how it looks, but how it works — for everyone."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. UX/UI Designer -->
+                <div class="swiper-slide">
+                    <div class="team-card">
+                        <div class="team-card-image" style="background-image: url('nabil.jpg');"></div>
+                        <div class="team-card-content">
+                            <h3 class="team-name">nabil Saouchi</h3>
+                            <span class="team-role">UX/UI Designer</span>
+                            <p class="team-quote">"I create experiences that feel intuitive, delightful, and human."</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- التنقل -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+<!-- ============================================================
+    FOOTER
+    ============================================================ -->
+<footer class="gm-footer" id="gm-footer">
+    <div class="gm-footer-inner">
+        <div class="gm-footer-top">
+            <!-- Brand -->
+            <div class="gm-footer-brand">
+                <a href="#" class="gm-footer-logo">
+                    <span class="gm-footer-logo-text">GM SOFT</span>
+                    <span class="gm-footer-logo-tag">agency</span>
+                </a>
+                <p class="gm-footer-desc">
+                    We design and build digital products — web, mobile and everything in between — for clients across Algeria and beyond.
+                </p>
+                <div class="gm-footer-socials">
+                    <a href="https://wa.me/213667123987" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://t.me/gmsoft" aria-label="Telegram" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="tel:+213667123987" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                    <a href="mailto:momayne10@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Navigate -->
+            <div class="gm-footer-col">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#how-we-work">Process</a></li>
+                    <li><a href="#presence">Presence</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="gm-footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Web Development</a></li>
+                    <li><a href="#services">Mobile Apps</a></li>
+                    <li><a href="#services">UI/UX Design</a></li>
+                    <li><a href="#services">Maintenance &amp; Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="gm-footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:momayne10@gmail.com"><i class="fa-solid fa-envelope"></i> momayne10@gmail.com</a></li>
+                    <li><a href="tel:+213667123987"><i class="fa-solid fa-phone"></i> +213 667 123 987</a></li>
+                    <li><a href="#"><i class="fa-solid fa-location-dot"></i> M'Sila, Algeria</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="gm-footer-divider"></div>
+
+        <!-- Bottom -->
+        <div class="gm-footer-bottom">
+            <p>&copy; <span id="footerYear">2026</span> GM SOFT. All rights reserved.</p>
+            <div class="gm-footer-badges">
+                <span><i class="fa-solid fa-shield-halved"></i> Secure by design</span>
+                <span><i class="fa-solid fa-bolt"></i> Fast delivery</span>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>

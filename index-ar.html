@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GM SOFT — بناء المنصات والأنظمة</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Google Fonts: Amiri -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body dir="rtl">
+
+    <!-- HEADER -->
+    <header class="gm-header" id="gmHeader">
+        <div class="gm-header-inner">
+            <a href="#" class="gm-logo">
+                GM SOFT <span class="gm-logo-tag">وكالة</span>
+            </a>
+
+            <nav class="gm-nav" id="gmNav">
+                <ul class="gm-nav-list">
+                    <li><a href="#services" class="gm-nav-link">ما نبنيه</a></li>
+                    <li><a href="#how-we-work" class="gm-nav-link">كيف نعمل</a></li>
+                    <li><a href="#terms" class="gm-nav-link">الالتزاماتنا</a></li>
+                    <li><a href="#desktop-messages" class="gm-nav-link">رسائل العملاء</a></li>
+                    <li><a href="#contact" class="gm-nav-link">اتصل بنا</a></li>
+                    <li><a href="#direct-contact" class="gm-nav-link">التواصل المباشر</a></li>
+                    <li><a href="#team" class="gm-nav-link">فريقنا</a></li>
+                </ul>
+
+                <!-- مبدل اللغة (يظهر فقط داخل القائمة المنسدلة في الهاتف) -->
+                <div class="gm-nav-lang">
+                    <div class="lang-switcher">
+                        <a href="index-ar.html" class="lang-link active" data-lang="ar">
+                            <span class="lang-flag">🇸🇦</span> AR
+                        </a>
+                        <span class="lang-divider">|</span>
+                        <a href="index.html" class="lang-link" data-lang="en">
+                            <span class="lang-flag">🇬🇧</span> EN
+                        </a>
+                        <span class="lang-divider">|</span>
+                        <a href="index-fr.html" class="lang-link" data-lang="fr">
+                            <span class="lang-flag">🇫🇷</span> FR
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="gm-header-actions">
+                <div class="lang-switcher gm-header-lang">
+                    <a href="index-ar.html" class="lang-link active" data-lang="ar">
+                        <span class="lang-flag">🇸🇦</span> AR
+                    </a>
+                    <span class="lang-divider">|</span>
+                    <a href="index.html" class="lang-link" data-lang="en">
+                        <span class="lang-flag">🇬🇧</span> EN
+                    </a>
+                    <span class="lang-divider">|</span>
+                    <a href="index-fr.html" class="lang-link" data-lang="fr">
+                        <span class="lang-flag">🇫🇷</span> FR
+                    </a>
+                </div>
+                <button class="gm-header-menu" id="menuToggle" aria-label="تبديل القائمة" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO — SWIPER SLIDER -->
+    <section class="gm-hero" id="gmHero">
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+
+                <!-- Slide 1: المواقع -->
+                <div class="swiper-slide slide-bg-1">
+                    <div class="gm-hero-overlay"></div>
+                    <div class="gm-hero-orb gm-hero-orb--1"></div>
+                    <div class="gm-hero-orb gm-hero-orb--2"></div>
+
+                    <div class="gm-hero-content">
+                        <div class="gm-hero-tag">
+                            <span class="gm-hero-dot"></span>
+                            مواقع إلكترونية احترافية
+                        </div>
+                        <h1 class="gm-hero-title">
+                            بناء <span class="gm-hero-highlight">مواقع</span><br>تحقق النتائج
+                        </h1>
+                        <p class="gm-hero-desc">
+                            نصمم ونبني مواقع إلكترونية احترافية تترك انطباعاً قوياً العملاء زيارة، وتعزز الثقة في علامتك التجارية، وتحول الزوار إلى عملاء أوفياء.
+                        </p>
+                        <div class="gm-hero-actions">
+                            <a href="#contact" class="gm-btn-primary">
+                                ابدأ موقعك <i class="fa-solid fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: المنصات -->
+                <div class="swiper-slide slide-bg-2">
+                    <div class="gm-hero-overlay"></div>
+                    <div class="gm-hero-orb gm-hero-orb--1"></div>
+                    <div class="gm-hero-orb gm-hero-orb--2"></div>
+
+                    <div class="gm-hero-content">
+                        <div class="gm-hero-tag">
+                            <span class="gm-hero-dot"></span>
+                            منصات رقمية
+                        </div>
+                        <h1 class="gm-hero-title">
+                            تصميم <span class="gm-hero-highlight">منصات</span><br>تعزز النمو
+                        </h1>
+                        <p class="gm-hero-desc">
+                            من الأسواق الإلكترونية إلى البوابات الداخلية للشركات — نبني منصات قوية مصممة لتنمو مع أعمالك، وتبقى موثوقة على مدار الساعة، وتمنح كل مستخدم تجربة سلسة وسهلة.
+                        </p>
+                        <div class="gm-hero-actions">
+                            <a href="#contact" class="gm-btn-primary">
+                                ابنِ منصتك <i class="fa-solid fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: الأنظمة -->
+                <div class="swiper-slide slide-bg-3">
+                    <div class="gm-hero-overlay"></div>
+                    <div class="gm-hero-orb gm-hero-orb--1"></div>
+                    <div class="gm-hero-orb gm-hero-orb--2"></div>
+
+                    <div class="gm-hero-content">
+                        <div class="gm-hero-tag">
+                            <span class="gm-hero-dot"></span>
+                            أنظمة أعمال
+                        </div>
+                        <h1 class="gm-hero-title">
+                            هندسة <span class="gm-hero-highlight">أنظمة</span><br>تدير أعمالك
+                        </h1>
+                        <p class="gm-hero-desc">
+                            من العمليات اليومية إلى إدارة العملاء — نبني أنظمة أعمال احترافية تبسط عملك، وتوفر وقتك، وتجعلك ترى بوضوح كيف أداء عملك فعلياً.
+                        </p>
+                        <div class="gm-hero-actions">
+                            <a href="#contact" class="gm-btn-primary">
+                                ابنِ نظامك <i class="fa-solid fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Swiper navigation & pagination -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ما نبنيه -->
+    <section id="what-we-build" class="wwb-section">
+        <div class="wwb-container">
+            <div class="wwb-header">
+                <span class="wwb-badge">✦ ما نبنيه</span>
+                <h2 class="wwb-title">
+                    منتجات رقمية <span style="color: #10b981;">لكل</span> احتياج
+                </h2>
+                <p class="wwb-subtitle">
+                    من المواقع البسيطة إلى أنظمة الأعمال المتقدمة — نبني حلولاً رقمية احترافية تحقق قيمة حقيقية وقابلة للقياس لأعمالك.
+                </p>
+            </div>
+
+            <div class="swiper wwb-slider">
+                <div class="swiper-wrapper">
+                    <!-- 1. تطوير المواقع -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-globe"></i></div>
+                            </div>
+                            <h3 class="wwb-name">تطوير المواقع</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> يبدو مثالياً على كل جهاز</li>
+                                <li><i class="fas fa-check-circle"></i> حديث وسريع وسهل الاستخدام</li>
+                                <li><i class="fas fa-check-circle"></i> موثوق وآمن خلف الكواليس</li>
+                                <li><i class="fas fa-check-circle"></i> متاجر إلكترونية وإدارة محتوى سهلة</li>
+                                <li><i class="fas fa-check-circle"></i> مصمم للحصول على ترتيب جيد وسرعة تحميل عالية</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 2. تطوير التطبيقات -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-mobile-alt"></i></div>
+                            </div>
+                            <h3 class="wwb-name">تطوير التطبيقات</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> تجربة سلسة على كل هاتف</li>
+                                <li><i class="fas fa-check-circle"></i> متاح على iPhone و Android</li>
+                                <li><i class="fas fa-check-circle"></i> سريع في التطوير وسهل الصيانة</li>
+                                <li><i class="fas fa-check-circle"></i> مصمم بطريقة الناس يستخدمون هواتفهم فعلياً</li>
+                                <li><i class="fas fa-check-circle"></i> نتولى عملية الإطلاق بالكامل لك</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 3. الذكاء الاصطناعي -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-robot"></i></div>
+                            </div>
+                            <h3 class="wwb-name">الذكاء الاصطناعي والأتمتة</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> مساعدون أذكياء يتحدثون مع عملائك على مدار الساعة</li>
+                                <li><i class="fas fa-check-circle"></i> أتمتة المهام المتكررة وتوفر وقتاً ثميناً</li>
+                                <li><i class="fas fa-check-circle"></i> يرد بطبيعة، تماماً مثل محادثة حقيقية</li>
+                                <li><i class="fas fa-check-circle"></i> قرارات أذكى بناءً على بياناتك الخاصة</li>
+                                <li><i class="fas fa-check-circle"></i> اعثر فوراً على إجابات داخل مستنداتك</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 4. تطبيقات سطح المكتب -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-desktop"></i></div>
+                            </div>
+                            <h3 class="wwb-name">تطبيقات سطح المكتب</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> يعمل على Windows و Mac و Linux</li>
+                                <li><i class="fas fa-check-circle"></i> سريع ومستقر وآمن للاستخدام</li>
+                                <li><i class="fas fa-check-circle"></i> يستمر في العمل حتى بدون إنترنت</li>
+                                <li><i class="fas fa-check-circle"></i> مصمم حول طريقة عمل فريقك</li>
+                                <li><i class="fas fa-check-circle"></i> يتصل بسلاسة مع أدواتك الأخرى</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 5. حلول SaaS -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-cloud"></i></div>
+                            </div>
+                            <h3 class="wwb-name">منصات سحابية</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> خدمة عدد غير محدود من العملاء من منصة واحدة</li>
+                                <li><i class="fas fa-check-circle"></i> فوترة بسيطة وإدارة الاشتراكات</li>
+                                <li><i class="fas fa-check-circle"></i> تنمو معك، بغض النظر عن حجم نموك</li>
+                                <li><i class="fas fa-check-circle"></i> تقارير ولوحات تحكم واضحة في لمحةตา</li>
+                                <li><i class="fas fa-check-circle"></i> مخصص بالكامل بهوية شركتك</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 6. أنظمة ERP -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-network-wired"></i></div>
+                            </div>
+                            <h3 class="wwb-name">أنظمة إدارة الأعمال</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> أدر أعمالك بالكامل من مكان واحد</li>
+                                <li><i class="fas fa-check-circle"></i> تتبع المخزون وسلسلة التوريد بسهولة</li>
+                                <li><i class="fas fa-check-circle"></i> نظم عملائك وعزز مبيعاتك</li>
+                                <li><i class="fas fa-check-circle"></i> بسط إدارة الموارد البشرية والرواتب</li>
+                                <li><i class="fas fa-check-circle"></i> رؤية مباشرة لأداء أعمالك</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 7. البرمجيات المخصصة -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-code"></i></div>
+                            </div>
+                            <h3 class="wwb-name">برمجيات مخصصة</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> مصممة بالكامل حول أعمالك</li>
+                                <li><i class="fas fa-check-circle"></i> مصممة للنمو بأمان مع نمو أعمالك</li>
+                                <li><i class="fas fa-check-circle"></i> تتصل بسهولة بالأدوات التي تستخدمها بالفعل</li>
+                                <li><i class="fas fa-check-circle"></i> يمكننا تحديث أنظمتك الحالية</li>
+                                <li><i class="fas fa-check-circle"></i> صيانة ودعم مستمر</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 8. تصميم UI/UX -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-pen-fancy"></i></div>
+                            </div>
+                            <h3 class="wwb-name">تصميم UI/UX</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> مصمم حول مستخدميك الحقيقيين</li>
+                                <li><i class="fas fa-check-circle"></i> تخطيط واضح قبل أن نبني أي شيء</li>
+                                <li><i class="fas fa-check-circle"></i> مظهر وشعور متناسق عبر علامتك التجارية</li>
+                                <li><i class="fas fa-check-circle"></i> تم اختباره وصقله حتى يشعر بالrightness</li>
+                                <li><i class="fas fa-check-circle"></i> سهل الاستخدام للجميع، على كل جهاز</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: كيف نعمل -->
+    <section id="how-we-work" class="process-section">
+        <div class="process-container">
+            <div class="process-header">
+                <span class="process-badge">
+                    <i class="fa-regular fa-gears"></i> كيف نعمل
+                </span>
+                <h2 class="process-title">
+                    <span style="color: #10b981;">عملية</span> العمل
+                </h2>
+                <p class="process-subtitle">
+                    من الفكرة إلى الإطلاق — رحلة واضحة وتعاونية لإنشاء منتجك الرقمي.
+                </p>
+            </div>
+
+            <div class="process-steps">
+                <!-- الخطوة 1: الاستكشاف -->
+                <div class="process-step">
+                    <div class="process-step-icon">
+                        <i class="fa-solid fa-compass"></i>
+                        <span class="step-number">1</span>
+                    </div>
+                    <div class="process-step-content">
+                        <h3><i class="fa-solid fa-compass"></i> الاستكشاف</h3>
+                        <p class="step-desc">نبدأ بفهم رؤيتك وأهدافك وجمهورك. نطرح الأسئلة الصحيحة لتشكيل استراتيجية منتج واضحة.</p>
+                        <ul class="step-bullets">
+                            <li>فهم رؤيتك وأهدافك</li>
+                            <li>تحديد الجمهور المستهدف والاحتياجات</li>
+                            <li>التحليل التنافسي</li>
+                            <li>خارطة طريق المشروع والجدول الزمني</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- الخطوة 2: الاستراتيجية -->
+                <div class="process-step">
+                    <div class="process-step-icon">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                        <span class="step-number">2</span>
+                    </div>
+                    <div class="process-step-content">
+                        <h3><i class="fa-solid fa-pen-ruler"></i> الاستراتيجية</h3>
+                        <p class="step-desc">نحدد الهيكل ومسارات المستخدم والتقنيات المستخدمة. نبني أساساً متيناً لمنتجك.</p>
+                        <ul class="step-bullets">
+                            <li>هيكلة المعلومات</li>
+                            <li>رسم مسارات المستخدم</li>
+                            <li>اختيار التقنيات المستخدمة</li>
+                            <li>تحديد نطاق المنتج الأولي</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- الخطوة 3: التصميم -->
+                <div class="process-step">
+                    <div class="process-step-icon">
+                        <i class="fa-solid fa-palette"></i>
+                        <span class="step-number">3</span>
+                    </div>
+                    <div class="process-step-content">
+                        <h3><i class="fa-solid fa-palette"></i> التصميم</h3>
+                        <p class="step-desc">نصمم واجهات مستخدم دقيقة وجميلة وسهلة الاستخدام ومبنية حول المستخدم.</p>
+                        <ul class="step-bullets">
+                            <li>إنشاء النماذج الأولية</li>
+                            <li>تصميم واجهة المستخدم عالية الدقة</li>
+                            <li>نظام التصميم والهوية البصرية</li>
+                            <li>اختبار سهولة الاستخدام</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- الخطوة 4: التطوير -->
+                <div class="process-step">
+                    <div class="process-step-icon">
+                        <i class="fa-solid fa-code"></i>
+                        <span class="step-number">4</span>
+                    </div>
+                    <div class="process-step-content">
+                        <h3><i class="fa-solid fa-code"></i> التطوير</h3>
+                        <p class="step-desc">نحول التصاميم إلى كود قوي وقابل للتوسع وعالي الأداء. نسلم بسرعة، أبداً على حساب الجودة.</p>
+                        <ul class="step-bullets">
+                            <li>تطوير الواجهة الأمامية والخلفية</li>
+                            <li>تكامل API وقواعد البيانات</li>
+                            <li>سبرنتات جيلية وتسليم مستمر</li>
+                            <li>مراجعة الكود وضمان الجودة</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- الخطوة 5: الإطلاق -->
+                <div class="process-step">
+                    <div class="process-step-icon">
+                        <i class="fa-solid fa-rocket"></i>
+                        <span class="step-number">5</span>
+                    </div>
+                    <div class="process-step-content">
+                        <h3><i class="fa-solid fa-rocket"></i> الإطلاق</h3>
+                        <p class="step-desc">نشر منتجك وضبط المراقبة وضمان عمل كل شيء بسلاسة. نحن معك في كل خطوة.</p>
+                        <ul class="step-bullets">
+                            <li>النشر والاستضافة</li>
+                            <li>مراقبة الأداء</li>
+                            <li>تدريب المستخدمين والتوجيه</li>
+                            <li>الدعم بعد الإطلاق</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- الخطوة 6: الدعم -->
+                <div class="process-step">
+                    <div class="process-step-icon">
+                        <i class="fa-solid fa-headset"></i>
+                        <span class="step-number">6</span>
+                    </div>
+                    <div class="process-step-content">
+                        <h3><i class="fa-solid fa-headset"></i> الدعم والنمو</h3>
+                        <p class="step-desc">نقدم الصيانة المستمرة والتحديثات والتحسينات. نجاحك هو أولويتنا — ننمو معاً.</p>
+                        <ul class="step-bullets">
+                            <li>صيانة وتحديثات مستمرة</li>
+                            <li>تحسين الميزات</li>
+                            <li>دعم على مدار الساعة</li>
+                            <li>استشارات النمو الاستراتيجي</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: التزاماتنا -->
+    <section id="terms" class="terms-section">
+        <div class="container">
+            <div class="section-header-enhanced">
+                <span class="section-badge">✦ التزاماتنا</span>
+                <h2 class="section-title-enhanced">شروط <span style="color:#10b981;">الخدمة</span></h2>
+                <p class="section-subtitle">نؤمن بالشفافية والاحترافية. إليك كيف نعمل وما يمكنك توقعه منا.</p>
+            </div>
+
+            <div class="swiper wwb-slider">
+                <div class="swiper-wrapper">
+                    <!-- 1. عقد موقّع -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-file-contract"></i></div>
+                            </div>
+                            <h3 class="wwb-name">عقد موقّع</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> نطاق ونواتج واضحة</li>
+                                <li><i class="fas fa-check-circle"></i> مواعيد نهائية ومراحل محددة</li>
+                                <li><i class="fas fa-check-circle"></i> أسعار شفافة</li>
+                                <li><i class="fas fa-check-circle"></i> حماية قانونية للطرفين</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 2. خدمة ما بعد البيع -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-headset"></i></div>
+                            </div>
+                            <h3 class="wwb-name">خدمة ما بعد البيع</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> إصلاح الأخطاء مجاناً لمدة 3 أشهر</li>
+                                <li><i class="fas fa-check-circle"></i> قناة دعم أولوية</li>
+                                <li><i class="fas fa-check-circle"></i> تحديثات أمنية منتظمة</li>
+                                <li><i class="fas fa-check-circle"></i> مراقبة الأداء</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 3. دورات تدريبية -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-graduation-cap"></i></div>
+                            </div>
+                            <h3 class="wwb-name">دورات تدريبية للموظفين</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> جلسات تدريب مخصصة</li>
+                                <li><i class="fas fa-check-circle"></i> كتيبات مستخدم وتوثيق</li>
+                                <li><i class="fas fa-check-circle"></i> مكتبة فيديوهات تعليمية</li>
+                                <li><i class="fas fa-check-circle"></i> دعم تعلّم مستمر</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 4. مدفوعات مرحلية -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-credit-card"></i></div>
+                            </div>
+                            <h3 class="wwb-name">مدفوعات مرحلية</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> يُدفع 20% مقدماً عند بدء المشروع</li>
+                                <li><i class="fas fa-check-circle"></i> باقي المبلغ يُدفع بعد انتهاء العمل</li>
+                                <li><i class="fas fa-check-circle"></i> لا رسوم خفية</li>
+                                <li><i class="fas fa-check-circle"></i> فاتورة لكل دفعة</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 5. ضمان الجودة -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-shield-halved"></i></div>
+                            </div>
+                            <h3 class="wwb-name">ضمان الجودة</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> اختبارات آلية ويدوية</li>
+                                <li><i class="fas fa-check-circle"></i> توافق متعدد المتصفحات</li>
+                                <li><i class="fas fa-check-circle"></i> تحسين الأداء</li>
+                                <li><i class="fas fa-check-circle"></i> اختبارات اختراق أمنية</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 6. قابلية التوسع -->
+                    <div class="swiper-slide">
+                        <div class="wwb-card">
+                            <div class="wwb-card-top">
+                                <div class="wwb-icon"><i class="fas fa-chart-line"></i></div>
+                            </div>
+                            <h3 class="wwb-name">قابلية التوسع المستقبلية</h3>
+                            <ul class="wwb-features">
+                                <li><i class="fas fa-check-circle"></i> هندسة قابلة للتوسع</li>
+                                <li><i class="fas fa-check-circle"></i> بنية تحتية سحابية جاهزة</li>
+                                <li><i class="fas fa-check-circle"></i> تصميم معياري للتحديثات السهلة</li>
+                                <li><i class="fas fa-check-circle"></i> جاهز للنمو من اليوم الأول</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swiper navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: رسائل العملاء -->
+    <section class="section-messages" id="desktop-messages">
+        <div class="container-messages">
+            <div class="section-label">
+                رسائل <span class="accent">العملاء</span>
+            </div>
+
+            <div class="menubar">
+                <div class="brand">GM SOFT</div>
+                <div class="right">
+                    <span><span class="dot-live"></span>متصل</span>
+                    <span class="clock">--:--</span>
+                </div>
+            </div>
+
+            <div class="msg-window" id="window-messages">
+                <div class="titlebar drag-handle">
+                    <div class="traffic">
+                        <span class="r"></span>
+                        <span class="y"></span>
+                        <span class="g"></span>
+                    </div>
+                    <div class="title">الرسائل — صندوق وارد العميل</div>
+                    <div class="spacer"></div>
+                </div>
+
+                <div class="body">
+                    <div class="sidebar">
+                        <div class="sidebar-label" id="inbox-count">صندوق الوارد — 0 محادثات</div>
+                        <div class="msg-list" id="msg-list"></div>
+                    </div>
+
+                    <div class="thread">
+                        <div class="thread-head">
+                                <div class="avatar" id="thread-avatar">N</div>
+                            <div style="flex:1;">
+                                <div class="name" id="thread-name">Nabil Saouchi</div>
+                                <div class="sub" id="thread-sub">عبر WhatsApp</div>
+                            </div>
+                            <div class="live-badge" id="live-badge">
+                                <span class="live-dot"></span> تشغيل تلقائي
+                            </div>
+                        </div>
+                        <div class="thread-body" id="thread-body"></div>
+                        <div class="thread-input">
+                            <input type="text" placeholder="اكتب رسالة…" id="thread-input" />
+                            <button class="gm-voice-btn" id="gm-voice-btn" title="إدخال صوتي (تحويل الكلام إلى نص)" aria-label="إدخال صوتي">
+                                <i class="fa-solid fa-microphone"></i>
+                                <span class="voice-wave" id="voice-wave">
+                                    <span></span><span></span><span></span><span></span>
+                                </span>
+                            </button>
+                            <button class="send" id="thread-send"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                        <div class="voice-status" id="voice-status"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: اتصل بنا -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header-enhanced">
+                <span class="section-badge">تواصل معنا</span>
+                <h2 class="section-title-enhanced">لنبني شيئاً <span style="color:#10b981;">مذهلاً</span></h2>
+                <p class="section-subtitle">أخبرنا عن مشروعك — نرد عادةً خلال يوم عمل واحد.</p>
+            </div>
+
+            <div class="contact-grid">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mzzanwoy" method="POST" novalidate>
+                    <div class="contact-form-row">
+                        <div class="contact-field">
+                            <label for="cf-name">الاسم الكامل</label>
+                            <input type="text" id="cf-name" name="name" placeholder="اسمك" required>
+                        </div>
+                        <div class="contact-field">
+                            <label for="cf-email">البريد الإلكتروني</label>
+                            <input type="email" id="cf-email" name="email" placeholder="you@company.com" required>
+                        </div>
+                    </div>
+
+                    <div class="contact-field">
+                        <label for="cf-subject">ما الذي تحتاجه؟</label>
+                        <select id="cf-subject" name="subject">
+                            <option>موقع ويب جديد أو تطبيق ويب</option>
+                            <option>تطبيق جوال</option>
+                            <option>صيانة ودعم مستمر</option>
+                            <option>شيء آخر</option>
+                        </select>
+                    </div>
+
+                    <div class="contact-field">
+                        <label for="cf-message">تفاصيل المشروع</label>
+                        <textarea id="cf-message" name="message" rows="5" placeholder="أخبرنا قليلاً عن ما تبنيه..." required></textarea>
+                    </div>
+
+                    <input type="text" name="_gotcha" style="display:none">
+                    <button type="submit" class="contact-submit-btn">
+                        إرسال الرسالة <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <p class="contact-form-note" id="contactFormNote"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: التواصل المباشر -->
+    <section id="direct-contact" class="direct-contact-section">
+        <div class="container">
+            <div class="section-header-enhanced">
+                <span class="section-badge">✦ التواصل المباشر</span>
+                <h2 class="section-title-enhanced">لنتراسل <span style="color:#10b981;">فوراً</span></h2>
+                <p class="section-subtitle">تواصل معنا مباشرة عبر تطبيق المحادثة المفضل لديك — نحن دائماً في متناول يدك.</p>
+            </div>
+
+            <div class="direct-contact-grid">
+                <a href="https://wa.me/213667123987" target="_blank" rel="noopener" class="direct-contact-card">
+                    <div class="direct-contact-icon" style="background: #25D366; color: #fff;">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="direct-contact-name">واتساب</h3>
+                    <p class="direct-contact-desc">تحدث معنا فوراً</p>
+                    <span class="direct-contact-action">ابدأ المحادثة <i class="fa-solid fa-arrow-left"></i></span>
+                </a>
+
+                <a href="https://t.me/gmsoft" target="_blank" rel="noopener" class="direct-contact-card">
+                    <div class="direct-contact-icon" style="background: #0088cc; color: #fff;">
+                        <i class="fa-brands fa-telegram"></i>
+                    </div>
+                    <h3 class="direct-contact-name">تيليجرام</h3>
+                    <p class="direct-contact-desc">رسائل سريعة وتحديثات</p>
+                    <span class="direct-contact-action">راسلنا <i class="fa-solid fa-arrow-left"></i></span>
+                </a>
+
+                <a href="tel:+213667123987" target="_blank" rel="noopener" class="direct-contact-card">
+                    <div class="direct-contact-icon" style="background: #10b981; color: #fff;">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3 class="direct-contact-name">الهاتف</h3>
+                    <p class="direct-contact-desc">اتصل بنا مباشرة</p>
+                    <span class="direct-contact-action">اتصل الآن <i class="fa-solid fa-arrow-left"></i></span>
+                </a>
+
+                <a href="mailto:momayne10@gmail.com" target="_blank" rel="noopener" class="direct-contact-card">
+                    <div class="direct-contact-icon" style="background: #ea4335; color: #fff;">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3 class="direct-contact-name">البريد الإلكتروني</h3>
+                    <p class="direct-contact-desc">أرسل لنا رسالة مفصلة</p>
+                    <span class="direct-contact-action">أرسل إيميل <i class="fa-solid fa-arrow-left"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: فريق العمل -->
+    <section id="team" class="team-section">
+        <div class="container-team">
+            <div class="section-header-enhanced">
+                <span class="section-badge">✦ فريقنا</span>
+                <h2 class="section-title-enhanced">تعرّف على <span style="color:#10b981;">العقول</span> وراء GM SOFT</h2>
+                <p class="section-subtitle">خبراء شغوفون مكرسون لتحويل أفكارك إلى منتجات رقمية استثنائية.</p>
+            </div>
+
+            <div class="swiper team-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-card-image" style="background-image: url('sassasd.png');"></div>
+                            <div class="team-card-content">
+                                <h3 class="team-name">بوساق عبدالمؤمن</h3>
+                                <span class="team-role">المدير التنفيذي والمؤسس</span>
+                                <p class="team-quote">مهندس برمجيات وتاصفي في فريق بخبرة عالية المستوى لإنجاز أفضل الحلول الرقمية.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="team-card team-card-icon">
+                            <div class="team-card-avatar" style="background: linear-gradient(135deg, #10b981, #06b6d4);">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="team-card-content">
+                                <h3 class="team-name">لينا دي اس</h3>
+                                <span class="team-role"> مصممة </span>
+                                <p class="team-quote">« التصميم ليس فقط كيف يبدو، بل كيف يعمل — للجميع. »</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="team-card">
+                            <div class="team-card-image" style="background-image: url('nabil.jpg');"></div>
+                            <div class="team-card-content">
+                                <h3 class="team-name">نبيل صوشي</h3>
+                                <span class="team-role">مصمم UX/UI</span>
+                                <p class="team-quote">« أبتكر تجارب تبدو بديهية وممتعة وإنسانية. »</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="gm-footer" id="gm-footer">
+        <div class="gm-footer-inner">
+            <div class="gm-footer-top">
+                <div class="gm-footer-brand">
+                    <a href="#" class="gm-footer-logo">
+                        <span class="gm-footer-logo-text">GM SOFT</span>
+                        <span class="gm-footer-logo-tag">وكالة</span>
+                    </a>
+                    <p class="gm-footer-desc">
+                        نصمم ونبني منتجات رقمية — ويب وجوال وكل ما بينهما — لعملاء في الجزائر وخارجها.
+                    </p>
+                    <div class="gm-footer-socials">
+                        <a href="https://wa.me/213667123987" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://t.me/gmsoft" aria-label="Telegram" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="tel:+213667123987" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                        <a href="mailto:momayne10@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="gm-footer-col">
+                    <h4>التنقل</h4>
+                    <ul>
+                        <li><a href="#services">ما نبنيه</a></li>
+                        <li><a href="#how-we-work">كيف نعمل</a></li>
+                        <li><a href="#terms">الالتزاماتنا</a></li>
+                        <li><a href="#desktop-messages">رسائل العملاء</a></li>
+                        <li><a href="#team">فريقنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="gm-footer-col">
+                    <h4>الخدمات</h4>
+                    <ul>
+                        <li><a href="#services">تطوير المواقع</a></li>
+                        <li><a href="#services">تطوير التطبيقات</a></li>
+                        <li><a href="#services">الذكاء الاصطناعي والأتمتة</a></li>
+                        <li><a href="#services">تطبيقات سطح المكتب</a></li>
+                        <li><a href="#services">منصات سحابية</a></li>
+                        <li><a href="#services">أنظمة إدارة الأعمال</a></li>
+                        <li><a href="#services">برمجيات مخصصة</a></li>
+                        <li><a href="#services">تصميم UI/UX</a></li>
+                    </ul>
+                </div>
+
+                <div class="gm-footer-col">
+                    <h4>التواصل</h4>
+                    <ul>
+                        <li><a href="mailto:momayne10@gmail.com"><i class="fa-solid fa-envelope"></i> momayne10@gmail.com</a></li>
+                        <li><a href="tel:+213667123987"><i class="fa-solid fa-phone"></i> +213 667 123 987</a></li>
+                        <li><a href="#"><i class="fa-solid fa-location-dot"></i> المسيلة، الجزائر</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="gm-footer-divider"></div>
+
+            <div class="gm-footer-bottom">
+                <p>&copy; <span id="footerYear">2026</span> GM SOFT. جميع الحقوق محفوظة.</p>
+                <div class="gm-footer-badges">
+                    <span><i class="fa-solid fa-shield-halved"></i> آمن بالتصميم</span>
+                    <span><i class="fa-solid fa-bolt"></i> تسليم سريع</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>

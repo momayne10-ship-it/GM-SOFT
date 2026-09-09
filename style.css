@@ -1062,12 +1062,11 @@ ul {
 .process-steps::before {
     content: '';
     position: absolute;
-    left: 50%;
+    left: calc(50% - 1.5px);
     top: 52px;
-    bottom: 95px;
+    bottom: 180px;
     width: 3px;
     background: linear-gradient(180deg, #10b981, #4d7fff);
-    transform: translateX(-50%);
     border-radius: 4px;
     opacity: 0.4;
     z-index: 0;
@@ -1222,8 +1221,9 @@ ul {
 
     .process-steps::before {
         top: 70px;
-        bottom: 70px;
+        bottom: 90px;
         width: 2.5px;
+        left: calc(50% - 1.25px);
     }
 
     .process-step {
@@ -1326,21 +1326,21 @@ ul {
         left: 0;
     }
 
-    /* تقسيم خطوات جنب جنب في الموبايل */
+    /* تقسيم خطوات جنب جنب في الموبايل - LTR */
     .process-step:nth-child(odd) .process-step-content {
-        margin-left: auto;
-        margin-right: 0;
-        text-align: right;
-        padding-right: 10px;
-        padding-left: 0;
-    }
-
-    .process-step:nth-child(even) .process-step-content {
-        margin-right: auto;
         margin-left: 0;
+        margin-right: auto;
         text-align: left;
         padding-left: 10px;
         padding-right: 0;
+    }
+
+    .process-step:nth-child(even) .process-step-content {
+        margin-right: 0;
+        margin-left: auto;
+        text-align: right;
+        padding-right: 10px;
+        padding-left: 0;
     }
 }
 
@@ -1348,7 +1348,8 @@ ul {
 @media (max-width: 400px) {
     .process-steps::before {
         top: 60px;
-        bottom: 56px;
+        bottom: 80px;
+        left: calc(50% - 1.25px);
     }
 
     .process-step-icon {
@@ -3224,6 +3225,9 @@ ul {
     .gm-footer-socials {
         justify-content: center;
     }
+    .gm-footer-col h4 {
+        text-align: center;
+    }
     .gm-footer-col ul {
         display: flex;
         flex-direction: column;
@@ -3238,6 +3242,25 @@ ul {
         justify-content: center;
     }
     .gm-footer-badges {
+        justify-content: center;
+    }
+    [dir="rtl"] .gm-footer-top {
+        flex-direction: column;
+    }
+    [dir="rtl"] .gm-footer-col {
+        text-align: center;
+    }
+    [dir="rtl"] .gm-footer-col h4 {
+        text-align: center;
+    }
+    [dir="rtl"] .gm-footer-col a {
+        justify-content: center;
+    }
+    [dir="rtl"] .gm-footer-bottom {
+        flex-direction: column;
+    }
+    [dir="rtl"] .gm-footer-badges {
+        flex-direction: row;
         justify-content: center;
     }
 }
@@ -3453,6 +3476,46 @@ ul {
 [dir="rtl"] .step-bullets li::before {
     margin-inline-end: 0.8rem;
     margin-inline-start: 0;
+}
+
+/* RTL Line Centering */
+[dir="rtl"] .process-steps::before {
+    left: calc(50% - 1.5px);
+}
+
+/* RTL Mobile Override */
+@media (max-width: 768px) {
+    [dir="rtl"] .process-steps::before {
+        left: calc(50% - 1.25px);
+    }
+
+    [dir="rtl"] .process-step:nth-child(odd) .process-step-content {
+        margin-left: auto;
+        margin-right: 0;
+        text-align: right;
+        padding-right: 10px;
+        padding-left: 0;
+    }
+
+    [dir="rtl"] .process-step:nth-child(even) .process-step-content {
+        margin-right: auto;
+        margin-left: 0;
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 0;
+    }
+
+    [dir="rtl"] .process-step:nth-child(odd) .step-bullets li {
+        direction: rtl;
+        text-align: right;
+        padding-left: 0;
+        padding-right: 0.8rem;
+    }
+
+    [dir="rtl"] .process-step:nth-child(odd) .step-bullets li::before {
+        left: auto;
+        right: 0;
+    }
 }
 
 /* Contact Form RTL */

@@ -481,9 +481,9 @@ async function composeAndSend(who, text, gen) {
         for (let i = 0; i < text.length; i++) {
             if (gen !== autoplayGen) { threadInput.classList.remove('typing-sim'); return false; }
             threadInput.value += text[i];
-            await sleep(18 + Math.random() * 28);
+            await sleep(35 + Math.random() * 35);
         }
-        await sleep(400);
+        await sleep(500);
         if (gen !== autoplayGen) { threadInput.classList.remove('typing-sim'); return false; }
         sendBtn.classList.add('sending');
         await sleep(180);
@@ -496,7 +496,7 @@ async function composeAndSend(who, text, gen) {
         typing.innerHTML = '<span></span><span></span><span></span>';
         threadBody.appendChild(typing);
         threadBody.scrollTop = threadBody.scrollHeight;
-        await sleep(850 + Math.random() * 450);
+        await sleep(1100 + Math.random() * 500);
         if (gen !== autoplayGen) { typing.remove(); return false; }
         typing.remove();
     }
@@ -530,11 +530,11 @@ async function playConversation(idx, gen) {
         if (gen !== autoplayGen) return;
         const sent = await composeAndSend(m.who, m.text, gen);
         if (!sent) return;
-        await sleep(750);
+        await sleep(900);
     }
 
     if (gen !== autoplayGen) return;
-    await sleep(3000);
+    await sleep(3500);
     if (gen !== autoplayGen || !autoplayOn) return;
     const nextIdx = (idx + 1) % conversations.length;
     playConversation(nextIdx, gen);

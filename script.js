@@ -119,7 +119,7 @@ const pageLang = document.documentElement.lang || 'en';
 
 const messagesEN = [
     {
-        name: 'Nabil Saouchi',
+        name: 'Dizayno DZ',
         initials: 'N',
         color: '#2f5c46',
         platform: 'WhatsApp',
@@ -186,7 +186,7 @@ const messagesEN = [
 
 const messagesFR = [
     {
-        name: 'Nabil Saouchi',
+        name: 'Dizayno DZ',
         initials: 'N',
         color: '#2f5c46',
         platform: 'WhatsApp',
@@ -254,7 +254,7 @@ const messagesFR = [
 const messagesAR = [
 
     {
-        name: 'Nabil Saouchi',
+        name: 'Dizayno DZ',
         initials: 'N',
         color: '#2f5c46',
         platform: 'WhatsApp',

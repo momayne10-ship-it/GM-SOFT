@@ -1,5 +1,5 @@
 /* ============================================================
-   RESET & VARIABLES (┘å┘üÏ│ Ïº┘äÏ¬ÏÁ┘à┘è┘à Ïº┘äÏúÏÁ┘ä┘è)
+   RESET & VARIABLES (نفس التصميم الأصلي)
    ============================================================ */
 * {
     margin: 0;
@@ -61,7 +61,7 @@ ul {
 }
 
 /* ============================================================
-   HEADER (┘å┘üÏ│ Ïº┘äÏ¬ÏÁ┘à┘è┘à Ïº┘äÏúÏÁ┘ä┘è)
+   HEADER (نفس التصميم الأصلي)
    ============================================================ */
 .gm-header {
     position: fixed;
@@ -220,7 +220,7 @@ ul {
     font-weight: 300;
 }
 
-/* Language switcher shown inside the mobile dropdown nav ÔÇö hidden on desktop */
+/* Language switcher shown inside the mobile dropdown nav — hidden on desktop */
 .gm-nav-lang {
     display: none;
 }
@@ -256,7 +256,7 @@ ul {
 }
 
 /* ============================================================
-   HERO ÔÇö SWIPER (Ï«┘ä┘ü┘èÏºÏ¬ Ï¿Ï│┘èÏÀÏ® + Ïú┘êÏ▒Ï¿)
+   HERO — SWIPER (خلفيات بسيطة + أورب)
    ============================================================ */
 .gm-hero {
     position: relative;
@@ -281,7 +281,7 @@ ul {
     padding: 0 2rem;
 }
 
-/* === Ïº┘äÏ«┘ä┘ü┘èÏºÏ¬ Ïº┘äÏ¿Ï│┘èÏÀÏ® ┘ä┘â┘ä Ï┤Ï▒┘èÏ¡Ï® === */
+/* === الخلفيات البسيطة لكل شريحة === */
 .slide-bg-1 {
     background: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1920&h=1080&fit=crop&q=80') center/cover no-repeat;
 }
@@ -292,7 +292,7 @@ ul {
     background: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&h=1080&fit=crop&q=80') center/cover no-repeat;
 }
 
-/* Overlay ┘äÏ¬Ï¡Ï│┘è┘å ┘éÏ▒ÏºÏíÏ® Ïº┘ä┘åÏÁ */
+/* Overlay لتحسين قراءة النص */
 .gm-hero-overlay {
     position: absolute;
     inset: 0;
@@ -305,7 +305,7 @@ ul {
     z-index: 1;
 }
 
-/* Orbs (Ï¬ÏúÏ½┘èÏ▒ÏºÏ¬ ÏÑÏÂÏºÏíÏ® ┘åÏºÏ╣┘àÏ®) */
+/* Orbs (تأثيرات إضاءة ناعمة) */
 .gm-hero-orb {
     position: absolute;
     border-radius: 50%;
@@ -557,7 +557,7 @@ ul {
 }
 
 /* ============================================================
-   RESPONSIVE (┘å┘üÏ│ Ïº┘äÏ¬ÏÁ┘à┘è┘à Ïº┘äÏúÏÁ┘ä┘è ┘ä┘ä┘éÏºÏª┘àÏ® Ïº┘äÏ¼Ïº┘åÏ¿┘èÏ®)
+   RESPONSIVE (نفس التصميم الأصلي للقائمة الجانبية)
    ============================================================ */
 @media (max-width: 992px) {
     .gm-header {
@@ -765,7 +765,7 @@ ul {
 }
 
 /* ============================================================
-   SECTION: WHAT WE BUILD (Ï«┘ä┘ü┘èÏ® ┘üÏºÏ¬Ï¡Ï® ┘àÏ▒┘èÏ¡Ï® ┘ä┘äÏ╣┘è┘å)
+   SECTION: WHAT WE BUILD (خلفية فاتحة مريحة للعين)
    ============================================================ */
 
 .wwb-section {
@@ -821,7 +821,7 @@ ul {
     overflow: hidden;
 }
 
-/* ===== Ïº┘äÏ¿ÏÀÏº┘éÏ® ===== */
+/* ===== البطاقة ===== */
 .wwb-card {
     background: #ffffff;
     border-radius: 28px;
@@ -842,7 +842,7 @@ ul {
     border-color: rgba(16, 185, 129, 0.15);
 }
 
-/* ===== Ïú┘è┘é┘ê┘åÏ® Ïº┘äÏ¿ÏÀÏº┘éÏ® ===== */
+/* ===== أيقونة البطاقة ===== */
 .wwb-card-top {
     display: flex;
     align-items: center;
@@ -872,7 +872,7 @@ ul {
     transform: rotate(-6deg) scale(1.08);
 }
 
-/* ===== Ï╣┘å┘êÏº┘å Ïº┘äÏ¿ÏÀÏº┘éÏ® ===== */
+/* ===== عنوان البطاقة ===== */
 .wwb-name {
     font-size: 1.5rem;
     font-weight: 800;
@@ -881,7 +881,7 @@ ul {
     line-height: 1.3;
 }
 
-/* ===== ┘éÏºÏª┘àÏ® Ïº┘ä┘à┘èÏ▓ÏºÏ¬ ===== */
+/* ===== قائمة الميزات ===== */
 .wwb-features {
     list-style: none;
     padding: 0;
@@ -910,7 +910,7 @@ ul {
     flex-shrink: 0;
 }
 
-/* ===== ÏúÏ▓Ï▒ÏºÏ▒ Swiper ===== */
+/* ===== أزرار Swiper ===== */
 .wwb-slider .swiper-button-next,
 .wwb-slider .swiper-button-prev {
     background: #ffffff;
@@ -1049,7 +1049,7 @@ ul {
     line-height: 1.7;
 }
 
-/* ===== Steps List (Ïº┘äÏ«ÏÀ Ïº┘äÏ╣┘à┘êÏ»┘è) ===== */
+/* ===== Steps List (الخط العمودي) ===== */
 .process-steps {
     display: flex;
     flex-direction: column;
@@ -1059,7 +1059,7 @@ ul {
     padding: 0;
 }
 
-/* Ïº┘äÏ«ÏÀ Ïº┘äÏ╣┘à┘êÏ»┘è */
+/* الخط العمودي */
 .process-steps::before {
     content: '';
     position: absolute;
@@ -1073,7 +1073,7 @@ ul {
     z-index: 0;
 }
 
-/* ===== ┘â┘ä Ï«ÏÀ┘êÏ® ===== */
+/* ===== كل خطوة ===== */
 .process-step {
     position: relative;
     padding: 1.5rem 0;
@@ -1092,7 +1092,7 @@ ul {
     padding-bottom: 0.5rem;
 }
 
-/* ===== Ïº┘äÏú┘è┘é┘ê┘åÏ® Ïº┘äÏ»ÏºÏªÏ▒┘èÏ® ===== */
+/* ===== الأيقونة الدائرية ===== */
 .process-step-icon {
     width: 56px;
     height: 56px;
@@ -1131,15 +1131,15 @@ ul {
     border: 2px solid #fff;
 }
 
-/* ===== Ïº┘ä┘àÏ¡Ï¬┘ê┘ë (┘åÏÁ) ===== */
+/* ===== المحتوى (نص) ===== */
 .process-step-content {
     display: none;
 }
 
-/* ===== Ï¬┘åÏ│┘è┘é Ïº┘äÏ┤ÏºÏ┤ÏºÏ¬ Ïº┘ä┘âÏ¿┘èÏ▒Ï® (Desktop) ===== */
+/* ===== تنسيق الشاشات الكبيرة (Desktop) ===== */
 @media (min-width: 769px) {
-    /* ┘å┘äÏ║┘è Ï«ÏÀ Ïº┘äÏ¡Ïº┘ê┘èÏ® Ïº┘äÏ½ÏºÏ¿Ï¬ ┘ê┘åÏ▒Ï│┘à ┘êÏÁ┘äÏ® ┘à┘å ┘â┘ä Ïú┘è┘é┘ê┘åÏ® ÏÑ┘ä┘ë Ïº┘äÏ¬┘è Ï¿Ï╣Ï»┘çÏº
-       ┘ü┘èÏ¬┘ê┘é┘ü Ïº┘äÏ«ÏÀ Ï¬┘àÏº┘àÏº┘ï Ï╣┘åÏ» ┘àÏ▒┘âÏ▓ Ïº┘äÏú┘è┘é┘ê┘åÏ® 6 */
+    /* نلغي خط الحاوية الثابت ونرسم وصلة من كل أيقونة إلى التي بعدها
+       فيتوقف الخط تماماً عند مركز الأيقونة 6 */
     .process-steps::before {
         display: none;
     }
@@ -1183,7 +1183,7 @@ ul {
         width: calc(50% - 50px);
     }
 
-    /* Ïº┘äÏ«ÏÀ┘êÏºÏ¬ Ïº┘ä┘üÏ▒Ï»┘èÏ® (┘èÏ│ÏºÏ▒) */
+    /* الخطوات الفردية (يسار) */
     .process-step:nth-child(odd) .process-step-content {
         margin-left: auto;
         margin-right: 0;
@@ -1192,7 +1192,7 @@ ul {
         direction: ltr;
     }
 
-    /* Ïº┘äÏ«ÏÀ┘êÏºÏ¬ Ïº┘äÏ▓┘êÏ¼┘èÏ® (┘è┘à┘è┘å) */
+    /* الخطوات الزوجية (يمين) */
     .process-step:nth-child(even) .process-step-content {
         margin-right: auto;
         margin-left: 0;
@@ -1226,7 +1226,7 @@ ul {
     }
 }
 
-/* ===== Ï¬┘åÏ│┘è┘é Ïº┘ä┘ç┘êÏºÏ¬┘ü (Mobile) ===== */
+/* ===== تنسيق الهواتف (Mobile) ===== */
 @media (max-width: 768px) {
     .process-section {
         padding: 2.5rem 1rem;
@@ -1334,7 +1334,7 @@ ul {
         background: linear-gradient(135deg, #10b981, #4d7fff);
     }
 
-    /* Ï╣┘åÏºÏÁÏ▒ ┘üÏ▒Ï╣┘èÏ® ┘ä┘äÏ«ÏÀ┘êÏºÏ¬ Ï╣┘ä┘ë Ïº┘ä┘èÏ│ÏºÏ▒ - ÏºÏ¬Ï¼Ïº┘ç ÏÑ┘åÏ¼┘ä┘èÏ▓┘è */
+    /* عناصر فرعية للخطوات على اليسار - اتجاه إنجليزي */
     .process-step:nth-child(odd) .step-bullets li {
         direction: ltr;
         text-align: left;
@@ -1347,7 +1347,7 @@ ul {
         left: 0;
     }
 
-    /* Ï¬┘éÏ│┘è┘à Ï«ÏÀ┘êÏºÏ¬ Ï¼┘åÏ¿ Ï¼┘åÏ¿ ┘ü┘è Ïº┘ä┘à┘êÏ¿Ïº┘è┘ä - LTR */
+    /* تقسيم خطوات جنب جنب في الموبايل - LTR */
     .process-step:nth-child(odd) .process-step-content {
         margin-left: 0;
         margin-right: auto;
@@ -1365,7 +1365,7 @@ ul {
     }
 }
 
-/* ===== Ï┤ÏºÏ┤ÏºÏ¬ ÏÁÏ║┘èÏ▒Ï® Ï¼Ï»Ïº┘ï ===== */
+/* ===== شاشات صغيرة جداً ===== */
 @media (max-width: 400px) {
     .process-steps::before {
         top: 60px;
@@ -1405,7 +1405,7 @@ ul {
 }
 
 /* ============================================================
-   SECTION: CLIENT MESSAGES (Ïú┘ä┘êÏº┘å Ï»Ïº┘â┘åÏ® ┘àÏ▒┘èÏ¡Ï®)
+   SECTION: CLIENT MESSAGES (ألوان داكنة مريحة)
    ============================================================ */
 
 :root {
@@ -1430,7 +1430,7 @@ ul {
     font-family: 'Amiri', 'Inter', sans-serif;
 }
 
-/* Ï¬Ï»Ï▒Ï¼ Ï«┘ä┘ü┘èÏ® ┘åÏºÏ╣┘à */
+/* تدرج خلفية ناعم */
 .section-messages::before {
     content: '';
     position: absolute;
@@ -1453,7 +1453,7 @@ ul {
     z-index: 1;
 }
 
-/* ---- Ï╣┘å┘êÏº┘å Ïº┘ä┘éÏ│┘à ---- */
+/* ---- عنوان القسم ---- */
 .section-label {
     font-family: 'Amiri', 'Inter', sans-serif;
     font-weight: 700;
@@ -1467,7 +1467,7 @@ ul {
     color: var(--msg-accent);
 }
 
-/* ---- Menubar (Ï┤Ï▒┘èÏÀ Ïº┘ä┘à┘çÏº┘à) ---- */
+/* ---- Menubar (شريط المهام) ---- */
 .menubar {
     display: flex;
     align-items: center;
@@ -1504,7 +1504,7 @@ ul {
     font-variant-numeric: tabular-nums;
 }
 
-/* ---- ┘åÏº┘üÏ░Ï® Ïº┘äÏ▒Ï│ÏºÏª┘ä ---- */
+/* ---- نافذة الرسائل ---- */
 .msg-window {
     background: var(--msg-elevated);
     border: 1px solid var(--msg-border-strong);
@@ -1513,7 +1513,7 @@ ul {
     box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .8);
 }
 
-/* Ï┤Ï▒┘èÏÀ Ïº┘äÏ╣┘å┘êÏº┘å */
+/* شريط العنوان */
 .titlebar {
     display: flex;
     align-items: center;
@@ -1550,13 +1550,13 @@ ul {
 .traffic .y { background: #febc2e; }
 .traffic .g { background: #28c840; }
 
-/* ---- Ï¼Ï│┘à Ïº┘ä┘åÏº┘üÏ░Ï® ---- */
+/* ---- جسم النافذة ---- */
 .body {
     display: flex;
     min-height: 420px;
 }
 
-/* ---- Ïº┘äÏ┤Ï▒┘èÏÀ Ïº┘äÏ¼Ïº┘åÏ¿┘è (┘éÏºÏª┘àÏ® Ïº┘äÏ╣┘à┘äÏºÏí) ---- */
+/* ---- الشريط الجانبي (قائمة العملاء) ---- */
 .sidebar {
     width: 250px;
     flex-shrink: 0;
@@ -1577,7 +1577,7 @@ ul {
     max-height: 400px;
 }
 
-/* ---- Ï╣┘åÏºÏÁÏ▒ ┘éÏºÏª┘àÏ® Ïº┘äÏ╣┘à┘äÏºÏí ---- */
+/* ---- عناصر قائمة العملاء ---- */
 .msg-item {
     display: flex;
     gap: 11px;
@@ -1595,7 +1595,7 @@ ul {
     border-left-color: transparent;
 }
 .msg-item.active .msg-item-top .name::after {
-    content: 'ÔùÅ';
+    content: '●';
     color: var(--msg-accent);
     font-size: 14px;
     margin-left: 6px;
@@ -1662,7 +1662,7 @@ ul {
     color: var(--msg-text-dim);
 }
 
-/* ---- ┘à┘åÏÀ┘éÏ® Ïº┘ä┘àÏ¡ÏºÏ»Ï½Ï® (Thread) ---- */
+/* ---- منطقة المحادثة (Thread) ---- */
 .thread {
     flex: 1;
     display: flex;
@@ -1686,7 +1686,7 @@ ul {
     color: var(--msg-text-faint);
 }
 
-/* Ï┤ÏºÏ▒Ï® Ïº┘äÏ¬Ï┤Ï║┘è┘ä Ïº┘äÏ¬┘ä┘éÏºÏª┘è */
+/* شارة التشغيل التلقائي */
 .live-badge {
     display: flex;
     align-items: center;
@@ -1719,7 +1719,7 @@ ul {
     display: none;
 }
 
-/* Ï¼Ï│┘à Ïº┘ä┘àÏ¡ÏºÏ»Ï½Ï® (Ïº┘ä┘ü┘éÏºÏ╣ÏºÏ¬) */
+/* جسم المحادثة (الفقاعات) */
 .thread-body {
     flex: 1;
     padding: 20px;
@@ -1780,7 +1780,7 @@ ul {
     30% { transform: translateY(-3px); opacity: 1; }
 }
 
-/* ---- Ï¡┘é┘ä Ïº┘äÏÑÏ»Ï«Ïº┘ä (┘àÏ╣ Ï▓Ï▒ Ïº┘äÏÁ┘êÏ¬) ---- */
+/* ---- حقل الإدخال (مع زر الصوت) ---- */
 .thread-input {
     display: flex;
     align-items: center;
@@ -1808,7 +1808,7 @@ ul {
     color: var(--msg-text-faint);
 }
 
-/* Ï▓Ï▒ Ïº┘ä┘à┘è┘âÏ▒┘ê┘ü┘ê┘å */
+/* زر الميكروفون */
 .gm-voice-btn {
     position: relative;
     width: 36px;
@@ -1870,7 +1870,7 @@ ul {
     50% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
 }
 
-/* Ï▓Ï▒ Ïº┘äÏÑÏ▒Ï│Ïº┘ä */
+/* زر الإرسال */
 .thread-input .send {
     width: 32px;
     height: 32px;
@@ -1891,7 +1891,7 @@ ul {
     background: var(--msg-accent-dim);
 }
 
-/* Ï¡Ïº┘äÏ® Ïº┘äÏÁ┘êÏ¬ */
+/* حالة الصوت */
 .voice-status {
     padding: 4px 16px 8px;
     font-size: 11px;
@@ -1911,7 +1911,7 @@ ul {
     border-top-color: rgba(16, 185, 129, .15);
 }
 
-/* ---- Ï┤Ï▒┘èÏÀ Ïº┘äÏ¬┘àÏ▒┘èÏ▒ ---- */
+/* ---- شريط التمرير ---- */
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -1923,7 +1923,7 @@ ul {
     background: transparent;
 }
 
-/* ---- Ïº┘äÏ¬Ï¼Ïº┘êÏ¿ ---- */
+/* ---- التجاوب ---- */
 @media (max-width: 768px) {
     .sidebar {
         width: 180px;
@@ -2596,7 +2596,7 @@ ul {
     align-items: start;
 }
 
-/* ===== Ïº┘ä┘å┘à┘êÏ░Ï¼ ===== */
+/* ===== النموذج ===== */
 .contact-form-wrapper {
     background: #ffffff;
     border-radius: 28px;
@@ -2708,7 +2708,7 @@ ul {
     color: #ef4444;
 }
 
-/* ===== ÏúÏ«ÏÀÏºÏí Ïº┘äÏ¡┘é┘ê┘ä (Ï¬Ï¡Ï¬ ┘â┘ä Ï¡┘é┘ä) ===== */
+/* ===== أخطاء الحقول (تحت كل حقل) ===== */
 .field-error {
     display: block;
     color: #ef4444;
@@ -2743,7 +2743,7 @@ ul {
     text-align: right;
 }
 
-/* ===== SweetAlert2 ÔÇö Ï¡┘êÏº┘ü Ï»ÏºÏªÏ▒┘èÏ® ===== */
+/* ===== SweetAlert2 — حواف دائرية ===== */
 .swal2-popup {
     border-radius: 22px !important;
     font-family: 'Amiri', 'Inter', sans-serif !important;
@@ -2780,7 +2780,7 @@ ul {
     box-shadow: 0 6px 20px rgba(16, 185, 129, 0.25), 0 0 0 4px rgba(16, 185, 129, 0.15) !important;
 }
 
-/* ===== ┘àÏ╣┘ä┘ê┘àÏºÏ¬ Ïº┘äÏºÏ¬ÏÁÏº┘ä ===== */
+/* ===== معلومات الاتصال ===== */
 .contact-info-wrapper {
     display: flex;
     flex-direction: column;
@@ -2842,7 +2842,7 @@ ul {
     color: #10b981;
 }
 
-/* ===== Ï┤ÏºÏ▒ÏºÏ¬ Ïº┘äÏ½┘éÏ® ===== */
+/* ===== شارات الثقة ===== */
 .contact-trust-badges {
     display: flex;
     flex-wrap: wrap;
@@ -2916,7 +2916,7 @@ ul {
 }
 
 /* ============================================================
-   SECTION: CONTACT (┘å┘à┘êÏ░Ï¼ ┘ü┘éÏÀ ÔÇô ┘àÏÀÏºÏ¿┘é ┘ä┘äÏúÏÁ┘ä)
+   SECTION: CONTACT (نموذج فقط – مطابق للأصل)
    ============================================================ */
 
 .contact-section {
@@ -2932,7 +2932,7 @@ ul {
     padding: 0 2rem;
 }
 
-/* ===== Header (┘àÏÀÏºÏ¿┘é ┘ä┘äÏúÏÁ┘ä) ===== */
+/* ===== Header (مطابق للأصل) ===== */
 .section-header-enhanced {
     text-align: center;
     margin-bottom: 3rem;
@@ -2980,7 +2980,7 @@ ul {
     margin: 0 auto;
 }
 
-/* ===== ┘å┘à┘êÏ░Ï¼ Ïº┘äÏºÏ¬ÏÁÏº┘ä ===== */
+/* ===== نموذج الاتصال ===== */
 .contact-form {
     background: #ffffff;
     border-radius: 28px;
@@ -3125,7 +3125,7 @@ ul {
 }
 
 /* ============================================================
-   SECTION: DIRECT CONTACT (┘êÏ│ÏºÏª┘ä Ïº┘äÏ¬┘êÏºÏÁ┘ä Ïº┘ä┘àÏ¿ÏºÏ┤Ï▒)
+   SECTION: DIRECT CONTACT (وسائل التواصل المباشر)
    ============================================================ */
 
 .direct-contact-section {
@@ -3135,7 +3135,7 @@ ul {
     direction: ltr;
 }
 
-/* ===== Header (┘àÏÀÏºÏ¿┘é ┘ä┘äÏú┘éÏ│Ïº┘à Ïº┘äÏ│ÏºÏ¿┘éÏ®) ===== */
+/* ===== Header (مطابق للأقسام السابقة) ===== */
 .section-header-enhanced {
     text-align: center;
     margin-bottom: 3rem;
@@ -3172,7 +3172,7 @@ ul {
     line-height: 1.7;
 }
 
-/* ===== Ï┤Ï¿┘âÏ® Ïº┘äÏú┘è┘é┘ê┘åÏºÏ¬ ===== */
+/* ===== شبكة الأيقونات ===== */
 .direct-contact-grid {
     display: flex;
     justify-content: center;
@@ -3182,7 +3182,7 @@ ul {
     flex-wrap: nowrap;
 }
 
-/* ===== Ï¿ÏÀÏº┘éÏ® Ïº┘äÏ¬┘êÏºÏÁ┘ä ===== */
+/* ===== بطاقة التواصل ===== */
 .direct-contact-card {
     background: transparent;
     border-radius: 0;
@@ -3205,7 +3205,7 @@ ul {
     border-color: transparent;
 }
 
-/* ===== Ïú┘è┘é┘ê┘åÏ® ===== */
+/* ===== أيقونة ===== */
 .direct-contact-icon {
     width: 68px;
     height: 68px;
@@ -3239,7 +3239,7 @@ ul {
     opacity: 0.2;
 }
 
-/* ===== Ïº┘ä┘åÏÁ┘êÏÁ ===== */
+/* ===== النصوص ===== */
 .direct-contact-name {
     font-size: 1.1rem;
     font-weight: 700;
@@ -3316,7 +3316,7 @@ ul {
 }
 
 /* ============================================================
-   SECTION: TEAM (┘üÏ▒┘è┘é Ïº┘äÏ╣┘à┘ä)
+   SECTION: TEAM (فريق العمل)
    ============================================================ */
 
 .team-section {
@@ -3332,7 +3332,7 @@ ul {
     padding: 0 2rem;
 }
 
-/* ===== Header (┘àÏÀÏºÏ¿┘é ┘ä┘äÏú┘éÏ│Ïº┘à Ïº┘äÏ│ÏºÏ¿┘éÏ®) ===== */
+/* ===== Header (مطابق للأقسام السابقة) ===== */
 .section-header-enhanced {
     text-align: center;
     margin-bottom: 3rem;
@@ -3375,7 +3375,7 @@ ul {
     overflow: hidden;
 }
 
-/* ===== Ï¿ÏÀÏº┘éÏ® Ïº┘ä┘üÏ▒┘è┘é ===== */
+/* ===== بطاقة الفريق ===== */
 .team-card {
     border-radius: 24px;
     overflow: hidden;
@@ -3394,7 +3394,7 @@ ul {
     box-shadow: 0 24px 50px rgba(16, 185, 129, 0.12);
 }
 
-/* ===== ÏÁ┘êÏ▒Ï® Ïº┘äÏ¿ÏÀÏº┘éÏ® (Ï«┘ä┘ü┘èÏ®) ===== */
+/* ===== صورة البطاقة (خلفية) ===== */
 .team-card-image {
     width: 100%;
     height: 280px;
@@ -3411,7 +3411,7 @@ ul {
     transform: scale(1.02);
 }
 
-/* ===== Ï¿ÏÀÏº┘éÏºÏ¬ Ïº┘äÏú┘è┘é┘ê┘åÏºÏ¬ ===== */
+/* ===== بطاقات الأيقونات ===== */
 .team-card-icon {
     display: flex;
     flex-direction: column;
@@ -3444,12 +3444,12 @@ ul {
     text-align: center;
 }
 
-/* ===== Ïº┘äÏ¬Ï▒Ïº┘âÏ¿ Ïº┘äÏ┤┘üÏº┘ü ÔÇö ÏÑÏ▓Ïº┘äÏ® ===== */
+/* ===== التراكب الشفاف — إزالة ===== */
 .team-card-overlay {
     display: none;
 }
 
-/* ===== ┘àÏ¡Ï¬┘ê┘ë Ïº┘äÏ¿ÏÀÏº┘éÏ® ===== */
+/* ===== محتوى البطاقة ===== */
 .team-card-content {
     width: 100%;
     padding: 1.5rem 1.8rem;
@@ -3461,7 +3461,7 @@ ul {
     justify-content: center;
 }
 
-/* ===== ÏºÏ│┘à Ïº┘äÏ╣ÏÂ┘ê ===== */
+/* ===== اسم العضو ===== */
 .team-name {
     font-size: 1.5rem;
     font-weight: 800;
@@ -3471,7 +3471,7 @@ ul {
     font-family: 'Amiri', serif;
 }
 
-/* ===== Ïº┘äÏ»┘êÏ▒ ===== */
+/* ===== الدور ===== */
 .team-role {
     font-size: 0.85rem;
     font-weight: 600;
@@ -3485,7 +3485,7 @@ ul {
     font-family: 'Amiri', serif;
 }
 
-/* ===== Ïº┘äÏº┘éÏ¬Ï¿ÏºÏ│ ===== */
+/* ===== الاقتباس ===== */
 .team-quote {
     font-size: 0.9rem;
     color: #5a6e7c;
@@ -3507,7 +3507,7 @@ ul {
     font-size: 1.2rem;
 }
 
-/* ===== ┘êÏ│ÏºÏª┘ä Ïº┘äÏ¬┘êÏºÏÁ┘ä ===== */
+/* ===== وسائل التواصل ===== */
 .team-social {
     display: flex;
     gap: 0.7rem;
@@ -3536,7 +3536,7 @@ ul {
     box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
 }
 
-/* ===== ÏúÏ▓Ï▒ÏºÏ▒ Swiper ===== */
+/* ===== أزرار Swiper ===== */
 .team-slider .swiper-button-next,
 .team-slider .swiper-button-prev {
     background: #ffffff;
@@ -3986,7 +3986,7 @@ ul {
     text-align: right;
 }
 
-/* Mobile Navigation RTL ÔÇö mirrors the English mobile dropdown exactly, just flipped to the left */
+/* Mobile Navigation RTL — mirrors the English mobile dropdown exactly, just flipped to the left */
 @media (max-width: 992px) {
     [dir="rtl"] .gm-nav {
         display: block;

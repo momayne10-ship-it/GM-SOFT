@@ -78,10 +78,10 @@ const heroSwiper = new Swiper('.heroSwiper', {
     watchSlidesProgress: true,
 });
 
-console.log('GM SOFT ÔÇö Header & Hero (Simple Backgrounds + Orbs) loaded.');
+console.log('GM SOFT — Header & Hero (Simple Backgrounds + Orbs) loaded.');
 
 // ============================================================
-// WHAT WE BUILD ÔÇö SWIPER INITIALIZATION
+// WHAT WE BUILD — SWIPER INITIALIZATION
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
     if (typeof Swiper !== 'undefined') {
@@ -111,10 +111,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================================
-// CLIENT MESSAGES ÔÇö DATA & LOGIC
+// CLIENT MESSAGES — DATA & LOGIC
 // ============================================================
 
-// ----- Ï¿┘èÏº┘åÏºÏ¬ Ïº┘äÏ╣┘à┘äÏºÏí ┘êÏº┘ä┘àÏ¡ÏºÏ»Ï½ÏºÏ¬ (Ï¡Ï│Ï¿ Ïº┘ä┘äÏ║Ï®) -----
+// ----- بيانات العملاء والمحادثات (حسب اللغة) -----
 const pageLang = document.documentElement.lang || 'en';
 
 const messagesEN = [
@@ -157,10 +157,10 @@ const messagesEN = [
         platform: 'Telegram',
         pcolor: '#3ea8e0',
         time: '2:21 PM',
-        preview: 'Bro... this is on another level ­ƒöÑ',
+        preview: 'Bro... this is on another level 🔥',
         messages: [
-            { who: 'them', text: "Bro... this is on another level ­ƒöÑ I seriously don't know what to say." },
-            { who: 'me', text: "­ƒÿé I'm really glad you liked it, bro." },
+            { who: 'them', text: "Bro... this is on another level 🔥 I seriously don't know what to say." },
+            { who: 'me', text: "😂 I'm really glad you liked it, bro." },
             { who: 'them', text: "The animations, the colors, the overall experience... everything feels world-class." },
             { who: 'me', text: "That was exactly the goal. I wanted it to feel unique." },
             { who: 'them', text: "Mission accomplished! This is easily one of the best portfolio websites I've seen." }
@@ -192,13 +192,13 @@ const messagesFR = [
         platform: 'WhatsApp',
         pcolor: '#3fce6a',
         time: '14:14',
-        preview: 'Franchement, je suis impressionn├® par le site...',
+        preview: 'Franchement, je suis impressionné par le site...',
         messages: [
-            { who: 'them', text: "H├® Moumen, franchement je suis impressionn├®. Le site est encore mieux que ce que j'avais imagin├®." },
+            { who: 'them', text: "Hé Moumen, franchement je suis impressionné. Le site est encore mieux que ce que j'avais imaginé." },
             { who: 'me', text: "Merci beaucoup ! Je suis vraiment ravi de l'entendre." },
             { who: 'them', text: "L'interface est premium, c'est incroyablement fluide, et tout charge rapidement." },
-            { who: 'me', text: "J'ai pass├® beaucoup de temps ├á optimiser chaque d├®tail pour la meilleure exp├®rience." },
-            { who: 'them', text: "Tu as vraiment tout d├®chir├®. Je te recommanderai certainement ├á quiconque cherche un d├®veloppeur." }
+            { who: 'me', text: "J'ai passé beaucoup de temps à optimiser chaque détail pour la meilleure expérience." },
+            { who: 'them', text: "Tu as vraiment tout déchiré. Je te recommanderai certainement à quiconque cherche un développeur." }
         ]
     },
     {
@@ -208,13 +208,13 @@ const messagesFR = [
         platform: 'Instagram DM',
         pcolor: '#e05a86',
         time: '14:18',
-        preview: 'Je ne m\'attendais pas ├á ce que ce soit aussi beau...',
+        preview: 'Je ne m\'attendais pas à ce que ce soit aussi beau...',
         messages: [
-            { who: 'them', text: "Salut Moumen ! Je n'honn├¬tement pas attendu que le r├®sultat final soit aussi beau." },
+            { who: 'them', text: "Salut Moumen ! Je n'honnêtement pas attendu que le résultat final soit aussi beau." },
             { who: 'me', text: "Cela compte vraiment pour moi. Merci !" },
-            { who: 'them', text: "Tout est moderne, ├®l├®gant et tr├¿s professionnel." },
-            { who: 'me', text: "Je suis content que tu aies remarqu├® les petits d├®tails. Ils font une ├®norme diff├®rence." },
-            { who: 'them', text: "Merci beaucoup pour ton travail acharn├®. Cela a d├®pass├® toutes mes attentes." }
+            { who: 'them', text: "Tout est moderne, élégant et très professionnel." },
+            { who: 'me', text: "Je suis content que tu aies remarqué les petits détails. Ils font une énorme différence." },
+            { who: 'them', text: "Merci beaucoup pour ton travail acharné. Cela a dépassé toutes mes attentes." }
         ]
     },
     {
@@ -224,12 +224,12 @@ const messagesFR = [
         platform: 'Telegram',
         pcolor: '#3ea8e0',
         time: '14:21',
-        preview: 'Franchement... c\'est un autre niveau ­ƒöÑ',
+        preview: 'Franchement... c\'est un autre niveau 🔥',
         messages: [
-            { who: 'them', text: "Franchement... c'est un autre niveau ­ƒöÑ Je ne sais vraiment pas quoi dire." },
-            { who: 'me', text: "­ƒÿé Je suis vraiment content que ├ºa te plaise, fr├¿re." },
-            { who: 'them', text: "Les animations, les couleurs, l'exp├®rience globale... tout est ├á un niveau mondial." },
-            { who: 'me', text: "C'├®tait exactement le but. Je voulais que ce soit unique." },
+            { who: 'them', text: "Franchement... c'est un autre niveau 🔥 Je ne sais vraiment pas quoi dire." },
+            { who: 'me', text: "😂 Je suis vraiment content que ça te plaise, frère." },
+            { who: 'them', text: "Les animations, les couleurs, l'expérience globale... tout est à un niveau mondial." },
+            { who: 'me', text: "C'était exactement le but. Je voulais que ce soit unique." },
             { who: 'them', text: "Mission accomplie ! C'est facilement l'un des meilleurs sites portfolio que j'ai vus." }
         ]
     },
@@ -243,10 +243,10 @@ const messagesFR = [
         preview: 'Excellent travail, Moumen !',
         messages: [
             { who: 'them', text: "Excellent travail, Moumen ! Merci beaucoup pour tout." },
-            { who: 'me', text: "Avec plaisir ! C'├®tait un vrai plaisir de travailler avec toi." },
-            { who: 'them', text: "Ta communication ├®tait excellente du d├®but ├á la fin, et la qualit├® est exceptionnelle." },
-            { who: 'me', text: "J'essaie toujours de fournir la meilleure exp├®rience possible." },
-            { who: 'them', text: "Continue comme ├ºa. Tu vas construire une r├®putation incroyable." }
+            { who: 'me', text: "Avec plaisir ! C'était un vrai plaisir de travailler avec toi." },
+            { who: 'them', text: "Ta communication était excellente du début à la fin, et la qualité est exceptionnelle." },
+            { who: 'me', text: "J'essaie toujours de fournir la meilleure expérience possible." },
+            { who: 'them', text: "Continue comme ça. Tu vas construire une réputation incroyable." }
         ]
     }
 ];
@@ -260,13 +260,13 @@ const messagesAR = [
         platform: 'WhatsApp',
         pcolor: '#3fce6a',
         time: '14:14',
-        preview: 'ÏÁÏ▒ÏºÏ¡Ï® Ïº┘äÏ│┘èÏ¬ ┘üÏº┘é Ïº┘äÏ¬┘ê┘éÏ╣ÏºÏ¬...',
+        preview: 'صراحة السيت فاق التوقعات...',
         messages: [
-            { who: 'them', text: "Ï│┘äÏº┘à ┘à┘ê┘à┘åÏî ÏÁÏ▒ÏºÏ¡Ï® ÏºÏ«┘è ┘èÏ╣ÏÀ┘è┘â Ïº┘äÏÁÏ¡Ï® Ïº┘äÏ│┘èÏ¬ ┘üÏº┘é Ïº┘äÏ¬┘ê┘éÏ╣ÏºÏ¬ . Ïº┘ä┘åÏ¬┘èÏ¼Ï® ┘çÏº┘è┘äÏ® Ï¿Ï▓Ïº┘ü." },
-            { who: 'me', text: "Ïº┘ä┘ä┘ç ┘èÏ¡┘üÏ©┘â  Ï«┘ê┘èÏºÏî ┘üÏ▒Ï¡Ï¬┘å┘è Ï¿Ï▓Ïº┘ü ┘â┘è Ï┤┘üÏ¬┘ê Ï╣Ï¼Ï¿┘â." },
-            { who: 'them', text: "Ïº┘äÏ»┘èÏ▓Ïº┘è┘å  Ï¿Ï▓Ïº┘ü ┘çÏºÏ▒Ï¿ ┘ê┘â┘ä Ï¡ÏºÏ¼Ï® Ï¿Ïº┘è┘åÏ® ┘ü┘è Ï¿┘äÏºÏÁÏ¬┘çÏº ┘ê┘àÏº ┘âÏº┘è┘å Ï¡Ï¬┘ë Ï¡ÏºÏ¼Ï® Ï▓Ïº┘èÏ»Ï®." },
-            { who: 'me', text: "Ïº┘äÏ¡┘àÏ» ┘ä┘ä┘ç ÏºÏ«┘è Ï«Ï▒Ï¼ ┘â┘è┘àÏº Ï¡ÏºÏ¿┘ê ┘åÏ¬Ïº ┘çÏ»Ïº ┘ç┘ê Ïº┘ä┘çÏ»┘ü ┘åÏ¬ÏºÏ╣┘åÏº Ï¡┘åÏº ." },
-            { who: 'them', text: "┘üÏ▒┘è Ï┤┘âÏ▒Ïº ┘ä┘è┘â ┘ê┘ä┘è┘â┘èÏ¿ ┘âÏº┘à┘äÏ®  Ï«Ï»┘àÏ® Ï¼Ï» ┘àÏ¬┘é┘ê┘åÏ® Ï▒Ï¿┘è ┘èÏ¿ÏºÏ▒┘â . ┘êÏº┘è Ï┤Ï«ÏÁ  Ï¡ÏºÏ¿ ┘èÏ«Ï»┘à  ┘å┘êÏÁ┘è Ï¿┘è┘â." }
+            { who: 'them', text: "سلام مومن، صراحة اخي يعطيك الصحة السيت فاق التوقعات . النتيجة هايلة بزاف." },
+            { who: 'me', text: "الله يحفظك  خويا، فرحتني بزاف كي شفتو عجبك." },
+            { who: 'them', text: "الديزاين  بزاف هارب وكل حاجة باينة في بلاصتها وما كاين حتى حاجة زايدة." },
+            { who: 'me', text: "الحمد لله اخي خرج كيما حابو نتا هدا هو الهدف نتاعنا حنا ." },
+            { who: 'them', text: "فري شكرا ليك وليكيب كاملة  خدمة جد متقونة ربي يبارك . واي شخص  حاب يخدم  نوصي بيك." }
         ]
     },
 
@@ -277,13 +277,13 @@ const messagesAR = [
         platform: 'Instagram DM',
         pcolor: '#e05a86',
         time: '14:18',
-        preview: 'Ïº┘ä┘åÏ¬┘èÏ¼Ï® Ï«Ï▒Ï¼Ï¬ Ï«┘èÏ▒ ┘à┘å Ïº┘ä┘ä┘è Ï¬┘ê┘éÏ╣Ï¬...',
+        preview: 'النتيجة خرجت خير من اللي توقعت...',
         messages: [
-            { who: 'them', text: "Ï│┘äÏº┘à ÏºÏ«┘è ! Ï┤┘üÏ¬ Ïº┘ä┘à┘ê┘éÏ╣ ┘âÏº┘à┘äÏî Ï¿ÏÁÏ▒ÏºÏ¡Ï® Ïº┘ä┘åÏ¬┘èÏ¼Ï® Ï«Ï▒Ï¼Ï¬ Ï«┘èÏ▒ ┘à┘å Ïº┘ä┘ä┘è ┘â┘åÏ¬ ┘àÏ¬┘ê┘éÏ╣Ï® ┘àÏ¬Ïº┘à┘åÏ┤ Ï┤Ï¡Ïº┘ä Ï▒Ïº┘å┘è ┘üÏ▒Ï¡Ïº┘åÏ® ­ƒÿ¡." },
-            { who: 'me', text: "Ïº┘äÏ¡┘àÏ» ┘ä┘ä┘çÏî ┘çÏ░Ïº ┘ç┘ê Ïº┘ä┘çÏ»┘ü ┘ä┘è ┘â┘åÏº Ï¡ÏºÏ¿┘è┘å ┘å┘êÏÁ┘ä┘ê┘ä┘ê." },
-            { who: 'them', text: "Ï╣Ï¼Ï¿┘å┘è Ï¿Ï▓Ïº┘ü ┘â┘è┘üÏºÏ┤ Ï▒Ï¬Ï¿Ï¬ Ïº┘ä┘àÏ¡Ï¬┘ê┘ëÏî Ï«ÏºÏÁÏ® Ï¬ÏÁ┘à┘è┘à  Ï¿Ï▓Ïº┘ü Ï╣Ï¼Ï¿┘å┘è . Ï¼Ïº┘ê ÏºÏ¡Ï¬Ï▒Ïº┘ü┘è ┘ê┘àÏºÏ┤┘è ┘àÏ¿Ïº┘äÏ║ ┘ü┘è┘ç┘à." },
-            { who: 'me', text: "  Ïº┘äÏ¡┘àÏ» ┘ä┘ä┘ç ┘â┘è Ï╣Ï¼Ï¿┘â Ïº┘è ÏºÏ│Ï¬┘üÏ│ÏºÏ▒ ┘àÏ▒Ï¡Ï¿Ïº Ï¿┘è┘â ┘ü┘è Ïº┘è ┘ê┘éÏ¬." },
-            { who: 'them', text: "Ï¿ÏÁÏ▒ÏºÏ¡Ï® Ï┤┘âÏ▒Ïº Ï¿Ï▓Ïº┘ü ┘üÏ▒┘è┘é ┘åÏ¬ÏºÏ╣┘â┘à ÏºÏ¡Ï¬Ï▒Ïº┘ü┘è ┘ê┘àÏ¡Ï¬Ï▒┘à   Ï┤┘âÏ▒Ïº  ." }
+            { who: 'them', text: "سلام اخي ! شفت الموقع كامل، بصراحة النتيجة خرجت خير من اللي كنت متوقعة متامنش شحال راني فرحانة 😭." },
+            { who: 'me', text: "الحمد لله، هذا هو الهدف لي كنا حابين نوصلولو." },
+            { who: 'them', text: "عجبني بزاف كيفاش رتبت المحتوى، خاصة تصميم  بزاف عجبني . جاو احترافي وماشي مبالغ فيهم." },
+            { who: 'me', text: "  الحمد لله كي عجبك اي استفسار مرحبا بيك في اي وقت." },
+            { who: 'them', text: "بصراحة شكرا بزاف فريق نتاعكم احترافي ومحترم   شكرا  ." }
         ]
     },
 
@@ -294,13 +294,13 @@ const messagesAR = [
         platform: 'Telegram',
         pcolor: '#3ea8e0',
         time: '14:21',
-        preview: 'Ï«┘ê┘èÏº ┘çÏ░Ïº ┘àÏ│Ï¬┘ê┘ë ÏóÏ«Ï▒ ­ƒöÑ',
+        preview: 'خويا هذا مستوى آخر 🔥',
         messages: [
-            { who: 'them', text: "Ï«┘ê┘èÏº Ï┤┘üÏ¬ Ïº┘ä┘à┘ê┘éÏ╣... ┘çÏ░Ïº ┘àÏ│Ï¬┘ê┘ë ÏóÏ«Ï▒ ­ƒöÑ Ï¿ÏÁÏ▒ÏºÏ¡Ï® ┘àÏº ┘â┘åÏ¬Ï┤ ┘åÏ¬┘ê┘éÏ╣ ┘èÏ«Ï▒Ï¼ ┘ç┘âÏ░Ïº." },
-            { who: 'me', text: "­ƒÿé ┘èÏ╣ÏÀ┘è┘â Ïº┘äÏÁÏ¡Ï®Ïî ┘üÏ▒Ï¡Ï¬ Ï¿Ï▓Ïº┘ü ┘â┘è Ï╣Ï¼Ï¿┘â." },
-            { who: 'them', text: "Ïº┘äÏ¡Ï▒┘âÏºÏ¬Ïî Ïº┘äÏú┘ä┘êÏº┘åÏî ÏÀÏ▒┘è┘éÏ® Ï╣Ï▒ÏÂ Ïº┘ä┘àÏ╣┘ä┘ê┘àÏºÏ¬ ┘êÏ¡Ï¬┘ë Ïº┘äÏ¬┘üÏºÏÁ┘è┘ä Ïº┘äÏÁÏ║┘èÏ▒Ï®... ┘â┘äÏ┤┘è Ï«Ï»Ïº┘à ┘àÏ╣ Ï¿Ï╣ÏÂÏº┘ç." },
-            { who: 'me', text: "┘çÏ░Ïº Ï¿Ïº┘äÏÂÏ¿ÏÀ ┘ä┘è ┘â┘åÏ¬ Ï¡ÏºÏ¿ ┘åÏ¡┘é┘é┘êÏî Ï¬Ï¼Ï▒Ï¿Ï® Ï¬┘â┘ê┘å ┘àÏ«Ï¬┘ä┘üÏ® Ï╣┘ä┘ë Ïº┘ä┘à┘êÏº┘éÏ╣ Ïº┘äÏ╣ÏºÏ»┘èÏ®." },
-            { who: 'them', text: "Ï¿┘äÏº ┘àÏ¼Ïº┘à┘äÏ®Ïî ┘à┘å ÏúÏ¡Ï│┘å ┘à┘êÏº┘éÏ╣ Ïº┘äÏ¿┘êÏ▒Ï¬┘ü┘ê┘ä┘è┘ê ┘ä┘è Ï┤┘üÏ¬┘ç┘à. ┘â┘à┘ä┘ê Ï¿┘å┘üÏ│ Ïº┘ä┘àÏ│Ï¬┘ê┘ë ┘àÏ▓┘èÏ» ┘à┘å Ï¬┘ê┘ü┘è┘é Ïº┘å Ï┤ÏºÏí Ïº┘ä┘ä┘ç ­ƒöÑ" }
+            { who: 'them', text: "خويا شفت الموقع... هذا مستوى آخر 🔥 بصراحة ما كنتش نتوقع يخرج هكذا." },
+            { who: 'me', text: "😂 يعطيك الصحة، فرحت بزاف كي عجبك." },
+            { who: 'them', text: "الحركات، الألوان، طريقة عرض المعلومات وحتى التفاصيل الصغيرة... كلشي خدام مع بعضاه." },
+            { who: 'me', text: "هذا بالضبط لي كنت حاب نحققو، تجربة تكون مختلفة على المواقع العادية." },
+            { who: 'them', text: "بلا مجاملة، من أحسن مواقع البورتفوليو لي شفتهم. كملو بنفس المستوى مزيد من توفيق ان شاء الله 🔥" }
         ]
     },
 
@@ -311,20 +311,20 @@ const messagesAR = [
         platform: 'Discord',
         pcolor: '#8b7bf0',
         time: '14:24',
-        preview: 'Ï«Ï»┘àÏ® ┘åÏ©┘è┘üÏ® Ï¿Ï▓Ïº┘üÏî ┘èÏ╣ÏÀ┘è┘â Ïº┘äÏÁÏ¡Ï®...',
+        preview: 'خدمة نظيفة بزاف، يعطيك الصحة...',
         messages: [
-            { who: 'them', text: "┘èÏ╣ÏÀ┘è┘â Ïº┘äÏÁÏ¡Ï® Ï«┘ê┘èÏº ┘à┘ê┘à┘åÏî Ïº┘äÏ«Ï»┘àÏ® Ï«Ï▒Ï¼Ï¬ ┘â┘è┘àÏº Ï¬┘üÏº┘ç┘à┘åÏº  ." },
-            { who: 'me', text: "Ïº┘äÏ¡┘àÏ» ┘ä┘ä┘ç  Ï«┘ê┘èÏºÏî ┘âÏº┘å ┘à┘å Ï┤Ï▒┘ü ┘ä┘èÏº ┘åÏ¬Ï╣Ïº┘à┘ä  ┘àÏ╣Ïº┘â." },
-            { who: 'them', text: "Ï¿Ïº┘ä┘åÏ│Ï¿Ï® ┘ü┘éÏÀ ┘ü┘êÏ▒┘àÏºÏ│┘è┘ê ┘åÏ¬ÏºÏ╣ ┘ä┘è ┘â┘èÏ¿ ┘ê┘âÏ¬Ïº Ïº┘å Ï┤ÏºÏí Ïº┘ä┘ä┘ç  ." },
-            { who: 'me', text: "┘è┘à┘â┘å ┘çÏ»Ïº ÏºÏ│Ï¿┘êÏ╣ ÏºÏ»Ïº Ï¼┘èÏ¬ Ïº┘åÏº ┘ê┘äÏº   ┘èÏ¼Ï¿┘â Ï┤Ï«ÏÁ ÏºÏ«Ï▒ ┘à┘å ┘üÏ▒┘è┘é ┘èÏ╣┘å┘è ┘â┘ê┘å ┘àÏ¬┘å┘ç┘è ." },
-            { who: 'them', text: "ÏºÏ«┘ê┘èÏº ┘àÏ▒┘è┘é┘äÏ® ┘èÏ╣┘èÏÀ ÏÁÏ¡Ï®  ┘àÏºÏ┤ÏºÏí Ïº┘ä┘ä┘ç   ┘àÏÁÏ║Ï▒ ┘êÏÀ┘èÏ▒┘ê Ï▒Ï¿┘è ┘èÏ¿ÏºÏ▒┘â. ÏÑ┘å Ï┤ÏºÏí Ïº┘ä┘ä┘ç Ï¬┘â┘ê┘å Ï¿┘è┘åÏºÏ¬┘åÏº ┘àÏ┤ÏºÏ▒┘èÏ╣ ÏúÏ«Ï▒┘ë." }
+            { who: 'them', text: "يعطيك الصحة خويا مومن، الخدمة خرجت كيما تفاهمنا  ." },
+            { who: 'me', text: "الحمد لله  خويا، كان من شرف ليا نتعامل  معاك." },
+            { who: 'them', text: "بالنسبة فقط فورماسيو نتاع لي كيب وكتا ان شاء الله  ." },
+            { who: 'me', text: "يمكن هدا اسبوع ادا جيت انا ولا   يجبك شخص اخر من فريق يعني كون متنهي ." },
+            { who: 'them', text: "اخويا مريقلة يعيط صحة  ماشاء الله   مصغر وطيرو ربي يبارك. إن شاء الله تكون بيناتنا مشاريع أخرى." }
         ]
     }
 
 ];
 const conversations = pageLang === 'fr' ? messagesFR : pageLang === 'ar' ? messagesAR : messagesEN;
 
-// ----- Ï╣┘åÏºÏÁÏ▒ DOM -----
+// ----- عناصر DOM -----
 const msgList = document.getElementById('msg-list');
 const threadBody = document.getElementById('thread-body');
 const liveBadge = document.getElementById('live-badge');
@@ -332,8 +332,8 @@ const threadInput = document.getElementById('thread-input');
 const sendBtn = document.getElementById('thread-send');
 const voiceBtn = document.getElementById('gm-voice-btn');
 const voiceStatus = document.getElementById('voice-status');
-const inboxLabel = pageLang === 'fr' ? 'Bo├«te de r├®ception ÔÇö' : pageLang === 'ar' ? 'ÏÁ┘åÏ»┘ê┘é Ïº┘ä┘êÏºÏ▒Ï» ÔÇö' : 'Inbox ÔÇö';
-const convLabel = pageLang === 'fr' ? 'conversations' : pageLang === 'ar' ? '┘àÏ¡ÏºÏ»Ï½ÏºÏ¬' : 'conversations';
+const inboxLabel = pageLang === 'fr' ? 'Boîte de réception —' : pageLang === 'ar' ? 'صندوق الوارد —' : 'Inbox —';
+const convLabel = pageLang === 'fr' ? 'conversations' : pageLang === 'ar' ? 'محادثات' : 'conversations';
 document.getElementById('inbox-count').textContent = `${inboxLabel} ${conversations.length} ${convLabel}`;
 
 let autoplayOn = true;
@@ -350,7 +350,7 @@ function initVoice() {
     if (!SpeechRecognition) {
         voiceBtn.disabled = true;
         voiceBtn.title = 'Voice not supported in this browser';
-        voiceStatus.textContent = 'ÔÜá´©Å Voice input not supported';
+        voiceStatus.textContent = '⚠️ Voice input not supported';
         voiceStatus.style.color = '#ef4444';
         return;
     }
@@ -364,7 +364,7 @@ function initVoice() {
     recognition.onstart = () => {
         isListening = true;
         voiceBtn.classList.add('listening');
-        voiceStatus.textContent = '­ƒÄñ Listening... Speak now';
+        voiceStatus.textContent = '🎤 Listening... Speak now';
         voiceStatus.className = 'voice-status active';
     };
 
@@ -397,9 +397,9 @@ function initVoice() {
     recognition.onerror = (event) => {
         console.warn('Voice error:', event.error);
         if (event.error === 'not-allowed') {
-            voiceStatus.textContent = '­ƒÜ½ Microphone access denied';
+            voiceStatus.textContent = '🚫 Microphone access denied';
         } else {
-            voiceStatus.textContent = `ÔÜá´©Å Error: ${event.error}`;
+            voiceStatus.textContent = `⚠️ Error: ${event.error}`;
         }
         voiceStatus.className = 'voice-status';
         stopListening();
@@ -443,14 +443,14 @@ voiceBtn.addEventListener('click', (e) => {
     if (voiceBtn.disabled) return;
     if (isListening) {
         stopListening();
-        voiceStatus.textContent = 'ÔÅ╣´©Å Stopped';
+        voiceStatus.textContent = '⏹️ Stopped';
         setTimeout(() => { voiceStatus.textContent = ''; }, 1000);
     } else {
         startListening();
     }
 });
 
-// ----- ÏÑÏ╣Ï»ÏºÏ»ÏºÏ¬ Ïº┘ä┘àÏ¡ÏºÏ»Ï½Ï® Ïº┘äÏ¬┘ä┘éÏºÏª┘èÏ® -----
+// ----- إعدادات المحادثة التلقائية -----
 function setThreadHead(conv) {
     document.getElementById('thread-avatar').textContent = conv.initials;
     document.getElementById('thread-avatar').style.background = conv.color;
@@ -467,7 +467,7 @@ function updateLiveBadge() {
         liveBadge.innerHTML = '<span class="live-dot"></span> Auto-playing';
         liveBadge.classList.remove('manual');
     } else {
-        liveBadge.innerHTML = '<i class="fa-solid fa-hand-pointer"></i> Manual ÔÇö click to resume';
+        liveBadge.innerHTML = '<i class="fa-solid fa-hand-pointer"></i> Manual — click to resume';
         liveBadge.classList.add('manual');
     }
 }
@@ -547,7 +547,7 @@ function startAutoplay(fromIndex) {
     playConversation(fromIndex, autoplayGen);
 }
 
-// ----- Ï¿┘åÏºÏí ┘éÏºÏª┘àÏ® Ïº┘äÏ╣┘à┘äÏºÏí -----
+// ----- بناء قائمة العملاء -----
 conversations.forEach((c, i) => {
     const el = document.createElement('div');
     el.className = 'msg-item';
@@ -569,7 +569,7 @@ conversations.forEach((c, i) => {
     msgList.appendChild(el);
 });
 
-// ----- ÏÑÏ▒Ï│Ïº┘ä Ïº┘äÏ▒Ï│ÏºÏª┘ä (┘èÏ»┘ê┘èÏº┘ï Ïú┘ê Ï¿Ïº┘äÏÁ┘êÏ¬) -----
+// ----- إرسال الرسائل (يدوياً أو بالصوت) -----
 function sendMessage(fromVoice = false) {
     const val = threadInput.value.trim();
     if (!val) return;
@@ -588,7 +588,7 @@ function sendMessage(fromVoice = false) {
     bubble.className = 'bubble me';
     if (fromVoice) {
         bubble.innerHTML = `<span class="voice-indicator"><i class="fa-solid fa-microphone"></i></span> ${val}`;
-        voiceStatus.textContent = 'Ô£à Voice message sent!';
+        voiceStatus.textContent = '✅ Voice message sent!';
         voiceStatus.className = 'voice-status success';
         setTimeout(() => { voiceStatus.className = 'voice-status'; voiceStatus.textContent = ''; }, 2000);
     } else {
@@ -598,7 +598,7 @@ function sendMessage(fromVoice = false) {
     threadInput.value = '';
     threadBody.scrollTop = threadBody.scrollHeight;
 
-    // Ï▒Ï» Ï¬┘ä┘éÏºÏª┘è ┘à┘å Ïº┘äÏ╣┘à┘è┘ä (┘àÏ¡Ïº┘âÏºÏ®)
+    // رد تلقائي من العميل (محاكاة)
     setTimeout(() => {
         const typing = document.createElement('div');
         typing.className = 'typing';
@@ -623,20 +623,20 @@ function sendMessage(fromVoice = false) {
     }, 400);
 }
 
-// ----- ÏúÏ¡Ï»ÏºÏ½ Ïº┘äÏ¡┘é┘ä -----
+// ----- أحداث الحقل -----
 sendBtn.addEventListener('click', () => sendMessage(false));
 threadInput.addEventListener('keydown', e => {
     if (e.key === 'Enter') sendMessage(false);
 });
 
-// ----- ÏÑÏ╣ÏºÏ»Ï® Ïº┘äÏ¬Ï┤Ï║┘è┘ä Ïº┘äÏ¬┘ä┘éÏºÏª┘è Ï╣┘åÏ» Ïº┘ä┘å┘éÏ▒ Ï╣┘ä┘ë Ïº┘äÏ┤ÏºÏ▒Ï® -----
+// ----- إعادة التشغيل التلقائي عند النقر على الشارة -----
 liveBadge.addEventListener('click', () => {
     if (!autoplayOn) {
         startAutoplay(currentConvIndex);
     }
 });
 
-// ----- Ï¬┘ç┘èÏªÏ® Ïº┘äÏ│ÏºÏ╣Ï® -----
+// ----- تهيئة الساعة -----
 function tickClock() {
     const d = new Date();
     const label = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
@@ -645,10 +645,10 @@ function tickClock() {
 tickClock();
 setInterval(tickClock, 15000);
 
-// ----- Ï¬┘ç┘èÏªÏ® Ïº┘äÏÁ┘êÏ¬ ┘êÏº┘ä┘àÏ¡ÏºÏ»Ï½Ï® Ïº┘äÏ¬┘ä┘éÏºÏª┘èÏ® -----
+// ----- تهيئة الصوت والمحادثة التلقائية -----
 initVoice();
 startAutoplay(0);
-console.log('GM SOFT ÔÇö Client Messages with Voice Input loaded.');
+console.log('GM SOFT — Client Messages with Voice Input loaded.');
 
 // ============================================================
 // TRUSTED CLIENTS — WALL OF LOVE (voice testimonials)
@@ -857,7 +857,7 @@ document.querySelectorAll('.faq-list').forEach(list => {
 
 
 // ============================================================
-// CONTACT FORM ÔÇö SUBMIT HANDLER (Formspree + per-field validation + SweetAlert2)
+// CONTACT FORM — SUBMIT HANDLER (Formspree + per-field validation + SweetAlert2)
 // ============================================================
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
@@ -866,29 +866,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const lang = (document.documentElement.lang || 'en').toLowerCase();
     const T = lang.startsWith('ar') ? {
-        required: '┘çÏ░Ïº Ïº┘äÏ¡┘é┘ä ┘àÏÀ┘ä┘êÏ¿',
-        invalidEmail: '┘èÏ▒Ï¼┘ë ÏÑÏ»Ï«Ïº┘ä Ï¿Ï▒┘èÏ» ÏÑ┘ä┘âÏ¬Ï▒┘ê┘å┘è ÏÁÏ¡┘èÏ¡',
-        sending: 'ÔÅ│ Ï¼ÏºÏ▒┘ì Ïº┘äÏÑÏ▒Ï│Ïº┘ä...',
-        successTitle: 'Ï¬┘à ÏÑÏ▒Ï│Ïº┘ä Ï▒Ï│Ïº┘äÏ¬┘â Ï¿┘åÏ¼ÏºÏ¡!',
-        successText: 'Ï│┘åÏ╣┘êÏ» ÏÑ┘ä┘è┘â ┘éÏ▒┘èÏ¿Ïº┘ï.',
-        errorTitle: 'Ï¡Ï»Ï½ Ï«ÏÀÏú ┘àÏº',
-        errorText: '┘èÏ▒Ï¼┘ë Ïº┘ä┘àÏ¡Ïº┘ê┘äÏ® ┘àÏ▒Ï® ÏúÏ«Ï▒┘ë.',
-        networkTitle: 'Ï«ÏÀÏú ┘ü┘è Ïº┘äÏºÏ¬ÏÁÏº┘ä',
-        networkText: 'Ï¬Ï¡┘é┘é ┘à┘å ÏºÏ¬ÏÁÏº┘ä┘â Ï¿Ïº┘äÏÑ┘åÏ¬Ï▒┘åÏ¬.'
+        required: 'هذا الحقل مطلوب',
+        invalidEmail: 'يرجى إدخال بريد إلكتروني صحيح',
+        sending: '⏳ جارٍ الإرسال...',
+        successTitle: 'تم إرسال رسالتك بنجاح!',
+        successText: 'سنعود إليك قريباً.',
+        errorTitle: 'حدث خطأ ما',
+        errorText: 'يرجى المحاولة مرة أخرى.',
+        networkTitle: 'خطأ في الاتصال',
+        networkText: 'تحقق من اتصالك بالإنترنت.'
     } : lang.startsWith('fr') ? {
         required: 'Ce champ est obligatoire',
         invalidEmail: 'Veuillez entrer un e-mail valide',
-        sending: 'ÔÅ│ Envoi en cours...',
-        successTitle: 'Message envoy├® avec succ├¿s !',
-        successText: 'Nous vous r├®pondrons bient├┤t.',
+        sending: '⏳ Envoi en cours...',
+        successTitle: 'Message envoyé avec succès !',
+        successText: 'Nous vous répondrons bientôt.',
         errorTitle: 'Une erreur est survenue',
-        errorText: 'Veuillez r├®essayer.',
-        networkTitle: 'Erreur r├®seau',
-        networkText: 'V├®rifiez votre connexion.'
+        errorText: 'Veuillez réessayer.',
+        networkTitle: 'Erreur réseau',
+        networkText: 'Vérifiez votre connexion.'
     } : {
         required: 'This field is required',
         invalidEmail: 'Please enter a valid email address',
-        sending: 'ÔÅ│ Sending...',
+        sending: '⏳ Sending...',
         successTitle: 'Message sent successfully!',
         successText: "We'll get back to you soon.",
         errorTitle: 'Something went wrong',
@@ -1009,7 +1009,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ============================================================
-// TEAM ÔÇö SWIPER INITIALIZATION
+// TEAM — SWIPER INITIALIZATION
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
     if (typeof Swiper !== 'undefined') {
@@ -1039,7 +1039,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================================
-// FOOTER ÔÇö UPDATE COPYRIGHT YEAR
+// FOOTER — UPDATE COPYRIGHT YEAR
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
     const yearSpan = document.getElementById('footerYear');

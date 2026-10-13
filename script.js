@@ -651,57 +651,150 @@ startAutoplay(0);
 console.log('GM SOFT — Client Messages with Voice Input loaded.');
 
 // ============================================================
-// CONTACT FORM — SUBMIT HANDLER (Formspree)
+// CONTACT FORM — SUBMIT HANDLER (Formspree + per-field validation + SweetAlert2)
 // ============================================================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
     const note = document.getElementById('contactFormNote');
+    if (!form) return;
 
-    if (form) {
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
+    const lang = (document.documentElement.lang || 'en').toLowerCase();
+    const T = lang.startsWith('ar') ? {
+        required: 'هذا الحقل مطلوب',
+        invalidEmail: 'يرجى إدخال بريد إلكتروني صحيح',
+        sending: '⏳ جارٍ الإرسال...',
+        successTitle: 'تم إرسال رسالتك بنجاح!',
+        successText: 'سنعود إليك قريباً.',
+        errorTitle: 'حدث خطأ ما',
+        errorText: 'يرجى المحاولة مرة أخرى.',
+        networkTitle: 'خطأ في الاتصال',
+        networkText: 'تحقق من اتصالك بالإنترنت.'
+    } : lang.startsWith('fr') ? {
+        required: 'Ce champ est obligatoire',
+        invalidEmail: 'Veuillez entrer un e-mail valide',
+        sending: '⏳ Envoi en cours...',
+        successTitle: 'Message envoyé avec succès !',
+        successText: 'Nous vous répondrons bientôt.',
+        errorTitle: 'Une erreur est survenue',
+        errorText: 'Veuillez réessayer.',
+        networkTitle: 'Erreur réseau',
+        networkText: 'Vérifiez votre connexion.'
+    } : {
+        required: 'This field is required',
+        invalidEmail: 'Please enter a valid email address',
+        sending: '⏳ Sending...',
+        successTitle: 'Message sent successfully!',
+        successText: "We'll get back to you soon.",
+        errorTitle: 'Something went wrong',
+        errorText: 'Please try again.',
+        networkTitle: 'Network error',
+        networkText: 'Please check your connection.'
+    };
 
-            const name = document.getElementById('cf-name').value.trim();
-            const email = document.getElementById('cf-email').value.trim();
-            const message = document.getElementById('cf-message').value.trim();
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            if (!name || !email || !message) {
-                note.textContent = '⚠️ Please fill in all required fields.';
-                note.style.color = '#ef4444';
-                return;
-            }
-
-            if (!email.includes('@') || !email.includes('.')) {
-                note.textContent = '⚠️ Please enter a valid email address.';
-                note.style.color = '#ef4444';
-                return;
-            }
-
-            note.textContent = '⏳ Sending...';
-            note.style.color = '#f59e0b';
-
-            try {
-                const data = new FormData(form);
-                const res = await fetch(form.action, {
-                    method: 'POST',
-                    body: data,
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (res.ok) {
-                    note.textContent = '✅ Message sent successfully! We\'ll get back to you soon.';
-                    note.style.color = '#10b981';
-                    form.reset();
-                } else {
-                    note.textContent = '❌ Something went wrong. Please try again.';
-                    note.style.color = '#ef4444';
-                }
-            } catch {
-                note.textContent = '❌ Network error. Please check your connection.';
-                note.style.color = '#ef4444';
-            }
-        });
+    function getFieldErrorEl(input) {
+        return input.parentElement.querySelector('.field-error');
     }
+
+    function showFieldError(input, msg) {
+        input.closest('.contact-field').classList.add('has-error');
+        let err = getFieldErrorEl(input);
+        if (!err) {
+            err = document.createElement('span');
+            err.className = 'field-error';
+            input.parentElement.appendChild(err);
+        }
+        err.textContent = msg;
+    }
+
+    function clearFieldError(input) {
+        input.closest('.contact-field').classList.remove('has-error');
+        const err = getFieldErrorEl(input);
+        if (err) err.remove();
+    }
+
+    const nameInput = document.getElementById('cf-name');
+    const emailInput = document.getElementById('cf-email');
+    const messageInput = document.getElementById('cf-message');
+
+    [nameInput, emailInput, messageInput].forEach(input => {
+        if (!input) return;
+        input.addEventListener('input', () => clearFieldError(input));
+    });
+
+    function validate() {
+        let ok = true;
+        [nameInput, emailInput, messageInput].forEach(clearFieldError);
+
+        if (!nameInput.value.trim()) {
+            showFieldError(nameInput, T.required);
+            ok = false;
+        }
+        if (!emailInput.value.trim()) {
+            showFieldError(emailInput, T.required);
+            ok = false;
+        } else if (!EMAIL_RE.test(emailInput.value.trim())) {
+            showFieldError(emailInput, T.invalidEmail);
+            ok = false;
+        }
+        if (!messageInput.value.trim()) {
+            showFieldError(messageInput, T.required);
+            ok = false;
+        }
+        return ok;
+    }
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        if (!validate()) {
+            const firstErr = form.querySelector('.contact-field.has-error input, .contact-field.has-error textarea');
+            if (firstErr) firstErr.focus();
+            return;
+        }
+
+        note.textContent = T.sending;
+        note.style.color = '#f59e0b';
+
+        try {
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (res.ok) {
+                note.textContent = '';
+                form.reset();
+                Swal.fire({
+                    icon: 'success',
+                    title: T.successTitle,
+                    text: T.successText,
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#10b981'
+                });
+            } else {
+                note.textContent = '';
+                Swal.fire({
+                    icon: 'error',
+                    title: T.errorTitle,
+                    text: T.errorText,
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#ef4444'
+                });
+            }
+        } catch {
+            note.textContent = '';
+            Swal.fire({
+                icon: 'error',
+                title: T.networkTitle,
+                text: T.networkText,
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#ef4444'
+            });
+        }
+    });
 });
 
 // ============================================================

@@ -1064,7 +1064,7 @@ ul {
     position: absolute;
     left: calc(50% - 1.5px);
     top: 52px;
-    bottom: 180px;
+    bottom: 80px;
     width: 3px;
     background: linear-gradient(180deg, #10b981, #4d7fff);
     border-radius: 4px;
@@ -1137,6 +1137,26 @@ ul {
 
 /* ===== تنسيق الشاشات الكبيرة (Desktop) ===== */
 @media (min-width: 769px) {
+    /* نلغي خط الحاوية الثابت ونرسم وصلة من كل أيقونة إلى التي بعدها
+       فيتوقف الخط تماماً عند مركز الأيقونة 6 */
+    .process-steps::before {
+        display: none;
+    }
+
+    .process-step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        margin-left: -1.5px;
+        top: calc(1.5rem + 28px);
+        bottom: calc(-1.5rem - 28px);
+        width: 3px;
+        background: linear-gradient(180deg, #10b981, #4d7fff);
+        border-radius: 4px;
+        opacity: 0.4;
+        z-index: 0;
+    }
+
     .process-step {
         justify-content: flex-start;
         padding: 1.5rem 0;

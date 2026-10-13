@@ -78,10 +78,10 @@ const heroSwiper = new Swiper('.heroSwiper', {
     watchSlidesProgress: true,
 });
 
-console.log('GM SOFT — Header & Hero (Simple Backgrounds + Orbs) loaded.');
+console.log('GM SOFT ÔÇö Header & Hero (Simple Backgrounds + Orbs) loaded.');
 
 // ============================================================
-// WHAT WE BUILD — SWIPER INITIALIZATION
+// WHAT WE BUILD ÔÇö SWIPER INITIALIZATION
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
     if (typeof Swiper !== 'undefined') {
@@ -111,10 +111,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================================
-// CLIENT MESSAGES — DATA & LOGIC
+// CLIENT MESSAGES ÔÇö DATA & LOGIC
 // ============================================================
 
-// ----- بيانات العملاء والمحادثات (حسب اللغة) -----
+// ----- Ï¿┘èÏº┘åÏºÏ¬ Ïº┘äÏ╣┘à┘äÏºÏí ┘êÏº┘ä┘àÏ¡ÏºÏ»Ï½ÏºÏ¬ (Ï¡Ï│Ï¿ Ïº┘ä┘äÏ║Ï®) -----
 const pageLang = document.documentElement.lang || 'en';
 
 const messagesEN = [
@@ -157,10 +157,10 @@ const messagesEN = [
         platform: 'Telegram',
         pcolor: '#3ea8e0',
         time: '2:21 PM',
-        preview: 'Bro... this is on another level 🔥',
+        preview: 'Bro... this is on another level ­ƒöÑ',
         messages: [
-            { who: 'them', text: "Bro... this is on another level 🔥 I seriously don't know what to say." },
-            { who: 'me', text: "😂 I'm really glad you liked it, bro." },
+            { who: 'them', text: "Bro... this is on another level ­ƒöÑ I seriously don't know what to say." },
+            { who: 'me', text: "­ƒÿé I'm really glad you liked it, bro." },
             { who: 'them', text: "The animations, the colors, the overall experience... everything feels world-class." },
             { who: 'me', text: "That was exactly the goal. I wanted it to feel unique." },
             { who: 'them', text: "Mission accomplished! This is easily one of the best portfolio websites I've seen." }
@@ -192,13 +192,13 @@ const messagesFR = [
         platform: 'WhatsApp',
         pcolor: '#3fce6a',
         time: '14:14',
-        preview: 'Franchement, je suis impressionné par le site...',
+        preview: 'Franchement, je suis impressionn├® par le site...',
         messages: [
-            { who: 'them', text: "Hé Moumen, franchement je suis impressionné. Le site est encore mieux que ce que j'avais imaginé." },
+            { who: 'them', text: "H├® Moumen, franchement je suis impressionn├®. Le site est encore mieux que ce que j'avais imagin├®." },
             { who: 'me', text: "Merci beaucoup ! Je suis vraiment ravi de l'entendre." },
             { who: 'them', text: "L'interface est premium, c'est incroyablement fluide, et tout charge rapidement." },
-            { who: 'me', text: "J'ai passé beaucoup de temps à optimiser chaque détail pour la meilleure expérience." },
-            { who: 'them', text: "Tu as vraiment tout déchiré. Je te recommanderai certainement à quiconque cherche un développeur." }
+            { who: 'me', text: "J'ai pass├® beaucoup de temps ├á optimiser chaque d├®tail pour la meilleure exp├®rience." },
+            { who: 'them', text: "Tu as vraiment tout d├®chir├®. Je te recommanderai certainement ├á quiconque cherche un d├®veloppeur." }
         ]
     },
     {
@@ -208,13 +208,13 @@ const messagesFR = [
         platform: 'Instagram DM',
         pcolor: '#e05a86',
         time: '14:18',
-        preview: 'Je ne m\'attendais pas à ce que ce soit aussi beau...',
+        preview: 'Je ne m\'attendais pas ├á ce que ce soit aussi beau...',
         messages: [
-            { who: 'them', text: "Salut Moumen ! Je n'honnêtement pas attendu que le résultat final soit aussi beau." },
+            { who: 'them', text: "Salut Moumen ! Je n'honn├¬tement pas attendu que le r├®sultat final soit aussi beau." },
             { who: 'me', text: "Cela compte vraiment pour moi. Merci !" },
-            { who: 'them', text: "Tout est moderne, élégant et très professionnel." },
-            { who: 'me', text: "Je suis content que tu aies remarqué les petits détails. Ils font une énorme différence." },
-            { who: 'them', text: "Merci beaucoup pour ton travail acharné. Cela a dépassé toutes mes attentes." }
+            { who: 'them', text: "Tout est moderne, ├®l├®gant et tr├¿s professionnel." },
+            { who: 'me', text: "Je suis content que tu aies remarqu├® les petits d├®tails. Ils font une ├®norme diff├®rence." },
+            { who: 'them', text: "Merci beaucoup pour ton travail acharn├®. Cela a d├®pass├® toutes mes attentes." }
         ]
     },
     {
@@ -224,12 +224,12 @@ const messagesFR = [
         platform: 'Telegram',
         pcolor: '#3ea8e0',
         time: '14:21',
-        preview: 'Franchement... c\'est un autre niveau 🔥',
+        preview: 'Franchement... c\'est un autre niveau ­ƒöÑ',
         messages: [
-            { who: 'them', text: "Franchement... c'est un autre niveau 🔥 Je ne sais vraiment pas quoi dire." },
-            { who: 'me', text: "😂 Je suis vraiment content que ça te plaise, frère." },
-            { who: 'them', text: "Les animations, les couleurs, l'expérience globale... tout est à un niveau mondial." },
-            { who: 'me', text: "C'était exactement le but. Je voulais que ce soit unique." },
+            { who: 'them', text: "Franchement... c'est un autre niveau ­ƒöÑ Je ne sais vraiment pas quoi dire." },
+            { who: 'me', text: "­ƒÿé Je suis vraiment content que ├ºa te plaise, fr├¿re." },
+            { who: 'them', text: "Les animations, les couleurs, l'exp├®rience globale... tout est ├á un niveau mondial." },
+            { who: 'me', text: "C'├®tait exactement le but. Je voulais que ce soit unique." },
             { who: 'them', text: "Mission accomplie ! C'est facilement l'un des meilleurs sites portfolio que j'ai vus." }
         ]
     },
@@ -243,10 +243,10 @@ const messagesFR = [
         preview: 'Excellent travail, Moumen !',
         messages: [
             { who: 'them', text: "Excellent travail, Moumen ! Merci beaucoup pour tout." },
-            { who: 'me', text: "Avec plaisir ! C'était un vrai plaisir de travailler avec toi." },
-            { who: 'them', text: "Ta communication était excellente du début à la fin, et la qualité est exceptionnelle." },
-            { who: 'me', text: "J'essaie toujours de fournir la meilleure expérience possible." },
-            { who: 'them', text: "Continue comme ça. Tu vas construire une réputation incroyable." }
+            { who: 'me', text: "Avec plaisir ! C'├®tait un vrai plaisir de travailler avec toi." },
+            { who: 'them', text: "Ta communication ├®tait excellente du d├®but ├á la fin, et la qualit├® est exceptionnelle." },
+            { who: 'me', text: "J'essaie toujours de fournir la meilleure exp├®rience possible." },
+            { who: 'them', text: "Continue comme ├ºa. Tu vas construire une r├®putation incroyable." }
         ]
     }
 ];
@@ -260,13 +260,13 @@ const messagesAR = [
         platform: 'WhatsApp',
         pcolor: '#3fce6a',
         time: '14:14',
-        preview: 'صراحة السيت فاق التوقعات...',
+        preview: 'ÏÁÏ▒ÏºÏ¡Ï® Ïº┘äÏ│┘èÏ¬ ┘üÏº┘é Ïº┘äÏ¬┘ê┘éÏ╣ÏºÏ¬...',
         messages: [
-            { who: 'them', text: "سلام مومن، صراحة اخي يعطيك الصحة السيت فاق التوقعات . النتيجة هايلة بزاف." },
-            { who: 'me', text: "الله يحفظك  خويا، فرحتني بزاف كي شفتو عجبك." },
-            { who: 'them', text: "الديزاين  بزاف هارب وكل حاجة باينة في بلاصتها وما كاين حتى حاجة زايدة." },
-            { who: 'me', text: "الحمد لله اخي خرج كيما حابو نتا هدا هو الهدف نتاعنا حنا ." },
-            { who: 'them', text: "فري شكرا ليك وليكيب كاملة  خدمة جد متقونة ربي يبارك . واي شخص  حاب يخدم  نوصي بيك." }
+            { who: 'them', text: "Ï│┘äÏº┘à ┘à┘ê┘à┘åÏî ÏÁÏ▒ÏºÏ¡Ï® ÏºÏ«┘è ┘èÏ╣ÏÀ┘è┘â Ïº┘äÏÁÏ¡Ï® Ïº┘äÏ│┘èÏ¬ ┘üÏº┘é Ïº┘äÏ¬┘ê┘éÏ╣ÏºÏ¬ . Ïº┘ä┘åÏ¬┘èÏ¼Ï® ┘çÏº┘è┘äÏ® Ï¿Ï▓Ïº┘ü." },
+            { who: 'me', text: "Ïº┘ä┘ä┘ç ┘èÏ¡┘üÏ©┘â  Ï«┘ê┘èÏºÏî ┘üÏ▒Ï¡Ï¬┘å┘è Ï¿Ï▓Ïº┘ü ┘â┘è Ï┤┘üÏ¬┘ê Ï╣Ï¼Ï¿┘â." },
+            { who: 'them', text: "Ïº┘äÏ»┘èÏ▓Ïº┘è┘å  Ï¿Ï▓Ïº┘ü ┘çÏºÏ▒Ï¿ ┘ê┘â┘ä Ï¡ÏºÏ¼Ï® Ï¿Ïº┘è┘åÏ® ┘ü┘è Ï¿┘äÏºÏÁÏ¬┘çÏº ┘ê┘àÏº ┘âÏº┘è┘å Ï¡Ï¬┘ë Ï¡ÏºÏ¼Ï® Ï▓Ïº┘èÏ»Ï®." },
+            { who: 'me', text: "Ïº┘äÏ¡┘àÏ» ┘ä┘ä┘ç ÏºÏ«┘è Ï«Ï▒Ï¼ ┘â┘è┘àÏº Ï¡ÏºÏ¿┘ê ┘åÏ¬Ïº ┘çÏ»Ïº ┘ç┘ê Ïº┘ä┘çÏ»┘ü ┘åÏ¬ÏºÏ╣┘åÏº Ï¡┘åÏº ." },
+            { who: 'them', text: "┘üÏ▒┘è Ï┤┘âÏ▒Ïº ┘ä┘è┘â ┘ê┘ä┘è┘â┘èÏ¿ ┘âÏº┘à┘äÏ®  Ï«Ï»┘àÏ® Ï¼Ï» ┘àÏ¬┘é┘ê┘åÏ® Ï▒Ï¿┘è ┘èÏ¿ÏºÏ▒┘â . ┘êÏº┘è Ï┤Ï«ÏÁ  Ï¡ÏºÏ¿ ┘èÏ«Ï»┘à  ┘å┘êÏÁ┘è Ï¿┘è┘â." }
         ]
     },
 
@@ -277,13 +277,13 @@ const messagesAR = [
         platform: 'Instagram DM',
         pcolor: '#e05a86',
         time: '14:18',
-        preview: 'النتيجة خرجت خير من اللي توقعت...',
+        preview: 'Ïº┘ä┘åÏ¬┘èÏ¼Ï® Ï«Ï▒Ï¼Ï¬ Ï«┘èÏ▒ ┘à┘å Ïº┘ä┘ä┘è Ï¬┘ê┘éÏ╣Ï¬...',
         messages: [
-            { who: 'them', text: "سلام اخي ! شفت الموقع كامل، بصراحة النتيجة خرجت خير من اللي كنت متوقعة متامنش شحال راني فرحانة 😭." },
-            { who: 'me', text: "الحمد لله، هذا هو الهدف لي كنا حابين نوصلولو." },
-            { who: 'them', text: "عجبني بزاف كيفاش رتبت المحتوى، خاصة تصميم  بزاف عجبني . جاو احترافي وماشي مبالغ فيهم." },
-            { who: 'me', text: "  الحمد لله كي عجبك اي استفسار مرحبا بيك في اي وقت." },
-            { who: 'them', text: "بصراحة شكرا بزاف فريق نتاعكم احترافي ومحترم   شكرا  ." }
+            { who: 'them', text: "Ï│┘äÏº┘à ÏºÏ«┘è ! Ï┤┘üÏ¬ Ïº┘ä┘à┘ê┘éÏ╣ ┘âÏº┘à┘äÏî Ï¿ÏÁÏ▒ÏºÏ¡Ï® Ïº┘ä┘åÏ¬┘èÏ¼Ï® Ï«Ï▒Ï¼Ï¬ Ï«┘èÏ▒ ┘à┘å Ïº┘ä┘ä┘è ┘â┘åÏ¬ ┘àÏ¬┘ê┘éÏ╣Ï® ┘àÏ¬Ïº┘à┘åÏ┤ Ï┤Ï¡Ïº┘ä Ï▒Ïº┘å┘è ┘üÏ▒Ï¡Ïº┘åÏ® ­ƒÿ¡." },
+            { who: 'me', text: "Ïº┘äÏ¡┘àÏ» ┘ä┘ä┘çÏî ┘çÏ░Ïº ┘ç┘ê Ïº┘ä┘çÏ»┘ü ┘ä┘è ┘â┘åÏº Ï¡ÏºÏ¿┘è┘å ┘å┘êÏÁ┘ä┘ê┘ä┘ê." },
+            { who: 'them', text: "Ï╣Ï¼Ï¿┘å┘è Ï¿Ï▓Ïº┘ü ┘â┘è┘üÏºÏ┤ Ï▒Ï¬Ï¿Ï¬ Ïº┘ä┘àÏ¡Ï¬┘ê┘ëÏî Ï«ÏºÏÁÏ® Ï¬ÏÁ┘à┘è┘à  Ï¿Ï▓Ïº┘ü Ï╣Ï¼Ï¿┘å┘è . Ï¼Ïº┘ê ÏºÏ¡Ï¬Ï▒Ïº┘ü┘è ┘ê┘àÏºÏ┤┘è ┘àÏ¿Ïº┘äÏ║ ┘ü┘è┘ç┘à." },
+            { who: 'me', text: "  Ïº┘äÏ¡┘àÏ» ┘ä┘ä┘ç ┘â┘è Ï╣Ï¼Ï¿┘â Ïº┘è ÏºÏ│Ï¬┘üÏ│ÏºÏ▒ ┘àÏ▒Ï¡Ï¿Ïº Ï¿┘è┘â ┘ü┘è Ïº┘è ┘ê┘éÏ¬." },
+            { who: 'them', text: "Ï¿ÏÁÏ▒ÏºÏ¡Ï® Ï┤┘âÏ▒Ïº Ï¿Ï▓Ïº┘ü ┘üÏ▒┘è┘é ┘åÏ¬ÏºÏ╣┘â┘à ÏºÏ¡Ï¬Ï▒Ïº┘ü┘è ┘ê┘àÏ¡Ï¬Ï▒┘à   Ï┤┘âÏ▒Ïº  ." }
         ]
     },
 
@@ -294,13 +294,13 @@ const messagesAR = [
         platform: 'Telegram',
         pcolor: '#3ea8e0',
         time: '14:21',
-        preview: 'خويا هذا مستوى آخر 🔥',
+        preview: 'Ï«┘ê┘èÏº ┘çÏ░Ïº ┘àÏ│Ï¬┘ê┘ë ÏóÏ«Ï▒ ­ƒöÑ',
         messages: [
-            { who: 'them', text: "خويا شفت الموقع... هذا مستوى آخر 🔥 بصراحة ما كنتش نتوقع يخرج هكذا." },
-            { who: 'me', text: "😂 يعطيك الصحة، فرحت بزاف كي عجبك." },
-            { who: 'them', text: "الحركات، الألوان، طريقة عرض المعلومات وحتى التفاصيل الصغيرة... كلشي خدام مع بعضاه." },
-            { who: 'me', text: "هذا بالضبط لي كنت حاب نحققو، تجربة تكون مختلفة على المواقع العادية." },
-            { who: 'them', text: "بلا مجاملة، من أحسن مواقع البورتفوليو لي شفتهم. كملو بنفس المستوى مزيد من توفيق ان شاء الله 🔥" }
+            { who: 'them', text: "Ï«┘ê┘èÏº Ï┤┘üÏ¬ Ïº┘ä┘à┘ê┘éÏ╣... ┘çÏ░Ïº ┘àÏ│Ï¬┘ê┘ë ÏóÏ«Ï▒ ­ƒöÑ Ï¿ÏÁÏ▒ÏºÏ¡Ï® ┘àÏº ┘â┘åÏ¬Ï┤ ┘åÏ¬┘ê┘éÏ╣ ┘èÏ«Ï▒Ï¼ ┘ç┘âÏ░Ïº." },
+            { who: 'me', text: "­ƒÿé ┘èÏ╣ÏÀ┘è┘â Ïº┘äÏÁÏ¡Ï®Ïî ┘üÏ▒Ï¡Ï¬ Ï¿Ï▓Ïº┘ü ┘â┘è Ï╣Ï¼Ï¿┘â." },
+            { who: 'them', text: "Ïº┘äÏ¡Ï▒┘âÏºÏ¬Ïî Ïº┘äÏú┘ä┘êÏº┘åÏî ÏÀÏ▒┘è┘éÏ® Ï╣Ï▒ÏÂ Ïº┘ä┘àÏ╣┘ä┘ê┘àÏºÏ¬ ┘êÏ¡Ï¬┘ë Ïº┘äÏ¬┘üÏºÏÁ┘è┘ä Ïº┘äÏÁÏ║┘èÏ▒Ï®... ┘â┘äÏ┤┘è Ï«Ï»Ïº┘à ┘àÏ╣ Ï¿Ï╣ÏÂÏº┘ç." },
+            { who: 'me', text: "┘çÏ░Ïº Ï¿Ïº┘äÏÂÏ¿ÏÀ ┘ä┘è ┘â┘åÏ¬ Ï¡ÏºÏ¿ ┘åÏ¡┘é┘é┘êÏî Ï¬Ï¼Ï▒Ï¿Ï® Ï¬┘â┘ê┘å ┘àÏ«Ï¬┘ä┘üÏ® Ï╣┘ä┘ë Ïº┘ä┘à┘êÏº┘éÏ╣ Ïº┘äÏ╣ÏºÏ»┘èÏ®." },
+            { who: 'them', text: "Ï¿┘äÏº ┘àÏ¼Ïº┘à┘äÏ®Ïî ┘à┘å ÏúÏ¡Ï│┘å ┘à┘êÏº┘éÏ╣ Ïº┘äÏ¿┘êÏ▒Ï¬┘ü┘ê┘ä┘è┘ê ┘ä┘è Ï┤┘üÏ¬┘ç┘à. ┘â┘à┘ä┘ê Ï¿┘å┘üÏ│ Ïº┘ä┘àÏ│Ï¬┘ê┘ë ┘àÏ▓┘èÏ» ┘à┘å Ï¬┘ê┘ü┘è┘é Ïº┘å Ï┤ÏºÏí Ïº┘ä┘ä┘ç ­ƒöÑ" }
         ]
     },
 
@@ -311,20 +311,20 @@ const messagesAR = [
         platform: 'Discord',
         pcolor: '#8b7bf0',
         time: '14:24',
-        preview: 'خدمة نظيفة بزاف، يعطيك الصحة...',
+        preview: 'Ï«Ï»┘àÏ® ┘åÏ©┘è┘üÏ® Ï¿Ï▓Ïº┘üÏî ┘èÏ╣ÏÀ┘è┘â Ïº┘äÏÁÏ¡Ï®...',
         messages: [
-            { who: 'them', text: "يعطيك الصحة خويا مومن، الخدمة خرجت كيما تفاهمنا  ." },
-            { who: 'me', text: "الحمد لله  خويا، كان من شرف ليا نتعامل  معاك." },
-            { who: 'them', text: "بالنسبة فقط فورماسيو نتاع لي كيب وكتا ان شاء الله  ." },
-            { who: 'me', text: "يمكن هدا اسبوع ادا جيت انا ولا   يجبك شخص اخر من فريق يعني كون متنهي ." },
-            { who: 'them', text: "اخويا مريقلة يعيط صحة  ماشاء الله   مصغر وطيرو ربي يبارك. إن شاء الله تكون بيناتنا مشاريع أخرى." }
+            { who: 'them', text: "┘èÏ╣ÏÀ┘è┘â Ïº┘äÏÁÏ¡Ï® Ï«┘ê┘èÏº ┘à┘ê┘à┘åÏî Ïº┘äÏ«Ï»┘àÏ® Ï«Ï▒Ï¼Ï¬ ┘â┘è┘àÏº Ï¬┘üÏº┘ç┘à┘åÏº  ." },
+            { who: 'me', text: "Ïº┘äÏ¡┘àÏ» ┘ä┘ä┘ç  Ï«┘ê┘èÏºÏî ┘âÏº┘å ┘à┘å Ï┤Ï▒┘ü ┘ä┘èÏº ┘åÏ¬Ï╣Ïº┘à┘ä  ┘àÏ╣Ïº┘â." },
+            { who: 'them', text: "Ï¿Ïº┘ä┘åÏ│Ï¿Ï® ┘ü┘éÏÀ ┘ü┘êÏ▒┘àÏºÏ│┘è┘ê ┘åÏ¬ÏºÏ╣ ┘ä┘è ┘â┘èÏ¿ ┘ê┘âÏ¬Ïº Ïº┘å Ï┤ÏºÏí Ïº┘ä┘ä┘ç  ." },
+            { who: 'me', text: "┘è┘à┘â┘å ┘çÏ»Ïº ÏºÏ│Ï¿┘êÏ╣ ÏºÏ»Ïº Ï¼┘èÏ¬ Ïº┘åÏº ┘ê┘äÏº   ┘èÏ¼Ï¿┘â Ï┤Ï«ÏÁ ÏºÏ«Ï▒ ┘à┘å ┘üÏ▒┘è┘é ┘èÏ╣┘å┘è ┘â┘ê┘å ┘àÏ¬┘å┘ç┘è ." },
+            { who: 'them', text: "ÏºÏ«┘ê┘èÏº ┘àÏ▒┘è┘é┘äÏ® ┘èÏ╣┘èÏÀ ÏÁÏ¡Ï®  ┘àÏºÏ┤ÏºÏí Ïº┘ä┘ä┘ç   ┘àÏÁÏ║Ï▒ ┘êÏÀ┘èÏ▒┘ê Ï▒Ï¿┘è ┘èÏ¿ÏºÏ▒┘â. ÏÑ┘å Ï┤ÏºÏí Ïº┘ä┘ä┘ç Ï¬┘â┘ê┘å Ï¿┘è┘åÏºÏ¬┘åÏº ┘àÏ┤ÏºÏ▒┘èÏ╣ ÏúÏ«Ï▒┘ë." }
         ]
     }
 
 ];
 const conversations = pageLang === 'fr' ? messagesFR : pageLang === 'ar' ? messagesAR : messagesEN;
 
-// ----- عناصر DOM -----
+// ----- Ï╣┘åÏºÏÁÏ▒ DOM -----
 const msgList = document.getElementById('msg-list');
 const threadBody = document.getElementById('thread-body');
 const liveBadge = document.getElementById('live-badge');
@@ -332,8 +332,8 @@ const threadInput = document.getElementById('thread-input');
 const sendBtn = document.getElementById('thread-send');
 const voiceBtn = document.getElementById('gm-voice-btn');
 const voiceStatus = document.getElementById('voice-status');
-const inboxLabel = pageLang === 'fr' ? 'Boîte de réception —' : pageLang === 'ar' ? 'صندوق الوارد —' : 'Inbox —';
-const convLabel = pageLang === 'fr' ? 'conversations' : pageLang === 'ar' ? 'محادثات' : 'conversations';
+const inboxLabel = pageLang === 'fr' ? 'Bo├«te de r├®ception ÔÇö' : pageLang === 'ar' ? 'ÏÁ┘åÏ»┘ê┘é Ïº┘ä┘êÏºÏ▒Ï» ÔÇö' : 'Inbox ÔÇö';
+const convLabel = pageLang === 'fr' ? 'conversations' : pageLang === 'ar' ? '┘àÏ¡ÏºÏ»Ï½ÏºÏ¬' : 'conversations';
 document.getElementById('inbox-count').textContent = `${inboxLabel} ${conversations.length} ${convLabel}`;
 
 let autoplayOn = true;
@@ -350,7 +350,7 @@ function initVoice() {
     if (!SpeechRecognition) {
         voiceBtn.disabled = true;
         voiceBtn.title = 'Voice not supported in this browser';
-        voiceStatus.textContent = '⚠️ Voice input not supported';
+        voiceStatus.textContent = 'ÔÜá´©Å Voice input not supported';
         voiceStatus.style.color = '#ef4444';
         return;
     }
@@ -364,7 +364,7 @@ function initVoice() {
     recognition.onstart = () => {
         isListening = true;
         voiceBtn.classList.add('listening');
-        voiceStatus.textContent = '🎤 Listening... Speak now';
+        voiceStatus.textContent = '­ƒÄñ Listening... Speak now';
         voiceStatus.className = 'voice-status active';
     };
 
@@ -397,9 +397,9 @@ function initVoice() {
     recognition.onerror = (event) => {
         console.warn('Voice error:', event.error);
         if (event.error === 'not-allowed') {
-            voiceStatus.textContent = '🚫 Microphone access denied';
+            voiceStatus.textContent = '­ƒÜ½ Microphone access denied';
         } else {
-            voiceStatus.textContent = `⚠️ Error: ${event.error}`;
+            voiceStatus.textContent = `ÔÜá´©Å Error: ${event.error}`;
         }
         voiceStatus.className = 'voice-status';
         stopListening();
@@ -443,14 +443,14 @@ voiceBtn.addEventListener('click', (e) => {
     if (voiceBtn.disabled) return;
     if (isListening) {
         stopListening();
-        voiceStatus.textContent = '⏹️ Stopped';
+        voiceStatus.textContent = 'ÔÅ╣´©Å Stopped';
         setTimeout(() => { voiceStatus.textContent = ''; }, 1000);
     } else {
         startListening();
     }
 });
 
-// ----- إعدادات المحادثة التلقائية -----
+// ----- ÏÑÏ╣Ï»ÏºÏ»ÏºÏ¬ Ïº┘ä┘àÏ¡ÏºÏ»Ï½Ï® Ïº┘äÏ¬┘ä┘éÏºÏª┘èÏ® -----
 function setThreadHead(conv) {
     document.getElementById('thread-avatar').textContent = conv.initials;
     document.getElementById('thread-avatar').style.background = conv.color;
@@ -467,7 +467,7 @@ function updateLiveBadge() {
         liveBadge.innerHTML = '<span class="live-dot"></span> Auto-playing';
         liveBadge.classList.remove('manual');
     } else {
-        liveBadge.innerHTML = '<i class="fa-solid fa-hand-pointer"></i> Manual — click to resume';
+        liveBadge.innerHTML = '<i class="fa-solid fa-hand-pointer"></i> Manual ÔÇö click to resume';
         liveBadge.classList.add('manual');
     }
 }
@@ -547,7 +547,7 @@ function startAutoplay(fromIndex) {
     playConversation(fromIndex, autoplayGen);
 }
 
-// ----- بناء قائمة العملاء -----
+// ----- Ï¿┘åÏºÏí ┘éÏºÏª┘àÏ® Ïº┘äÏ╣┘à┘äÏºÏí -----
 conversations.forEach((c, i) => {
     const el = document.createElement('div');
     el.className = 'msg-item';
@@ -569,7 +569,7 @@ conversations.forEach((c, i) => {
     msgList.appendChild(el);
 });
 
-// ----- إرسال الرسائل (يدوياً أو بالصوت) -----
+// ----- ÏÑÏ▒Ï│Ïº┘ä Ïº┘äÏ▒Ï│ÏºÏª┘ä (┘èÏ»┘ê┘èÏº┘ï Ïú┘ê Ï¿Ïº┘äÏÁ┘êÏ¬) -----
 function sendMessage(fromVoice = false) {
     const val = threadInput.value.trim();
     if (!val) return;
@@ -588,7 +588,7 @@ function sendMessage(fromVoice = false) {
     bubble.className = 'bubble me';
     if (fromVoice) {
         bubble.innerHTML = `<span class="voice-indicator"><i class="fa-solid fa-microphone"></i></span> ${val}`;
-        voiceStatus.textContent = '✅ Voice message sent!';
+        voiceStatus.textContent = 'Ô£à Voice message sent!';
         voiceStatus.className = 'voice-status success';
         setTimeout(() => { voiceStatus.className = 'voice-status'; voiceStatus.textContent = ''; }, 2000);
     } else {
@@ -598,7 +598,7 @@ function sendMessage(fromVoice = false) {
     threadInput.value = '';
     threadBody.scrollTop = threadBody.scrollHeight;
 
-    // رد تلقائي من العميل (محاكاة)
+    // Ï▒Ï» Ï¬┘ä┘éÏºÏª┘è ┘à┘å Ïº┘äÏ╣┘à┘è┘ä (┘àÏ¡Ïº┘âÏºÏ®)
     setTimeout(() => {
         const typing = document.createElement('div');
         typing.className = 'typing';
@@ -623,20 +623,20 @@ function sendMessage(fromVoice = false) {
     }, 400);
 }
 
-// ----- أحداث الحقل -----
+// ----- ÏúÏ¡Ï»ÏºÏ½ Ïº┘äÏ¡┘é┘ä -----
 sendBtn.addEventListener('click', () => sendMessage(false));
 threadInput.addEventListener('keydown', e => {
     if (e.key === 'Enter') sendMessage(false);
 });
 
-// ----- إعادة التشغيل التلقائي عند النقر على الشارة -----
+// ----- ÏÑÏ╣ÏºÏ»Ï® Ïº┘äÏ¬Ï┤Ï║┘è┘ä Ïº┘äÏ¬┘ä┘éÏºÏª┘è Ï╣┘åÏ» Ïº┘ä┘å┘éÏ▒ Ï╣┘ä┘ë Ïº┘äÏ┤ÏºÏ▒Ï® -----
 liveBadge.addEventListener('click', () => {
     if (!autoplayOn) {
         startAutoplay(currentConvIndex);
     }
 });
 
-// ----- تهيئة الساعة -----
+// ----- Ï¬┘ç┘èÏªÏ® Ïº┘äÏ│ÏºÏ╣Ï® -----
 function tickClock() {
     const d = new Date();
     const label = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
@@ -645,13 +645,219 @@ function tickClock() {
 tickClock();
 setInterval(tickClock, 15000);
 
-// ----- تهيئة الصوت والمحادثة التلقائية -----
+// ----- Ï¬┘ç┘èÏªÏ® Ïº┘äÏÁ┘êÏ¬ ┘êÏº┘ä┘àÏ¡ÏºÏ»Ï½Ï® Ïº┘äÏ¬┘ä┘éÏºÏª┘èÏ® -----
 initVoice();
 startAutoplay(0);
-console.log('GM SOFT — Client Messages with Voice Input loaded.');
+console.log('GM SOFT ÔÇö Client Messages with Voice Input loaded.');
 
 // ============================================================
-// CONTACT FORM — SUBMIT HANDLER (Formspree + per-field validation + SweetAlert2)
+// TRUSTED CLIENTS — WALL OF LOVE (voice testimonials)
+// ============================================================
+const trustEN = [
+    { name: 'Dizayno DZ', initials: 'N', color: '#2f5c46', role: 'Founder @ Dizayno Studio', platform: 'WhatsApp', pcolor: '#3fce6a', rating: 5, project: 'Studio Portfolio',
+      quote: "The website turned out even better than I imagined — premium feel, incredibly smooth, and everything loads fast.",
+      voice: 'audio/en-voice-1.wav' },
+    { name: 'Mariam', initials: 'M', color: '#5c2f4a', role: 'Content Creator', platform: 'Instagram', pcolor: '#e05a86', rating: 5, project: 'Personal Branding',
+      quote: "Modern, elegant and very professional. They cared about every small detail that makes a huge difference.",
+      voice: 'audio/en-voice-2.wav' },
+    { name: 'Brahim RDX', initials: 'B', color: '#2b4f7a', role: 'Streamer & Entrepreneur', platform: 'Telegram', pcolor: '#3ea8e0', rating: 5, project: 'Streaming Platform',
+      quote: "The animations, the colors, the overall experience — everything feels world-class. Easily one of the best.",
+      voice: 'audio/en-voice-3.wav' },
+    { name: 'Ilyes OX', initials: 'I', color: '#3a3a68', role: 'Project Manager', platform: 'Discord', pcolor: '#8b7bf0', rating: 5, project: 'SaaS Dashboard',
+      quote: "Excellent communication from start to finish, and the quality is outstanding. A real pleasure to work with.",
+      voice: 'audio/en-voice-4.wav' }
+];
+
+const trustFR = [
+    { name: 'Dizayno DZ', initials: 'N', color: '#2f5c46', role: 'Fondateur @ Dizayno Studio', platform: 'WhatsApp', pcolor: '#3fce6a', rating: 5, project: 'Portfolio Studio',
+      quote: "Le site est encore mieux que ce que j'avais imaginé — aspect premium, incroyablement fluide.",
+      voice: 'audio/fr-voice-1.wav' },
+    { name: 'Mariam', initials: 'M', color: '#5c2f4a', role: 'Créatrice de contenu', platform: 'Instagram', pcolor: '#e05a86', rating: 5, project: 'Site Personnel',
+      quote: "Moderne, élégant et très professionnel. Ils ont soigné chaque petit détail qui fait la différence.",
+      voice: 'audio/fr-voice-2.wav' },
+    { name: 'Brahim RDX', initials: 'B', color: '#2b4f7a', role: 'Streamer & Entrepreneur', platform: 'Telegram', pcolor: '#3ea8e0', rating: 5, project: 'Plateforme de Stream',
+      quote: "Les animations, les couleurs, l'expérience globale... tout est à un niveau mondial.",
+      voice: 'audio/fr-voice-3.wav' },
+    { name: 'Ilyes OX', initials: 'I', color: '#3a3a68', role: 'Chef de projet', platform: 'Discord', pcolor: '#8b7bf0', rating: 5, project: 'Tableau de bord SaaS',
+      quote: "Communication excellente du début à la fin, qualité exceptionnelle. Un vrai plaisir.",
+      voice: 'audio/fr-voice-4.wav' }
+];
+
+const trustAR = [
+    { name: 'Dizayno DZ', initials: 'N', color: '#2f5c46', role: 'مؤسس @ Dizayno Studio', platform: 'WhatsApp', pcolor: '#3fce6a', rating: 5, project: 'موقع استوديو',
+      quote: "السيت خرج أحسن من اللي تخيلت. ديزاين هارب، كلشي خفيف وكيبان في بلاصتو.",
+      voice: 'audio/ar-voice-1.wav' },
+    { name: 'Mariam', initials: 'M', color: '#5c2f4a', role: 'صانعة محتوى', platform: 'Instagram', pcolor: '#e05a86', rating: 5, project: 'موقع شخصي',
+      quote: "موديرن، أنيق واحترافي بزاف. علّقو على أصغر التفاصيل لي كيدير فرق كبير.",
+      voice: 'audio/ar-voice-2.wav' },
+    { name: 'Brahim RDX', initials: 'B', color: '#2b4f7a', role: 'ستريمر ورائد أعمال', platform: 'Telegram', pcolor: '#3ea8e0', rating: 5, project: 'منصة بث',
+      quote: "الحركات، الألوان، التجربة كاملة... كلو عالمي level. من أحسن مواقع بلا مبالغة.",
+      voice: 'audio/ar-voice-3.wav' },
+    { name: 'Ilyes OX', initials: 'I', color: '#3a3a68', role: 'مدير مشروعات', platform: 'Discord', pcolor: '#8b7bf0', rating: 5, project: 'لوحة تحكم SaaS',
+      quote: "تواصل ممتاز من الأول للآخر، والجودة خيالية. الشرف نتعامل معاكم.",
+      voice: 'audio/ar-voice-4.wav' }
+];
+
+[trustEN, trustFR, trustAR].forEach(function (arr) {
+    arr.forEach(function (c, i) { c.img = 'images/clients/' + (i + 1) + '.jpg'; });
+});
+
+const trustData = pageLang === 'fr' ? trustFR : pageLang === 'ar' ? trustAR : trustEN;
+const trustOfficialLabel = pageLang === 'fr' ? 'CLIENT OFFICIEL' : pageLang === 'ar' ? 'عميل رسمي' : 'OFFICIAL CLIENT';
+
+const trustSlidesEl = document.getElementById('trustSlides');
+let trustSwiper = null;
+let trustAudio = null;
+let trustPlayingBtn = null;
+
+window.pauseTrustVoice = function () {
+    if (trustAudio) {
+        try { trustAudio.pause(); } catch (e) {}
+    }
+    if (trustPlayingBtn) {
+        const icon = trustPlayingBtn.querySelector('i');
+        if (icon) icon.className = 'fa-solid fa-play';
+        const player = trustPlayingBtn.closest('.trust-player');
+        if (player) {
+            const prog = player.querySelector('.trust-progress');
+            if (prog) prog.style.width = '0%';
+        }
+        const card = trustPlayingBtn.closest('.trust-card');
+        if (card) card.classList.remove('is-playing');
+        trustPlayingBtn = null;
+    }
+};
+
+function trustStars(n) {
+    return '★'.repeat(n) + '☆'.repeat(Math.max(0, 5 - n));
+}
+
+function trustFmt(s) {
+    if (!isFinite(s) || s < 0) s = 0;
+    return Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+}
+
+function trustWaveHTML(count) {
+    let bars = '';
+    for (let i = 0; i < count; i++) {
+        const h = 30 + Math.round(Math.random() * 65);
+        bars += `<span style="height:${h}%"></span>`;
+    }
+    return bars;
+}
+
+function bindTrustPlayer(scope) {
+    const audio = scope.querySelector('audio');
+    const btn = scope.querySelector('.trust-play');
+    if (!audio || !btn) return;
+    const icon = btn.querySelector('i');
+    const card = scope.closest('.trust-card') || scope;
+    const prog = scope.querySelector('.trust-progress');
+    const durEl = scope.querySelector('.trust-dur');
+    let total = 0;
+
+    audio.addEventListener('loadedmetadata', () => { total = audio.duration; durEl.textContent = trustFmt(total); });
+    if (audio.readyState >= 1) { total = audio.duration; durEl.textContent = trustFmt(total); }
+
+    audio.addEventListener('timeupdate', () => {
+        if (audio.duration) prog.style.width = (audio.currentTime / audio.duration * 100) + '%';
+        durEl.textContent = trustFmt(audio.currentTime);
+    });
+
+    audio.addEventListener('ended', () => {
+        icon.className = 'fa-solid fa-play';
+        card.classList.remove('is-playing');
+        prog.style.width = '0%';
+        durEl.textContent = trustFmt(total);
+        if (trustAudio === audio) { trustAudio = null; trustPlayingBtn = null; }
+    });
+
+    btn.addEventListener('click', () => {
+        const isPlayingThis = trustAudio === audio && !audio.paused;
+        window.pauseTrustVoice();
+        if (!isPlayingThis) {
+            if (typeof stopCurrentAudio === 'function') stopCurrentAudio();
+            audio.play().then(() => {
+                icon.className = 'fa-solid fa-pause';
+                card.classList.add('is-playing');
+                trustAudio = audio;
+                trustPlayingBtn = btn;
+            }).catch(() => {});
+        }
+    });
+}
+
+function renderTrustSlides() {
+    trustSlidesEl.innerHTML = trustData.map(c => `
+        <div class="swiper-slide">
+            <article class="trust-card">
+                <div class="trust-card-head">
+                    <div class="trust-avatar"><img src="${c.img}" alt="${c.name}" loading="lazy"></div>
+                    <div class="trust-id">
+                        <div class="trust-name">${c.name} <i class="fa-solid fa-circle-check trust-verified"></i></div>
+                        <div class="trust-role">${c.role}</div>
+                    </div>
+                    <span class="trust-official"><i class="fa-solid fa-shield-halved"></i> ${trustOfficialLabel}</span>
+                </div>
+                <blockquote class="trust-quote"><span class="trust-qmark">&ldquo;</span>${c.quote}</blockquote>
+                <div class="trust-player">
+                    <button class="trust-play" type="button" aria-label="Play testimonial"><i class="fa-solid fa-play"></i></button>
+                    <div class="trust-body">
+                        <div class="trust-wave">${trustWaveHTML(22)}</div>
+                        <div class="trust-progress"></div>
+                    </div>
+                    <span class="trust-dur">0:00</span>
+                    <audio preload="auto" src="${c.voice}"></audio>
+                </div>
+                <div class="trust-card-foot">
+                    <span class="trust-stars">${trustStars(c.rating)}</span>
+                    <span class="trust-project"><i class="fa-regular fa-folder-open"></i> ${c.project}</span>
+                </div>
+            </article>
+        </div>`).join('');
+    trustSlidesEl.querySelectorAll('.trust-player').forEach(bindTrustPlayer);
+}
+
+if (trustSlidesEl && typeof Swiper !== 'undefined') {
+    renderTrustSlides();
+    if (document.documentElement.dir === 'rtl') {
+        const prevIcon = document.querySelector('.trust-prev i');
+        const nextIcon = document.querySelector('.trust-next i');
+        if (prevIcon) prevIcon.className = 'fa-solid fa-chevron-right';
+        if (nextIcon) nextIcon.className = 'fa-solid fa-chevron-left';
+    }
+    trustSwiper = new Swiper('.trustSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 18,
+        grabCursor: true,
+        keyboard: { enabled: true },
+        pagination: { el: '.trust-pagination', clickable: true },
+        navigation: { nextEl: '.trust-next', prevEl: '.trust-prev' },
+        on: { slideChange() { window.pauseTrustVoice(); } },
+        breakpoints: {
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        }
+    });
+}
+
+// ============================================================
+// FAQ — ACCORDION
+// ============================================================
+document.querySelectorAll('.faq-list').forEach(list => {
+    list.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            list.querySelectorAll('.faq-item.open').forEach(o => o.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        });
+    });
+});
+
+
+// ============================================================
+// CONTACT FORM ÔÇö SUBMIT HANDLER (Formspree + per-field validation + SweetAlert2)
 // ============================================================
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
@@ -660,29 +866,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const lang = (document.documentElement.lang || 'en').toLowerCase();
     const T = lang.startsWith('ar') ? {
-        required: 'هذا الحقل مطلوب',
-        invalidEmail: 'يرجى إدخال بريد إلكتروني صحيح',
-        sending: '⏳ جارٍ الإرسال...',
-        successTitle: 'تم إرسال رسالتك بنجاح!',
-        successText: 'سنعود إليك قريباً.',
-        errorTitle: 'حدث خطأ ما',
-        errorText: 'يرجى المحاولة مرة أخرى.',
-        networkTitle: 'خطأ في الاتصال',
-        networkText: 'تحقق من اتصالك بالإنترنت.'
+        required: '┘çÏ░Ïº Ïº┘äÏ¡┘é┘ä ┘àÏÀ┘ä┘êÏ¿',
+        invalidEmail: '┘èÏ▒Ï¼┘ë ÏÑÏ»Ï«Ïº┘ä Ï¿Ï▒┘èÏ» ÏÑ┘ä┘âÏ¬Ï▒┘ê┘å┘è ÏÁÏ¡┘èÏ¡',
+        sending: 'ÔÅ│ Ï¼ÏºÏ▒┘ì Ïº┘äÏÑÏ▒Ï│Ïº┘ä...',
+        successTitle: 'Ï¬┘à ÏÑÏ▒Ï│Ïº┘ä Ï▒Ï│Ïº┘äÏ¬┘â Ï¿┘åÏ¼ÏºÏ¡!',
+        successText: 'Ï│┘åÏ╣┘êÏ» ÏÑ┘ä┘è┘â ┘éÏ▒┘èÏ¿Ïº┘ï.',
+        errorTitle: 'Ï¡Ï»Ï½ Ï«ÏÀÏú ┘àÏº',
+        errorText: '┘èÏ▒Ï¼┘ë Ïº┘ä┘àÏ¡Ïº┘ê┘äÏ® ┘àÏ▒Ï® ÏúÏ«Ï▒┘ë.',
+        networkTitle: 'Ï«ÏÀÏú ┘ü┘è Ïº┘äÏºÏ¬ÏÁÏº┘ä',
+        networkText: 'Ï¬Ï¡┘é┘é ┘à┘å ÏºÏ¬ÏÁÏº┘ä┘â Ï¿Ïº┘äÏÑ┘åÏ¬Ï▒┘åÏ¬.'
     } : lang.startsWith('fr') ? {
         required: 'Ce champ est obligatoire',
         invalidEmail: 'Veuillez entrer un e-mail valide',
-        sending: '⏳ Envoi en cours...',
-        successTitle: 'Message envoyé avec succès !',
-        successText: 'Nous vous répondrons bientôt.',
+        sending: 'ÔÅ│ Envoi en cours...',
+        successTitle: 'Message envoy├® avec succ├¿s !',
+        successText: 'Nous vous r├®pondrons bient├┤t.',
         errorTitle: 'Une erreur est survenue',
-        errorText: 'Veuillez réessayer.',
-        networkTitle: 'Erreur réseau',
-        networkText: 'Vérifiez votre connexion.'
+        errorText: 'Veuillez r├®essayer.',
+        networkTitle: 'Erreur r├®seau',
+        networkText: 'V├®rifiez votre connexion.'
     } : {
         required: 'This field is required',
         invalidEmail: 'Please enter a valid email address',
-        sending: '⏳ Sending...',
+        sending: 'ÔÅ│ Sending...',
         successTitle: 'Message sent successfully!',
         successText: "We'll get back to you soon.",
         errorTitle: 'Something went wrong',
@@ -716,16 +922,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const nameInput = document.getElementById('cf-name');
     const emailInput = document.getElementById('cf-email');
+    const subjectInput = document.getElementById('cf-subject');
     const messageInput = document.getElementById('cf-message');
 
-    [nameInput, emailInput, messageInput].forEach(input => {
+    [nameInput, emailInput, subjectInput, messageInput].forEach(input => {
         if (!input) return;
         input.addEventListener('input', () => clearFieldError(input));
     });
 
     function validate() {
         let ok = true;
-        [nameInput, emailInput, messageInput].forEach(clearFieldError);
+        [nameInput, emailInput, subjectInput, messageInput].forEach(clearFieldError);
 
         if (!nameInput.value.trim()) {
             showFieldError(nameInput, T.required);
@@ -736,6 +943,10 @@ document.addEventListener('DOMContentLoaded', function () {
             ok = false;
         } else if (!EMAIL_RE.test(emailInput.value.trim())) {
             showFieldError(emailInput, T.invalidEmail);
+            ok = false;
+        }
+        if (subjectInput && !subjectInput.value.trim()) {
+            showFieldError(subjectInput, T.required);
             ok = false;
         }
         if (!messageInput.value.trim()) {
@@ -798,7 +1009,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ============================================================
-// TEAM — SWIPER INITIALIZATION
+// TEAM ÔÇö SWIPER INITIALIZATION
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
     if (typeof Swiper !== 'undefined') {
@@ -828,7 +1039,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================================
-// FOOTER — UPDATE COPYRIGHT YEAR
+// FOOTER ÔÇö UPDATE COPYRIGHT YEAR
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
     const yearSpan = document.getElementById('footerYear');

@@ -631,6 +631,126 @@
         </div>
     </section>
 
+    <!-- SECTION: TÉMOIGNAGES -->
+    <section id="clients" class="trust-section">
+        <div class="trust-glow trust-glow-1"></div>
+        <div class="trust-glow trust-glow-2"></div>
+        <div class="trust-container">
+            <div class="trust-header">
+                <span class="trust-badge">✦ TÉMOIGNAGES</span>
+                <h2 class="trust-title">Des institutions qui nous ont <span style="color:#10b981;">fait confiance</span></h2>
+                <p class="trust-subtitle">De vraies voix, de vrais clients — écoutez leur expérience avec GM SOFT.</p>
+            </div>
+            <div class="trust-slider">
+                <div class="swiper trustSwiper">
+                    <div class="swiper-wrapper" id="trustSlides"></div>
+                </div>
+                <div class="trust-nav">
+                    <button class="trust-nav-btn trust-prev" type="button" aria-label="Précédent"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="swiper-pagination trust-pagination"></div>
+                    <button class="trust-nav-btn trust-next" type="button" aria-label="Suivant"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="faq-container">
+            <div class="faq-header">
+                <span class="faq-badge">FAQ</span>
+                <h2 class="faq-title">Questions <span style="color:#10b981;">Fréquentes</span></h2>
+                <p class="faq-subtitle">Tout ce que vous devez savoir avant de démarrer votre projet avec GM SOFT.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q" type="button">
+                        <span>Combien de temps dure un projet ?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-a"><div class="faq-a-inner">
+                        <p>La plupart des projets prennent 1 à 4 semaines selon l'envergure.</p>
+                        <ul>
+                            <li>Landing page : environ 1 semaine</li>
+                            <li>Site d'entreprise : 2 à 3 semaines</li>
+                            <li>Application ou e-commerce : 3 à 4 semaines</li>
+                        </ul>
+                    </div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button">
+                        <span>Combien coûte un site web ?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-a"><div class="faq-a-inner">
+                        <p>Chaque projet est tarifé individuellement — sans frais cachés.</p>
+                        <ul>
+                            <li>Devis gratuit sous 24 h</li>
+                            <li>Détail clair avant de commencer</li>
+                            <li>Paiement flexible (possible en deux fois)</li>
+                        </ul>
+                    </div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button">
+                        <span>Travaillez-vous avec des clients hors Algérie ?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-a"><div class="faq-a-inner">
+                        <p>Oui — nous travaillons à distance avec des clients du monde entier.</p>
+                        <ul>
+                            <li>Arabe, anglais et français</li>
+                            <li>Horaires flexibles selon les fuseaux</li>
+                            <li>Même processus, même qualité</li>
+                        </ul>
+                    </div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button">
+                        <span>Fournissez-vous l'hébergement et le nom de domaine ?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-a"><div class="faq-a-inner">
+                        <p>Oui. Nous pouvons tout gérer pour vous.</p>
+                        <ul>
+                            <li>Enregistrement et renouvellement du domaine</li>
+                            <li>Hébergement rapide et sécurisé</li>
+                            <li>Certificat SSL et sauvegardes</li>
+                        </ul>
+                    </div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button">
+                        <span>Et la maintenance après la livraison ?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-a"><div class="faq-a-inner">
+                        <p>Nous proposons des formules optionnelles pour garder votre site en forme.</p>
+                        <ul>
+                            <li>Mises à jour et contrôles de sécurité</li>
+                            <li>Corrections prioritaires</li>
+                            <li>Rapport de performance mensuel</li>
+                        </ul>
+                    </div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button">
+                        <span>Comment commencer ?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-a"><div class="faq-a-inner">
+                        <p>Trois étapes simples et nous démarrons.</p>
+                        <ul>
+                            <li>Consultation gratuite (formulaire ou WhatsApp)</li>
+                            <li>Devis et calendrier sous 24 h</li>
+                            <li>Nous commençons la construction</li>
+                        </ul>
+                    </div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SECTION: CONTACT -->
     <section id="contact" class="contact-section">
         <div class="container">
@@ -655,12 +775,7 @@
 
                     <div class="contact-field">
                         <label for="cf-subject">De quoi avez-vous besoin ?</label>
-                        <select id="cf-subject" name="subject">
-                            <option>Nouveau site web ou application web</option>
-                            <option>Application mobile</option>
-                            <option>Maintenance & support continuels</option>
-                            <option>Autre chose</option>
-                        </select>
+                        <input type="text" id="cf-subject" name="subject" placeholder="ex. Nouveau site web, application mobile, maintenance...">
                     </div>
 
                     <div class="contact-field">

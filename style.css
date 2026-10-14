@@ -3908,50 +3908,6 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
     margin: 0;
 }
 
-.gm-footer-meta {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.gm-footer-made {
-    font-size: 0.8rem;
-    color: #6b7280;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-}
-
-.gm-footer-meta i {
-    color: #10b981;
-}
-
-.gm-footer-langs {
-    display: flex;
-    gap: 0.35rem;
-}
-
-.gm-footer-langs a {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #6b7280;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
-    padding: 0.2rem 0.55rem;
-    transition: all .2s ease;
-}
-
-.gm-footer-langs a:hover {
-    color: #10b981;
-    border-color: #10b981;
-}
-
-.gm-footer-langs a.active {
-    color: #fff;
-    background: #10b981;
-    border-color: #10b981;
-}
-
 /* ============================================================
    RESPONSIVE
    ============================================================ */
@@ -3998,9 +3954,6 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
         text-align: center;
         justify-content: center;
     }
-    .gm-footer-meta {
-        justify-content: center;
-    }
     [dir="rtl"] .gm-footer-top {
         flex-direction: column;
     }
@@ -4015,10 +3968,6 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
     }
     [dir="rtl"] .gm-footer-bottom {
         flex-direction: column;
-    }
-    [dir="rtl"] .gm-footer-meta {
-        flex-direction: row;
-        justify-content: center;
     }
 }
 
@@ -4343,14 +4292,6 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
 }
 
 [dir="rtl"] .gm-footer-bottom {
-    flex-direction: row-reverse;
-}
-
-[dir="rtl"] .gm-footer-meta {
-    flex-direction: row-reverse;
-}
-
-[dir="rtl"] .gm-footer-made {
     flex-direction: row-reverse;
 }
 

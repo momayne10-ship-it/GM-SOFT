@@ -1798,6 +1798,7 @@ ul {
 }
 .thread-input input {
     flex: 1;
+    min-width: 0;
     background: var(--msg-elevated);
     border: 1px solid var(--msg-border);
     border-radius: 20px;

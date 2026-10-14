@@ -1289,36 +1289,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ============================================================
-// TEAM — SWIPER INITIALIZATION
-// ============================================================
-document.addEventListener('DOMContentLoaded', function() {
-    if (typeof Swiper !== 'undefined') {
-        new Swiper('.team-slider', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
-            pagination: {
-                el: '.team-slider .swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.team-slider .swiper-button-next',
-                prevEl: '.team-slider .swiper-button-prev',
-            },
-            breakpoints: {
-                768: { slidesPerView: 2, spaceBetween: 24 },
-                1024: { slidesPerView: 3, spaceBetween: 28 },
-            },
-        });
-    }
-});
-
-// ============================================================
 // FOOTER — UPDATE COPYRIGHT YEAR
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {

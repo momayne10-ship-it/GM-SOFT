@@ -3663,23 +3663,6 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
     }
 }
 
-/* ============================================================
-   SECTION: TEAM (فريق العمل)
-   ============================================================ */
-
-.team-section {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-    font-family: 'Amiri', 'Inter', sans-serif;
-    direction: ltr;
-}
-
-.container-team {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
 /* ===== Header (مطابق للأقسام السابقة) ===== */
 .section-header-enhanced {
     text-align: center;
@@ -3715,273 +3698,6 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.7;
-}
-
-/* ===== Swiper Container ===== */
-.team-slider {
-    padding: 20px 10px 70px;
-    overflow: hidden;
-}
-
-/* ===== بطاقة الفريق ===== */
-.team-card {
-    border-radius: 24px;
-    overflow: hidden;
-    margin: 10px 12px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-    height: 100%;
-    min-height: 420px;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-}
-
-.team-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 24px 50px rgba(16, 185, 129, 0.12);
-}
-
-/* ===== صورة البطاقة (خلفية) ===== */
-.team-card-image {
-    width: 100%;
-    height: 280px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    transition: transform 0.6s ease;
-    flex-shrink: 0;
-}
-
-.team-card:hover .team-card-image {
-    transform: scale(1.02);
-}
-
-/* ===== بطاقات الأيقونات ===== */
-.team-card-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.team-card-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem auto 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-card-avatar i {
-    font-size: 3rem;
-    color: #fff;
-}
-
-.team-card-icon:hover .team-card-avatar {
-    transform: scale(1.1);
-    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
-}
-
-.team-card-icon .team-card-content {
-    text-align: center;
-}
-
-/* ===== التراكب الشفاف — إزالة ===== */
-.team-card-overlay {
-    display: none;
-}
-
-/* ===== محتوى البطاقة ===== */
-.team-card-content {
-    width: 100%;
-    padding: 1.5rem 1.8rem;
-    color: #1e2f3e;
-    text-align: left;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* ===== اسم العضو ===== */
-.team-name {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #1e2f3e;
-    margin-bottom: 0.3rem;
-    letter-spacing: -0.01em;
-    font-family: 'Amiri', serif;
-}
-
-/* ===== الدور ===== */
-.team-role {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #10b981;
-    background: rgba(16, 185, 129, 0.08);
-    padding: 0.3rem 0.9rem;
-    border-radius: 40px;
-    display: inline-block;
-    margin-bottom: 0.8rem;
-    width: fit-content;
-    font-family: 'Amiri', serif;
-}
-
-/* ===== الاقتباس ===== */
-.team-quote {
-    font-size: 0.9rem;
-    color: #5a6e7c;
-    line-height: 1.6;
-    font-style: italic;
-    margin-bottom: 1rem;
-    max-width: 95%;
-    font-family: 'Amiri', serif;
-}
-
-.team-quote::before {
-    content: '"';
-    color: #10b981;
-    font-size: 1.2rem;
-}
-.team-quote::after {
-    content: '"';
-    color: #10b981;
-    font-size: 1.2rem;
-}
-
-/* ===== وسائل التواصل ===== */
-.team-social {
-    display: flex;
-    gap: 0.7rem;
-}
-
-.team-social a {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: rgba(16, 185, 129, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #10b981;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(16, 185, 129, 0.12);
-    text-decoration: none;
-    font-family: 'Amiri', serif;
-}
-
-.team-social a:hover {
-    background: #10b981;
-    color: #ffffff;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
-}
-
-/* ===== أزرار Swiper ===== */
-.team-slider .swiper-button-next,
-.team-slider .swiper-button-prev {
-    background: #ffffff;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-    transition: 0.3s;
-    border: 1px solid rgba(16, 185, 129, 0.1);
-}
-
-.team-slider .swiper-button-next:after,
-.team-slider .swiper-button-prev:after {
-    font-size: 18px;
-    font-weight: 700;
-    color: #10b981;
-}
-
-.team-slider .swiper-button-next:hover,
-.team-slider .swiper-button-prev:hover {
-    background: #10b981;
-    border-color: #10b981;
-}
-
-.team-slider .swiper-button-next:hover:after,
-.team-slider .swiper-button-prev:hover:after {
-    color: #ffffff;
-}
-
-.team-slider .swiper-pagination-bullet {
-    background: #b0c4d4;
-    opacity: 1;
-    transition: all 0.3s;
-}
-
-.team-slider .swiper-pagination-bullet-active {
-    background: #10b981;
-    width: 28px;
-    border-radius: 6px;
-}
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media (max-width: 768px) {
-    .team-section {
-        padding: 50px 0;
-    }
-    .section-title-enhanced {
-        font-size: 1.8rem;
-    }
-    .team-card {
-        min-height: auto;
-    }
-    .team-card-image {
-        height: 240px;
-    }
-    .team-name {
-        font-size: 1.3rem;
-    }
-    .team-card-content {
-        padding: 1.2rem;
-    }
-    .team-slider .swiper-button-next,
-    .team-slider .swiper-button-prev {
-        width: 36px;
-        height: 36px;
-    }
-    .team-slider .swiper-button-next:after,
-    .team-slider .swiper-button-prev:after {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .team-card {
-        min-height: auto;
-        margin: 6px 8px;
-    }
-    .team-card-image {
-        height: 200px;
-    }
-    .team-name {
-        font-size: 1.1rem;
-    }
-    .team-quote {
-        font-size: 0.8rem;
-        max-width: 100%;
-    }
-    .team-role {
-        font-size: 0.75rem;
-    }
-    .team-social a {
-        width: 32px;
-        height: 32px;
-        font-size: 0.8rem;
-    }
 }
 
 /* ============================================================
@@ -4192,13 +3908,13 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
     margin: 0;
 }
 
-.gm-footer-badges {
+.gm-footer-meta {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
 }
 
-.gm-footer-badges span {
+.gm-footer-made {
     font-size: 0.8rem;
     color: #6b7280;
     display: flex;
@@ -4206,8 +3922,34 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
     gap: 0.4rem;
 }
 
-.gm-footer-badges i {
+.gm-footer-meta i {
     color: #10b981;
+}
+
+.gm-footer-langs {
+    display: flex;
+    gap: 0.35rem;
+}
+
+.gm-footer-langs a {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #6b7280;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 0.2rem 0.55rem;
+    transition: all .2s ease;
+}
+
+.gm-footer-langs a:hover {
+    color: #10b981;
+    border-color: #10b981;
+}
+
+.gm-footer-langs a.active {
+    color: #fff;
+    background: #10b981;
+    border-color: #10b981;
 }
 
 /* ============================================================
@@ -4256,7 +3998,7 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
         text-align: center;
         justify-content: center;
     }
-    .gm-footer-badges {
+    .gm-footer-meta {
         justify-content: center;
     }
     [dir="rtl"] .gm-footer-top {
@@ -4274,7 +4016,7 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
     [dir="rtl"] .gm-footer-bottom {
         flex-direction: column;
     }
-    [dir="rtl"] .gm-footer-badges {
+    [dir="rtl"] .gm-footer-meta {
         flex-direction: row;
         justify-content: center;
     }
@@ -4390,30 +4132,26 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
 /* Swiper Buttons RTL */
 [dir="rtl"] .gm-hero .swiper-button-next::after,
 [dir="rtl"] .process-section .swiper-button-next::after,
-[dir="rtl"] .wwb-section .swiper-button-next::after,
-[dir="rtl"] .team-section .swiper-button-next::after {
+[dir="rtl"] .wwb-section .swiper-button-next::after {
     content: '-prev';
 }
 
 [dir="rtl"] .gm-hero .swiper-button-prev::after,
 [dir="rtl"] .process-section .swiper-button-prev::after,
-[dir="rtl"] .wwb-section .swiper-button-prev::after,
-[dir="rtl"] .team-section .swiper-button-prev::after {
+[dir="rtl"] .wwb-section .swiper-button-prev::after {
     content: 'next-';
 }
 
 [dir="rtl"] .gm-hero .swiper-button-next,
 [dir="rtl"] .process-section .swiper-button-next,
-[dir="rtl"] .wwb-section .swiper-button-next,
-[dir="rtl"] .team-section .swiper-button-next {
+[dir="rtl"] .wwb-section .swiper-button-next {
     left: 20px;
     right: auto;
 }
 
 [dir="rtl"] .gm-hero .swiper-button-prev,
 [dir="rtl"] .process-section .swiper-button-prev,
-[dir="rtl"] .wwb-section .swiper-button-prev,
-[dir="rtl"] .team-section .swiper-button-prev {
+[dir="rtl"] .wwb-section .swiper-button-prev {
     right: 20px;
     left: auto;
 }
@@ -4591,17 +4329,6 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
     transform: none;
 }
 
-/* Team Section RTL */
-[dir="rtl"] .team-card-content {
-    text-align: right;
-    direction: rtl;
-}
-
-[dir="rtl"] .team-social {
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-}
-
 /* Footer RTL */
 [dir="rtl"] .gm-footer-inner {
     direction: rtl;
@@ -4619,11 +4346,11 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
     flex-direction: row-reverse;
 }
 
-[dir="rtl"] .gm-footer-badges {
+[dir="rtl"] .gm-footer-meta {
     flex-direction: row-reverse;
 }
 
-[dir="rtl"] .gm-footer-badges span {
+[dir="rtl"] .gm-footer-made {
     flex-direction: row-reverse;
 }
 
@@ -4665,8 +4392,7 @@ svg.wilaya-svg path.st-active { filter: drop-shadow(0 6px 16px rgba(13, 148, 136
 .container,
 .wwb-container,
 .process-container,
-.container-messages,
-.container-team {
+.container-messages {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;

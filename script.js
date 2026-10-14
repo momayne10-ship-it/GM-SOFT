@@ -85,27 +85,33 @@ console.log('GM SOFT — Header & Hero (Simple Backgrounds + Orbs) loaded.');
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
     if (typeof Swiper !== 'undefined') {
-        new Swiper('.wwb-slider', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: {
-                delay: 4500,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-            },
-            pagination: {
-                el: '.wwb-slider .swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.wwb-slider .swiper-button-next',
-                prevEl: '.wwb-slider .swiper-button-prev',
-            },
-            breakpoints: {
-                768: { slidesPerView: 2, spaceBetween: 24 },
-                1024: { slidesPerView: 3, spaceBetween: 28 },
-            },
+        document.querySelectorAll('.wwb-slider').forEach(function(sliderEl) {
+            var nav = sliderEl.nextElementSibling;
+            if (!nav || !nav.classList.contains('wwb-nav')) {
+                nav = sliderEl.parentElement ? sliderEl.parentElement.querySelector('.wwb-nav') : null;
+            }
+            new Swiper(sliderEl, {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                pagination: {
+                    el: nav ? nav.querySelector('.wwb-pagination') : null,
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: nav ? nav.querySelector('.wwb-next') : null,
+                    prevEl: nav ? nav.querySelector('.wwb-prev') : null,
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2, spaceBetween: 24 },
+                    1024: { slidesPerView: 3, spaceBetween: 28 },
+                },
+            });
         });
     }
 });
@@ -855,6 +861,280 @@ document.querySelectorAll('.faq-list').forEach(list => {
     });
 });
 
+// ============================================================
+// PRESENCE — INTERACTIVE ALGERIA MAP (footprint)
+// ============================================================
+const presenceMeta = {
+    "01": { latin: "Adrar", ar: "أدرار" },
+    "02": { latin: "Chlef", ar: "الشلف" },
+    "03": { latin: "Laghouat", ar: "الأغواط" },
+    "04": { latin: "Oum El Bouaghi", ar: "أم البواقي" },
+    "05": { latin: "Batna", ar: "باتنة" },
+    "06": { latin: "Béjaïa", ar: "بجاية" },
+    "07": { latin: "Biskra", ar: "بسكرة" },
+    "08": { latin: "Béchar", ar: "بشار" },
+    "09": { latin: "Blida", ar: "البليدة" },
+    "10": { latin: "Bouira", ar: "البويرة" },
+    "11": { latin: "Tamanrasset", ar: "تمنراست" },
+    "12": { latin: "Tébessa", ar: "تبسة" },
+    "13": { latin: "Tlemcen", ar: "تلمسان" },
+    "14": { latin: "Tiaret", ar: "تيارت" },
+    "15": { latin: "Tizi Ouzou", ar: "تيزي وزو" },
+    "16": { latin: "Algiers", ar: "الجزائر" },
+    "17": { latin: "Djelfa", ar: "الجلفة" },
+    "18": { latin: "Jijel", ar: "جيجل" },
+    "19": { latin: "Sétif", ar: "سطيف" },
+    "20": { latin: "Saïda", ar: "سعيدة" },
+    "21": { latin: "Skikda", ar: "سكيكدة" },
+    "22": { latin: "Sidi Bel Abbès", ar: "سيدي بلعباس" },
+    "23": { latin: "Annaba", ar: "عنابة" },
+    "24": { latin: "Guelma", ar: "قالمة" },
+    "25": { latin: "Constantine", ar: "قسنطينة" },
+    "26": { latin: "Médéa", ar: "المدية" },
+    "27": { latin: "Mostaganem", ar: "مستغانم" },
+    "28": { latin: "M'Sila", ar: "المسيلة" },
+    "29": { latin: "Mascara", ar: "معسكر" },
+    "30": { latin: "Ouargla", ar: "ورقلة" },
+    "31": { latin: "Oran", ar: "وهران" },
+    "32": { latin: "El Bayadh", ar: "البيض" },
+    "33": { latin: "Illizi", ar: "إليزي" },
+    "34": { latin: "Bordj Bou Arréridj", ar: "برج بوعريريج" },
+    "35": { latin: "Boumerdès", ar: "بومرداس" },
+    "36": { latin: "El Tarf", ar: "الطارف" },
+    "37": { latin: "Tindouf", ar: "تندوف" },
+    "38": { latin: "Tissemsilt", ar: "تيسمسيلت" },
+    "39": { latin: "El Oued", ar: "الوادي" },
+    "40": { latin: "Khenchela", ar: "خنشلة" },
+    "41": { latin: "Souk Ahras", ar: "سوق أهراس" },
+    "42": { latin: "Tipaza", ar: "تيبازة" },
+    "43": { latin: "Mila", ar: "ميلة" },
+    "44": { latin: "Aïn Defla", ar: "عين الدفلى" },
+    "45": { latin: "Naâma", ar: "النعامة" },
+    "46": { latin: "Aïn Témouchent", ar: "عين تموشنت" },
+    "47": { latin: "Ghardaïa", ar: "غرداية" },
+    "48": { latin: "Relizane", ar: "غليزان" },
+    "49": { latin: "Timimoun", ar: "تيميمون" },
+    "50": { latin: "Bordj Badji Mokhtar", ar: "برج باجي مختار" },
+    "51": { latin: "Ouled Djellal", ar: "أولاد جلال" },
+    "52": { latin: "Béni Abbès", ar: "بني عباس" },
+    "53": { latin: "In Salah", ar: "عين صالح" },
+    "54": { latin: "In Guezzam", ar: "عين قزام" },
+    "55": { latin: "Touggourt", ar: "تقرت" },
+    "56": { latin: "Djanet", ar: "جانت" },
+    "57": { latin: "El M'Ghair", ar: "المغير" },
+    "58": { latin: "El Meniaa", ar: "المنيعة" },
+    "59": { latin: "Aflou", ar: "أفلو" },
+    "60": { latin: "El Abiodh Sidi Cheikh", ar: "الأبيض سيدي الشيخ" },
+    "61": { latin: "El Aricha", ar: "العريشة" },
+    "62": { latin: "El Kantara", ar: "القنطرة" },
+    "63": { latin: "Barika", ar: "بريكة" },
+    "64": { latin: "Bou Saâda", ar: "بوسعادة" },
+    "65": { latin: "Bir El Ater", ar: "بئر العاتر" },
+    "66": { latin: "Ksar El Boukhari", ar: "قصر البخاري" },
+    "67": { latin: "Ksar Chellala", ar: "قصر الشلالة" },
+    "68": { latin: "Aïn Oussara", ar: "عين وسارة" },
+    "69": { latin: "M'saâd", ar: "مسعد" }
+};
+
+const presenceEN = {
+    ui: {
+        hqBadge: 'Our Team',
+        coveredBadge: 'Projects delivered',
+        tipHq: 'Our team is based here',
+        tipCovered: 'projects delivered',
+        tipAvailable: 'Available nationwide — remote delivery',
+        totalSuffix: '+',
+        serviceLabels: ['Web', 'Mobile', 'AI', 'Desktop', 'UI/UX', 'Maintenance']
+    },
+    '28': { status: 'hq', projects: null, types: [0, 1, 2, 3, 4, 5], note: 'The GM SOFT team works from M’Sila — every project we ship starts here.' },
+    '16': { status: 'covered', projects: 6, types: [0, 2, 4], note: 'Web platforms and AI solutions delivered for clients in the capital.' },
+    '31': { status: 'covered', projects: 4, types: [0, 1], note: 'Web and mobile projects for businesses across the west.' },
+    '25': { status: 'covered', projects: 3, types: [0, 3], note: 'Desktop systems and web portals for institutions in Constantine.' },
+    '19': { status: 'covered', projects: 3, types: [0, 1], note: 'Web and mobile apps for companies in the High Plains.' },
+    '23': { status: 'covered', projects: 2, types: [0, 5], note: 'Website delivery and ongoing maintenance for eastern clients.' },
+    '15': { status: 'covered', projects: 2, types: [1, 4], note: 'Mobile apps and UI/UX design for startups in the Kabylie region.' },
+    '13': { status: 'covered', projects: 2, types: [0, 1], note: 'Web and mobile projects for clients in the far west.' },
+    '34': { status: 'covered', projects: 2, types: [0, 3], note: 'Web portals and desktop tools for local businesses.' },
+    '07': { status: 'covered', projects: 1, types: [0], note: 'A first website delivered for a Biskra-based business.' },
+    '03': { status: 'covered', projects: 1, types: [0, 5], note: 'Web presence and maintenance for Laghouat professionals.' },
+    '08': { status: 'covered', projects: 1, types: [0], note: 'Website delivered for a Béchar enterprise.' },
+    '18': { status: 'covered', projects: 1, types: [1], note: 'A mobile app delivered for clients in Jijel.' },
+    '11': { status: 'covered', projects: 1, types: [0, 5], note: 'Remote web projects served as far as the deep south.' }
+};
+
+const presenceFR = {
+    ui: {
+        hqBadge: 'Notre équipe',
+        coveredBadge: 'Projets livrés',
+        tipHq: 'Notre équipe est basée ici',
+        tipCovered: 'projets livrés',
+        tipAvailable: 'Disponible partout — livraison à distance',
+        totalSuffix: '+',
+        serviceLabels: ['Web', 'Mobile', 'IA', 'Desktop', 'UI/UX', 'Maintenance']
+    },
+    '28': { status: 'hq', projects: null, types: [0, 1, 2, 3, 4, 5], note: 'L’équipe GM SOFT travaille depuis M’Sila — chaque projet livré commence ici.' },
+    '16': { status: 'covered', projects: 6, types: [0, 2, 4], note: 'Plateformes web et solutions IA livrées pour des clients de la capitale.' },
+    '31': { status: 'covered', projects: 4, types: [0, 1], note: 'Projets web et mobiles pour des entreprises de l’ouest.' },
+    '25': { status: 'covered', projects: 3, types: [0, 3], note: 'Systèmes desktop et portails web pour des institutions à Constantine.' },
+    '19': { status: 'covered', projects: 3, types: [0, 1], note: 'Web et applications mobiles pour les entreprises des Hauts-Plateaux.' },
+    '23': { status: 'covered', projects: 2, types: [0, 5], note: 'Création de sites et maintenance continue pour des clients de l’est.' },
+    '15': { status: 'covered', projects: 2, types: [1, 4], note: 'Applications mobiles et design UI/UX pour des startups de la Kabylie.' },
+    '13': { status: 'covered', projects: 2, types: [0, 1], note: 'Projets web et mobiles pour des clients de l’extrême ouest.' },
+    '34': { status: 'covered', projects: 2, types: [0, 3], note: 'Portails web et outils desktop pour les entreprises locales.' },
+    '07': { status: 'covered', projects: 1, types: [0], note: 'Un premier site web livré pour une entreprise de Biskra.' },
+    '03': { status: 'covered', projects: 1, types: [0, 5], note: 'Site web et maintenance pour des professionnels de Laghouat.' },
+    '08': { status: 'covered', projects: 1, types: [0], note: 'Site web livré pour une entreprise de Béchar.' },
+    '18': { status: 'covered', projects: 1, types: [1], note: 'Une application mobile livrée pour des clients à Jijel.' },
+    '11': { status: 'covered', projects: 1, types: [0, 5], note: 'Des projets web servis à distance jusqu’au grand Sud.' }
+};
+
+const presenceAR = {
+    ui: {
+        hqBadge: 'فريقنا',
+        coveredBadge: 'مشاريع منجزة',
+        tipHq: 'هنا يقع فريقنا',
+        tipCovered: 'مشاريع منجزة',
+        tipAvailable: 'متاحة في كامل الجزائر — خدمة عن بُعد',
+        totalSuffix: '+',
+        serviceLabels: ['مواقع ويب', 'تطبيقات', 'ذكاء اصطناعي', 'برامج مكتبية', 'واجهات UI/UX', 'صيانة']
+    },
+    '28': { status: 'hq', projects: null, types: [0, 1, 2, 3, 4, 5], note: 'فريق GM SOFT يعمل من المسيلة — كل مشروع نسلّمه يبدأ من هنا.' },
+    '16': { status: 'covered', projects: 6, types: [0, 2, 4], note: 'منصات ويب وحلول ذكاء اصطناعي لعملاء بالعاصمة.' },
+    '31': { status: 'covered', projects: 4, types: [0, 1], note: 'مشاريع ويب وتطبيقات لغرب الجزائر.' },
+    '25': { status: 'covered', projects: 3, types: [0, 3], note: 'أنظمة مكتبية وبوابات ويب لمؤسسات بقسنطينة.' },
+    '19': { status: 'covered', projects: 3, types: [0, 1], note: 'مواقع وتطبيقات للشركات في الهضاب العليا.' },
+    '23': { status: 'covered', projects: 2, types: [0, 5], note: 'إنشاء مواقع وصيانة مستمرة لعملاء الشرق.' },
+    '15': { status: 'covered', projects: 2, types: [1, 4], note: 'تطبيقات وتصميم واجهات لشركات ناشئة في القبائل.' },
+    '13': { status: 'covered', projects: 2, types: [0, 1], note: 'مشاريع ويب وتطبيقات لعملاء الغرب الأقصى.' },
+    '34': { status: 'covered', projects: 2, types: [0, 3], note: 'بوابات وأدوات مكتبية للتجار والمؤسسات المحلية.' },
+    '07': { status: 'covered', projects: 1, types: [0], note: 'أول موقع إلكتروني لنشاط تجاري في بسكرة.' },
+    '03': { status: 'covered', projects: 1, types: [0, 5], note: 'حضور رقمي وصيانة لمهنيي الأغواط.' },
+    '08': { status: 'covered', projects: 1, types: [0], note: 'موقع إلكتروني لمؤسسة تجارية في بشار.' },
+    '18': { status: 'covered', projects: 1, types: [1], note: 'تطبيق جوال لعملائنا بجيجل.' },
+    '11': { status: 'covered', projects: 1, types: [0, 5], note: 'مشاريع ويب نخدم بها عملاء الجنوب البعيد عن بُعد.' }
+};
+
+(function () {
+    const svg = document.querySelector('.wilaya-svg');
+    if (!svg) return;
+
+    const data = pageLang === 'fr' ? presenceFR : pageLang === 'ar' ? presenceAR : presenceEN;
+    const ui = data.ui;
+    const isAr = pageLang === 'ar';
+    const svgWrap = svg.closest('.map-flex-svg');
+    const tooltip = document.getElementById('mapTooltip');
+    const tipCity = document.getElementById('tipCity');
+    const tipDetail = document.getElementById('tipDetail');
+    const sideEmpty = document.getElementById('sideEmpty');
+    const sideDetail = document.getElementById('sideDetail');
+    const sideBadge = document.getElementById('sideBadge');
+    const sideName = document.getElementById('sideName');
+    const sideLatin = document.getElementById('sideLatin');
+    const sideCount = document.getElementById('sideCount');
+    const sideServices = document.getElementById('sideServices');
+    const sideNote = document.getElementById('sideNote');
+    const directoryMini = document.getElementById('directoryMini');
+
+    let totalProjects = 0;
+    Object.keys(data).forEach(function (k) {
+        if (k !== 'ui' && data[k].status === 'covered') totalProjects += data[k].projects;
+    });
+
+    let tipTimer = null;
+    let rippleEl = null;
+
+    function showTooltip(e, title, detail) {
+        tipCity.textContent = title;
+        tipDetail.textContent = detail;
+        let left = e.clientX - 110;
+        let top = e.clientY - 90;
+        if (left < 10) left = 10;
+        if (top < 10) top = 10;
+        if (left + 220 > window.innerWidth) left = window.innerWidth - 230;
+        tooltip.style.left = left + 'px';
+        tooltip.style.top = top + 'px';
+        tooltip.classList.add('visible');
+        clearTimeout(tipTimer);
+    }
+    function hideTooltip() {
+        tipTimer = setTimeout(function () { tooltip.classList.remove('visible'); }, 150);
+    }
+
+    function placeRipple(e) {
+        if (rippleEl) rippleEl.remove();
+        const wrapRect = svgWrap.getBoundingClientRect();
+        rippleEl = document.createElement('div');
+        rippleEl.className = 'ripple-dot';
+        rippleEl.style.left = (e.clientX - wrapRect.left) + 'px';
+        rippleEl.style.top = (e.clientY - wrapRect.top) + 'px';
+        svgWrap.appendChild(rippleEl);
+    }
+
+    function selectWilaya(code, e) {
+        const info = data[code];
+        if (!info) return;
+
+        document.querySelectorAll('.wilaya-svg path').forEach(function (p) {
+            p.classList.toggle('st-active', p.id === code);
+        });
+        document.querySelectorAll('.directory-mini button').forEach(function (b) {
+            b.classList.toggle('active', b.dataset.code === code);
+        });
+
+        if (e) placeRipple(e);
+
+        sideEmpty.style.display = 'none';
+        sideDetail.classList.add('show');
+
+        const meta = presenceMeta[code] || {};
+        const isHQ = info.status === 'hq';
+        sideBadge.className = 'side-status-badge ' + (isHQ ? 'hq' : 'covered');
+        sideBadge.textContent = isHQ ? ui.hqBadge : ui.coveredBadge;
+        sideName.textContent = isAr ? meta.ar : meta.latin;
+        sideLatin.textContent = isAr ? meta.latin : meta.ar;
+        sideCount.textContent = isHQ ? (totalProjects + ui.totalSuffix) : String(info.projects);
+        sideServices.innerHTML = info.types.map(function (t) {
+            return '<span class="service-chip">' + ui.serviceLabels[t] + '</span>';
+        }).join('');
+        sideNote.textContent = info.note;
+    }
+
+    document.querySelectorAll('.wilaya-svg path').forEach(function (path) {
+        const code = path.id;
+        const meta = presenceMeta[code];
+        if (!meta) return;
+        const info = data[code];
+        const name = isAr ? meta.ar : meta.latin;
+
+        path.addEventListener('mousemove', function (e) {
+            if (!info) showTooltip(e, name, ui.tipAvailable);
+            else if (info.status === 'hq') showTooltip(e, name, ui.tipHq);
+            else showTooltip(e, name, info.projects + ' ' + ui.tipCovered);
+        });
+        path.addEventListener('mouseleave', hideTooltip);
+        if (info) path.addEventListener('click', function (e) { selectWilaya(code, e); });
+    });
+
+    document.addEventListener('scroll', function () { tooltip.classList.remove('visible'); });
+
+    Object.keys(data)
+        .filter(function (k) { return k !== 'ui'; })
+        .sort(function (a, b) {
+            const aHQ = data[a].status === 'hq' ? 0 : 1;
+            const bHQ = data[b].status === 'hq' ? 0 : 1;
+            if (aHQ !== bHQ) return aHQ - bHQ;
+            return (data[b].projects || 0) - (data[a].projects || 0);
+        })
+        .forEach(function (code) {
+            const meta = presenceMeta[code] || {};
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.dataset.code = code;
+            btn.textContent = isAr ? meta.ar : meta.latin;
+            btn.addEventListener('click', function (e) { selectWilaya(code, e); });
+            directoryMini.appendChild(btn);
+        });
+})();
 
 // ============================================================
 // CONTACT FORM — SUBMIT HANDLER (Formspree + per-field validation + SweetAlert2)

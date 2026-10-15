@@ -657,7 +657,7 @@ startAutoplay(0);
 console.log('GM SOFT — Client Messages with Voice Input loaded.');
 
 // ============================================================
-// WORK SECTION — DESKTOP FINDER PORTFOLIO
+// WORK SECTION — DESKTOP FINDER PORTFOLIO (ANONYMIZED / NDA)
 // ============================================================
 (function () {
     if (!document.getElementById('work')) return;
@@ -669,40 +669,52 @@ console.log('GM SOFT — Client Messages with Voice Input loaded.');
             available: 'Available for work',
             caption: 'Portfolio / Work — click a folder to open',
             folders: 'Folders',
-            all: 'All Projects', website: 'Web Sites', webapp: 'Web Apps', desktop: 'Desktop Apps', mpss: 'MPSS',
+            all: 'All Projects', website: 'Websites', webapp: 'Web Apps', desktop: 'Desktop Apps', mpss: 'Business Systems',
             itemWord: 'item', itemWordPlural: 'items',
-            preview: 'Preview', goTo: 'Go to project', close: 'Close',
-            viewGrid: 'Grid view', viewList: 'List view'
+            preview: 'Request case study', close: 'Close',
+            viewGrid: 'Grid view', viewList: 'List view',
+            ribbon: 'CONFIDENTIAL',
+            caseTitle: 'Case Study \u2014 Confidential',
+            caseHtml: 'We don\u2019t showcase full project details publicly to protect our clients\u2019 privacy.<br><b>Contact us</b> \u2014 we\u2019ll walk you through relevant work at every level.',
+            caseConfirm: 'Contact us', caseCancel: 'Close'
         },
         fr: {
             brandCrumb: 'Portfolio /', brand: 'Travaux',
             available: 'Disponible pour des projets',
-            caption: 'Portfolio / Travaux — cliquez sur un dossier pour l\u2019ouvrir',
+            caption: 'Portfolio / Travaux \u2014 cliquez sur un dossier pour l\u2019ouvrir',
             folders: 'Dossiers',
-            all: 'Tous les projets', website: 'Sites web', webapp: 'Apps web', desktop: 'Apps bureau', mpss: 'MPSS',
+            all: 'Tous les projets', website: 'Sites web', webapp: 'Apps web', desktop: 'Apps bureau', mpss: 'Syst\u00e8mes m\u00e9tier',
             itemWord: '\u00e9l\u00e9ment', itemWordPlural: '\u00e9l\u00e9ments',
-            preview: 'Aper\u00e7u', goTo: 'Voir le projet', close: 'Fermer',
-            viewGrid: 'Vue grille', viewList: 'Vue liste'
+            preview: 'Demander une \u00e9tude de cas', close: 'Fermer',
+            viewGrid: 'Vue grille', viewList: 'Vue liste',
+            ribbon: 'SOUS NDA',
+            caseTitle: '\u00c9tude de cas \u2014 Confidentiel',
+            caseHtml: 'Nous ne publions pas les d\u00e9tails complets des projets afin de prot\u00e9ger la confidentialit\u00e9 de nos clients.<br><b>Contactez-nous</b> \u2014 nous vous pr\u00e9senterons des r\u00e9alisations pertinentes \u00e0 tous les niveaux.',
+            caseConfirm: 'Nous contacter', caseCancel: 'Fermer'
         },
         ar: {
-            brandCrumb: '\u0627\u0644\u0623\u0639\u0645\u0627\u0644 /', brand: '\u0645\u0634\u0627\u0631\u064a\u0639',
+            brandCrumb: '\u0627\u0644\u0623\u0644\u0639\u0645\u0627\u062f /', brand: '\u0623\u0639\u0645\u0627\u0644\u0646\u0627',
             available: '\u0645\u062a\u0627\u062d \u0644\u0644\u0639\u0645\u0644',
-            caption: '\u0627\u0644\u0623\u0639\u0645\u0627\u0644 \u2014 \u0627\u0636\u063a\u0637 \u0639\u0644\u0649 \u0645\u062c\u0644\u062f \u0644\u0641\u062a\u062d\u0647',
+            caption: '\u0623\u0639\u0645\u0627\u0644\u0646\u0627 \u2014 \u0627\u0636\u063a\u0637 \u0639\u0644\u0649 \u0645\u062c\u0644\u062f \u0644\u0641\u062a\u062d\u0647',
             folders: '\u0627\u0644\u0645\u062c\u0644\u062f\u0627\u062a',
-            all: '\u0643\u0644 \u0627\u0644\u0645\u0634\u0627\u0631\u064a\u0639', website: '\u0645\u0648\u0627\u0642\u0639 \u0627\u0644\u0648\u064a\u0628', webapp: '\u062a\u0637\u0628\u064a\u0642\u0627\u062a \u0627\u0644\u0648\u064a\u0628', desktop: '\u062a\u0637\u0628\u064a\u0642\u0627\u062a \u0627\u0644\u062d\u0627\u0633\u0648\u0628', mpss: 'MPSS',
+            all: '\u0643\u0644 \u0627\u0644\u0623\u0639\u0645\u0627\u0644', website: '\u0645\u0648\u0627\u0642\u0639 \u0627\u0644\u0648\u064a\u0628', webapp: '\u062a\u0637\u0628\u064a\u0642\u0627\u062a \u0627\u0644\u0648\u064a\u0628', desktop: '\u062a\u0637\u0628\u064a\u0642\u0627\u062a \u0627\u0644\u062d\u0627\u0633\u0648\u0628', mpss: '\u0623\u0646\u0638\u0645\u0629 \u0623\u0639\u0645\u0627\u0644 \u062a\u062c\u0627\u0631\u064a\u0629',
             itemWord: '\u0639\u0646\u0635\u0631', itemWordPlural: '\u0639\u0646\u0627\u0635\u0631',
-            preview: '\u0645\u0639\u0627\u064a\u0646\u0629', goTo: '\u0641\u062a\u062d \u0627\u0644\u0645\u0634\u0631\u0648\u0639', close: '\u0625\u063a\u0644\u0627\u0642',
-            viewGrid: '\u0639\u0631\u0636 \u0634\u0628\u0643\u064a', viewList: '\u0639\u0631\u0636 \u0642\u0627\u0626\u0645\u0629'
+            preview: '\u0637\u0644\u0628 \u062f\u0631\u0627\u0633\u0629 \u062d\u0627\u0644\u0629', close: '\u0625\u063a\u0644\u0627\u0642',
+            viewGrid: '\u0639\u0631\u0636 \u0634\u0628\u0643\u064a', viewList: '\u0639\u0631\u0636 \u0642\u0627\u0626\u0645\u0629',
+            ribbon: '\u0633\u0631\u064a',
+            caseTitle: '\u062f\u0631\u0627\u0633\u0629 \u062d\u0627\u0644\u0629 \u2014 \u0633\u0631\u064a',
+            caseHtml: '\u0646\u062d\u0641\u0636 \u0639\u0644\u0649 \u0639\u0631\u0636 \u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0645\u0634\u0631\u0648\u0639\u0627\u062a \u0628\u0634\u0643\u0644 \u0639\u0627\u0645 \u062d\u0641\u0627\u0638\u0627\u064b \u0639\u0644\u0649 \u062e\u0635\u0648\u0635\u064a\u0629 \u0639\u0645\u0644\u0627\u0626\u0646\u0627.<br><b>\u062a\u0648\u0627\u0635\u0644 \u0645\u0639\u0646\u0627</b> \u2014 \u0633\u0646\u0639\u0631\u0636\u0643 \u0623\u0639\u0645\u0627\u0644\u0646\u0627 \u0639\u0646\u062f \u0643\u0644 \u0627\u0644\u0645\u0633\u062a\u0648\u064a\u0627\u062a.',
+            caseConfirm: '\u062a\u0648\u0627\u0635\u0644 \u0645\u0639\u0646\u0627', caseCancel: '\u0625\u063a\u0644\u0627\u0642'
         }
     };
     var T = WT[wl] || WT.en;
+    var L = (T === WT.ar) ? 'ar' : (T === WT.fr) ? 'fr' : 'en';
     var itemsLabel = function (n) { return '\u2014 ' + n + ' ' + (n !== 1 ? T.itemWordPlural : T.itemWord); };
     var itemsShort = function (n) { return n + ' ' + (n !== 1 ? T.itemWordPlural : T.itemWord); };
     var brandHTML = function (crumb, name) { return '<span class="crumb">' + crumb + '</span> ' + name; };
     var defaultBrand = brandHTML(T.brandCrumb, T.brand);
 
     var ic = function (c) { return '<i class="fa-solid fa-' + c + '"></i>'; };
-    var RAWIMG = 'https://raw.githubusercontent.com/momayne10-ship-it/Gmayne/main/';
 
     var FOLDERS = [
         { id: 'all', name: T.all, icon: ic('folder-open'), color: '#c9a53a', badge: 14, dockIcon: ic('folder-open') },
@@ -713,53 +725,50 @@ console.log('GM SOFT — Client Messages with Voice Input loaded.');
     ];
 
     var PROJECTS = [
-        { title: 'Iron Man \u2014 3D Interactive Website', client: 'Iron Man', year: 2026, cat: 'website', color: '#e50914',
-            icon: ic('robot'), url: 'https://iron-man-puce.vercel.app/',
-            image: 'https://image.thum.io/get/width/400/crop/600/https://iron-man-puce.vercel.app/' },
-        { title: 'Burger House \u2014 \u0645\u0637\u0639\u0645 \u0628\u0631\u063a\u0631 \u0641\u0627\u062e\u0631', client: 'Burger House', year: 2026, cat: 'website', color: '#ff4d00',
-            icon: ic('burger'), url: 'https://burger-house-plum.vercel.app/',
-            image: 'https://image.thum.io/get/width/400/crop/600/https://burger-house-plum.vercel.app/' },
-        { title: 'CinePulse \u2014 Movies & TV Shows', client: 'CinePulse', year: 2026, cat: 'website', color: '#e50914',
-            icon: ic('film'), url: 'https://momayne10-ship-it.github.io/-CinePulse/',
-            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/-CinePulse/' },
-        { title: 'Golden Taste \u2014 \u0645\u0637\u0639\u0645 \u0641\u0627\u062e\u0631', client: 'Golden Taste', year: 2026, cat: 'website', color: '#d4a017',
-            icon: ic('utensils'), url: 'https://momayne10-ship-it.github.io/Golden-Taste/',
-            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/Golden-Taste/' },
-        { title: 'Sweet Delight \u2014 \u062d\u0644\u0648\u064a\u0627\u062a \u0641\u0627\u062e\u0631\u0629', client: 'Sweet Delight', year: 2026, cat: 'website', color: '#e91e8c',
-            icon: ic('cake-candles'), url: 'https://momayne10-ship-it.github.io/Sweet-Delight/',
-            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/Sweet-Delight/' },
-        { title: 'Black Brew \u2014 Specialty Coffee', client: 'Specialty Coffee', year: 2026, cat: 'website', color: '#3d2314',
-            icon: ic('mug-hot'), url: 'https://momayne10-ship-it.github.io/Specialty-Coffee/',
-            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/Specialty-Coffee/' },
-        { title: 'Muse \u2014 Women\'s Fashion', client: 'Muse', year: 2026, cat: 'website', color: '#c41e3a',
-            icon: ic('shirt'), url: 'https://momayne10-ship-it.github.io/Muse/',
-            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/Muse/' },
-        { title: 'MediSys \u2014 \u0646\u0638\u0627\u0645 \u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0639\u064a\u0627\u062f\u0627\u062a', client: 'MediSys', year: 2026, cat: 'mpss', color: '#10b981',
-            icon: ic('hospital'), url: 'https://momayne10-ship-it.github.io/MediSys/',
-            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/MediSys/' },
-        { title: 'Ain Lexicon \u2014 \u0645\u0639\u0645\u062c \u0627\u0644\u0639\u064a\u0646', client: 'Ain Lexicon', year: 2026, cat: 'webapp', color: '#2ecc71',
-            icon: ic('book-open'), url: 'https://momayne10-ship-it.github.io/Ain-Lexicon/',
-            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/Ain-Lexicon/' },
-        { title: 'Medisys \u2014 Medical System', client: 'Medisys', year: 2025, cat: 'desktop', color: '#1a8a6a',
-            icon: ic('laptop-medical'),
-            image: RAWIMG + 'MD1.png',
-            gallery: [RAWIMG + 'MD1.png', RAWIMG + 'MD2.png', RAWIMG + 'MD3.png', RAWIMG + 'MD4.png', RAWIMG + 'MD5.png', RAWIMG + 'MD6.png', RAWIMG + 'MD7.png'] },
-        { title: 'Dar Al Oud \u2014 Perfume Store', client: 'Dar Al Oud', year: 2025, cat: 'desktop', color: '#c49a3a',
-            icon: ic('bottle-droplet'),
-            image: RAWIMG + 'DO1.png',
-            gallery: [RAWIMG + 'DO1.png', RAWIMG + 'DO2.png', RAWIMG + 'DO3.png', RAWIMG + 'DO4.png', RAWIMG + 'DO5.png', RAWIMG + 'DO6.png', RAWIMG + 'DO7.png'] },
-        { title: 'Glasses Outlet \u2014 Eyewear Store', client: 'Glasses Outlet', year: 2025, cat: 'desktop', color: '#4a7ad6',
-            icon: ic('glasses'),
-            image: RAWIMG + 'GO1.png',
-            gallery: [RAWIMG + 'GO1.png', RAWIMG + 'GO2.png', RAWIMG + 'GO3.png', RAWIMG + 'GO4.png', RAWIMG + 'GO5.png', RAWIMG + 'GO6.png'] },
-        { title: 'Nursery Rhymes \u2014 Kids Garden', client: 'Nursery Rhymes', year: 2025, cat: 'desktop', color: '#e06a9a',
-            icon: ic('children'),
-            image: RAWIMG + 'NR1.png',
-            gallery: [RAWIMG + 'NR1.png', RAWIMG + 'NR2.png', RAWIMG + 'NR3.png', RAWIMG + 'NR4.png', RAWIMG + 'NR5.png', RAWIMG + 'NR6.png', RAWIMG + 'NR7.png'] },
-        { title: 'Astronomia Luxe \u2014 3D Luxury Watch', client: 'Astronomia Luxe', year: 2026, cat: 'website', color: '#C9A05C',
-            icon: ic('clock'), url: 'https://astronomia-luxe-kohl.vercel.app/',
-            image: RAWIMG + 'astronomia-preview.png' }
-    ].map(function (p) { return p; });
+        { t: { en: 'Interactive 3D Product Site', fr: 'Site produit 3D interactif', ar: '\u0645\u0648\u0642\u0639 \u062a\u0641\u0627\u0639\u0644\u064a \u062b\u0644\u0627\u062b\u064a \u0627\u0644\u0628\u0639\u062f' },
+            s: { en: 'Entertainment', fr: 'Divertissement', ar: '\u062a\u0631\u0641\u064a\u0647' },
+            tech: 'Three.js \u00b7 WebGL', year: 2026, cat: 'website', color: '#e50914', icon: ic('robot') },
+        { t: { en: 'Restaurant Ordering Website', fr: 'Site de commande \u2014 restaurant', ar: '\u0645\u0648\u0642\u0639 \u0637\u0644\u0628 \u0623\u0643\u0644 \u0644\u0645\u0637\u0639\u0645' },
+            s: { en: 'Food & Beverage', fr: 'Restauration', ar: '\u0627\u0644\u0645\u0637\u0639\u0645 \u0648\u0627\u0644\u0645\u0634\u0631\u0648\u0628\u0627\u062a' },
+            tech: 'HTML \u00b7 CSS \u00b7 JS', year: 2026, cat: 'website', color: '#ff4d00', icon: ic('burger') },
+        { t: { en: 'Streaming Catalog Platform', fr: 'Plateforme de catalogues streaming', ar: '\u0645\u0646\u0635\u0629 \u0645\u062d\u062a\u0648\u0627\u0629 \u0628\u062b' },
+            s: { en: 'Media & Entertainment', fr: 'M\u00e9dias', ar: '\u0627\u0644\u0625\u0639\u0644\u0627\u0645 \u0648\u0627\u0644\u062a\u0631\u0641\u064a\u0647' },
+            tech: 'React \u00b7 REST API', year: 2026, cat: 'website', color: '#e50914', icon: ic('film') },
+        { t: { en: 'Premium Restaurant Website', fr: 'Site restaurant premium', ar: '\u0645\u0648\u0642\u0639 \u0645\u0637\u0639\u0645 \u0641\u0627\u062e\u0631' },
+            s: { en: 'Food & Beverage', fr: 'Restauration', ar: '\u0627\u0644\u0645\u0637\u0639\u0645 \u0648\u0627\u0644\u0645\u0634\u0631\u0648\u0628\u0627\u062a' },
+            tech: 'Landing \u00b7 Responsive', year: 2026, cat: 'website', color: '#d4a017', icon: ic('utensils') },
+        { t: { en: 'Bakery & Desserts Website', fr: 'Site pâtisserie', ar: '\u0645\u0648\u0642\u0639 \u062d\u0644\u0648\u064a\u0627\u062a' },
+            s: { en: 'Retail', fr: 'Commerce', ar: '\u0627\u0644\u062a\u062c\u0627\u0631\u0629' },
+            tech: 'Landing \u00b7 Responsive', year: 2026, cat: 'website', color: '#e91e8c', icon: ic('cake-candles') },
+        { t: { en: 'Specialty Coffee Brand Website', fr: 'Site de torréfaction artisanale', ar: '\u0645\u0648\u0642\u0639 \u0642\u0647\u0648\u0629 \u0645\u062e\u0635\u0635\u0629' },
+            s: { en: 'Food & Beverage', fr: 'Restauration', ar: '\u0627\u0644\u0645\u0637\u0639\u0645 \u0648\u0627\u0644\u0645\u0634\u0631\u0648\u0628\u0627\u062a' },
+            tech: 'Landing \u00b7 SEO', year: 2026, cat: 'website', color: '#3d2314', icon: ic('mug-hot') },
+        { t: { en: 'Fashion E-commerce Website', fr: 'Boutique mode en ligne', ar: '\u0645\u062a\u062c\u0631 \u0623\u0644\u0648\u0627\u0646 \u0645\u0648\u0627\u0644' },
+            s: { en: 'Retail', fr: 'Commerce', ar: '\u0627\u0644\u062a\u062c\u0627\u0631\u0629' },
+            tech: 'E-commerce \u00b7 CMS', year: 2026, cat: 'website', color: '#c41e3a', icon: ic('shirt') },
+        { t: { en: 'Healthcare Management Platform', fr: 'Plateforme de gestion \u2014 santé', ar: '\u0645\u0646\u0635\u0629 \u0625\u062f\u0627\u0631\u0629 \u0635\u062d\u064a\u0629' },
+            s: { en: 'Healthcare', fr: 'Sant\u00e9', ar: '\u0627\u0644\u0635\u062d\u0629' },
+            tech: 'Full-stack \u00b7 Multi-role', year: 2026, cat: 'mpss', color: '#10b981', icon: ic('hospital') },
+        { t: { en: 'Arabic Lexicon Web App', fr: 'Application lexicale arabe', ar: '\u062a\u0637\u0628\u064a\u0642 \u0645\u0639\u062c\u0645 \u0639\u0631\u0628\u064a' },
+            s: { en: 'Education & Culture', fr: 'Éducation', ar: '\u0627\u0644\u062a\u0631\u0628\u064a\u0629 \u0648\u0627\u0644\u062ab\u0627\u0642\u0627\u0641\u0629' },
+            tech: 'Web App \u00b7 Search', year: 2026, cat: 'webapp', color: '#2ecc71', icon: ic('book-open') },
+        { t: { en: 'Medical Practice Management', fr: 'Gestion de cabinet médical', ar: '\u0646\u0638\u0627\u0645 \u0625\u062f\u0627\u0631\u0629 \u0639\u064a\u0627\u062f\u0629 \u0637\u0628\u064a\u0629' },
+            s: { en: 'Healthcare', fr: 'Sant\u00e9', ar: '\u0627\u0644\u0635\u062d\u0629' },
+            tech: 'Electron \u00b7 SQLite \u00b7 Offline', year: 2025, cat: 'desktop', color: '#1a8a6a', icon: ic('laptop-medical') },
+        { t: { en: 'Perfume Store Management', fr: 'Gestion de parfumerie', ar: '\u0646\u0638\u0627\u0645 \u0625\u062f\u0627\u0631\u0629 \u0639\u062a\u0628\u0629' },
+            s: { en: 'Retail', fr: 'Commerce', ar: '\u0627\u0644\u062a\u062c\u0627\u0631\u0629' },
+            tech: 'Electron \u00b7 POS \u00b7 Offline', year: 2025, cat: 'desktop', color: '#c49a3a', icon: ic('bottle-droplet') },
+        { t: { en: 'Eyewear Retail Management', fr: 'Gestion de magasin d\u2019optique', ar: '\u0646\u0638\u0627\u0645 \u0645\u062a\u062c\u0631 \u0646\u0638\u0627\u0641\u0627\u062a' },
+            s: { en: 'Retail', fr: 'Commerce', ar: '\u0627\u0644\u062a\u062c\u0627\u0631\u0629' },
+            tech: 'Electron \u00b7 Inventory', year: 2025, cat: 'desktop', color: '#4a7ad6', icon: ic('glasses') },
+        { t: { en: 'Childcare Center Management', fr: 'Gestion de crèche', ar: '\u0646\u0638\u0627\u0645 \u0625\u062f\u0627\u0631\u0629 \u0645\u0631\u062a\u0639\u0629' },
+            s: { en: 'Education', fr: '\u00c9ducation', ar: '\u0627\u0644\u062a\u0631\u0628\u064a\u0629' },
+            tech: 'Electron \u00b7 Reports', year: 2025, cat: 'desktop', color: '#e06a9a', icon: ic('children') },
+        { t: { en: 'Luxury 3D Product Showcase', fr: 'Vitrine 3D \u2014 produit de luxe', ar: '\u0639\u0631\u0648\u062f\u0629 \u062b\u0644\u0627\u062b\u064a\u0629 \u0627\u0644\u0628\u0639\u062f \u0644\u0645\u0646\u062a\u062c\u0627\u062a' },
+            s: { en: 'Jewelry & Watches', fr: 'Joaillerie', ar: '\u0627\u0644\u0623\u0644\u0648\u0627\u062b \u0648\u0627\u0644\u0645\u0648\u0627\u0639\u064a\u0630' },
+            tech: 'Three.js \u00b7 WebGL', year: 2026, cat: 'website', color: '#C9A05C', icon: ic('clock') }
+    ];
+    PROJECTS.forEach(function (p) { p.title = p.t[L] + ' \u2014 ' + p.s[L]; p.sub = p.tech + ' \u00b7 ' + p.year; });
 
     var currentCat = 'all';
     var viewMode = 'grid';
@@ -822,6 +831,32 @@ console.log('GM SOFT — Client Messages with Voice Input loaded.');
         fwSidebar.appendChild(el);
     });
 
+    function openCaseModal() {
+        if (typeof Swal === 'undefined') {
+            alert(T.caseTitle + '\n\n' + T.caseHtml.replace(/<br>/g, '\n').replace(/<[^>]+>/g, ''));
+            return;
+        }
+        Swal.fire({
+            icon: 'info',
+            title: T.caseTitle,
+            html: T.caseHtml,
+            showCancelButton: true,
+            confirmButtonText: T.caseConfirm,
+            cancelButtonText: T.caseCancel,
+            confirmButtonColor: '#10b981',
+            cancelButtonColor: '#555',
+            background: '#18181c',
+            color: '#f2f2f4'
+        }).then(function (r) {
+            if (r.isConfirmed) {
+                setTimeout(function () {
+                    var c = document.getElementById('contact');
+                    if (c) c.scrollIntoView({ behavior: 'smooth' });
+                }, 450);
+            }
+        });
+    }
+
     function renderGrid(cat) {
         fwGrid.innerHTML = '';
         var list = projectsFor(cat);
@@ -829,18 +864,13 @@ console.log('GM SOFT — Client Messages with Voice Input loaded.');
             var c = document.createElement('div');
             c.className = 'card';
             c.style.animationDelay = (i * 35) + 'ms';
-            c.innerHTML = '<div class="thumb" style="background-image:url(\'' + p.image + '\')">' +
-                '<span class="cat-badge" style="color:' + p.color + '">' + p.icon + '</span>' +
-                (p.url ? '<div class="link-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>' : '') +
-                (p.video ? '<div class="play">\u25b6</div>' : '') + '</div>' +
+            c.innerHTML = '<div class="thumb nda" style="--nda-c:' + p.color + '">' +
+                '<i class="fa-solid fa-lock nda-lock"></i>' +
+                '<span class="nda-ribbon">' + T.ribbon + '</span></div>' +
                 '<div class="meta"><div class="ctitle">' + p.title + '</div>' +
-                '<div class="csub">' + p.client + ' \u00b7 ' + p.year + '</div></div>';
+                '<div class="csub">' + p.sub + '</div></div>';
             c.addEventListener('contextmenu', function (e) { e.preventDefault(); openContextMenu(e, p); });
-            if (p.url) {
-                c.addEventListener('click', function () { window.open(p.url, '_blank'); });
-            } else {
-                c.addEventListener('click', function () { openLightbox(p); });
-            }
+            c.addEventListener('click', function () { openCaseModal(); });
             fwGrid.appendChild(c);
         });
     }
@@ -911,26 +941,17 @@ console.log('GM SOFT — Client Messages with Voice Input loaded.');
 
     var ctxMenu = document.getElementById('ctx-menu');
 
-    function openContextMenu(e, project, centered) {
+    function openContextMenu(e, project) {
         e.preventDefault && e.preventDefault();
         var bodyRect = document.querySelector('.fw-body').getBoundingClientRect();
-        var x, y;
-        if (centered) {
-            var r = e.currentTarget.getBoundingClientRect();
-            x = r.left - bodyRect.left + r.width / 2 - 100;
-            y = r.top - bodyRect.top + 20;
-        } else {
-            x = e.clientX - bodyRect.left;
-            y = e.clientY - bodyRect.top;
-        }
-        x = Math.max(6, Math.min(x, bodyRect.width - 216));
-        y = Math.max(6, Math.min(y, bodyRect.height - 140));
+        var x = Math.max(6, Math.min(e.clientX - bodyRect.left, bodyRect.width - 216));
+        var y = Math.max(6, Math.min(e.clientY - bodyRect.top, bodyRect.height - 140));
         ctxMenu.style.left = x + 'px';
         ctxMenu.style.top = y + 'px';
-        ctxMenu.innerHTML = '<div class="ctx-head"><div class="cthumb" style="background-image:url(\'' + project.image + '\')"></div>' +
+        ctxMenu.innerHTML = '<div class="ctx-head"><div class="cthumb nda" style="background:linear-gradient(145deg, ' + project.color + ', #0d0d10)">' +
+            '<i class="fa-solid fa-lock"></i></div>' +
             '<div class="cinfo"><div class="n">' + project.title + '</div></div></div>' +
-            '<div class="ctx-item" data-a="preview"><i class="fa-solid fa-play"></i> ' + T.preview + '</div>' +
-            (project.url ? '<div class="ctx-item" data-a="open"><i class="fa-solid fa-arrow-up-right-from-square"></i> ' + T.goTo + '</div>' : '') +
+            '<div class="ctx-item" data-a="preview"><i class="fa-solid fa-file-shield"></i> ' + T.preview + '</div>' +
             '<div class="ctx-sep"></div>' +
             '<div class="ctx-item danger" data-a="close"><i class="fa-solid fa-xmark"></i> ' + T.close + '</div>';
         ctxMenu.classList.add('show');
@@ -938,11 +959,7 @@ console.log('GM SOFT — Client Messages with Voice Input loaded.');
             it.addEventListener('click', function () {
                 var action = it.dataset.a;
                 closeContextMenu();
-                if (action === 'preview') {
-                    if (project.url) window.open(project.url, '_blank');
-                    else openLightbox(project);
-                }
-                if (action === 'open' && project.url) window.open(project.url, '_blank');
+                if (action === 'preview') openCaseModal();
             });
         });
     }
@@ -952,56 +969,6 @@ console.log('GM SOFT — Client Messages with Voice Input loaded.');
         if (!ctxMenu.contains(e.target) && !e.target.closest('.card')) closeContextMenu();
     });
     document.addEventListener('scroll', closeContextMenu, true);
-
-    /* ---- IMAGE LIGHTBOX ---- */
-    var lightboxOverlay = document.getElementById('lightbox-overlay');
-    var lightboxImg = document.getElementById('lightbox-img');
-    var lightboxCaption = document.getElementById('lightbox-caption');
-    var lightboxCounter = document.getElementById('lightbox-counter');
-    var lightboxGallery = [];
-    var lightboxIndex = 0;
-    var currentProject = null;
-
-    function openLightbox(project) {
-        currentProject = project;
-        lightboxGallery = project.gallery || [project.image];
-        lightboxIndex = 0;
-        updateLightbox();
-        lightboxOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function updateLightbox() {
-        var src = lightboxGallery[lightboxIndex];
-        lightboxImg.src = src;
-        lightboxCaption.textContent = currentProject ? currentProject.title : '';
-        lightboxCounter.textContent = lightboxGallery.length > 1
-            ? (lightboxIndex + 1) + ' / ' + lightboxGallery.length
-            : '';
-    }
-
-    function closeLightbox() {
-        lightboxOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    function lightboxNav(dir) {
-        lightboxIndex = (lightboxIndex + dir + lightboxGallery.length) % lightboxGallery.length;
-        updateLightbox();
-    }
-
-    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
-    document.getElementById('lightbox-prev').addEventListener('click', function () { lightboxNav(-1); });
-    document.getElementById('lightbox-next').addEventListener('click', function () { lightboxNav(1); });
-    lightboxOverlay.addEventListener('click', function (e) {
-        if (e.target === lightboxOverlay) closeLightbox();
-    });
-    document.addEventListener('keydown', function (e) {
-        if (!lightboxOverlay.classList.contains('active')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') lightboxNav(-1);
-        if (e.key === 'ArrowRight') lightboxNav(1);
-    });
 
     renderGrid('all');
 })();

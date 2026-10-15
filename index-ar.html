@@ -34,6 +34,7 @@
                     <li><a href="#what-we-build" class="gm-nav-link">ما نبنيه</a></li>
                     <li><a href="#how-we-work" class="gm-nav-link">كيف نعمل</a></li>
                     <li><a href="#terms" class="gm-nav-link">الالتزاماتنا</a></li>
+                    <li><a href="#work" class="gm-nav-link">أعمالنا</a></li>
                     <li><a href="#desktop-messages" class="gm-nav-link">رسائل العملاء</a></li>
                     <li><a href="#presence" class="gm-nav-link">حضورنا</a></li>
                     <li><a href="#contact" class="gm-nav-link">اتصل بنا</a></li>
@@ -578,7 +579,66 @@
         </div>
     </section>
 
-    <!-- SECTION 4: رسائل العملاء -->
+    <!-- ============================================================
+    SECTION: أعمالنا (Desktop Finder)
+    ============================================================ -->
+<section class="section-work" id="work">
+    <div class="container-work">
+
+        <div class="section-label">
+            أعمالنا
+        </div>
+
+        <div class="menubar">
+            <div class="brand" id="mb-brand"><span class="crumb">الأعمال /</span> مشاريع</div>
+            <div class="right">
+                <span><span class="dot-live"></span>متاح للعمل</span>
+                <span class="clock">--:--</span>
+            </div>
+        </div>
+
+        <div class="stage" id="stage">
+            <div class="desktop-layer" id="desktop-layer">
+                <div class="breadcrumb-caption">الأعمال — اضغط على مجلد لفتحه</div>
+                <div class="icon-grid" id="icon-grid"></div>
+            </div>
+
+            <div class="finder-window" id="finder-window">
+                <div class="fw-titlebar">
+                    <div class="traffic"><span class="r" id="fw-close"></span><span class="y"></span><span class="g"></span></div>
+                    <div class="title"><span class="ic" id="fw-title-icon"><i class="fa-solid fa-folder-open"></i></span><span id="fw-title-text">كل المشاريع</span></div>
+                    <div class="fw-view-toggle">
+                        <button id="view-grid" class="active" title="عرض شبكي"><i class="fa-solid fa-table-cells"></i></button>
+                        <button id="view-list" title="عرض قائمة"><i class="fa-solid fa-list"></i></button>
+                    </div>
+                </div>
+                <div class="fw-body">
+                    <div class="fw-sidebar" id="fw-sidebar"></div>
+                    <div class="fw-main">
+                        <div class="fw-crumbbar">
+                            <h2><span id="crumb-icon"><i class="fa-solid fa-folder-open"></i></span><span id="crumb-name">كل المشاريع</span><span class="items-tag" id="crumb-count">— 14 عنصر</span></h2>
+                            <div class="fw-spinner" id="fw-spinner"></div>
+                        </div>
+                        <div class="fw-grid-wrap">
+                            <div class="fw-grid" id="fw-grid"></div>
+                        </div>
+                        <div class="fw-statusbar">
+                            <span id="status-count">14 عنصر</span>
+                            <span id="status-crumb">■ كل المشاريع</span>
+                        </div>
+                    </div>
+                    <div class="ctx-menu" id="ctx-menu"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dock-wrap">
+            <div class="dock" id="dock"></div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 4: رسائل العملاء -->
     <section class="section-messages" id="desktop-messages">
         <div class="container-messages">
             <div class="section-label">
@@ -970,6 +1030,20 @@
             </div>
         </div>
     </footer>
+
+    <!-- Image Lightbox -->
+    <div class="lightbox-overlay" id="lightbox-overlay">
+        <div class="lightbox-container">
+            <button class="lightbox-close" id="lightbox-close"><i class="fa-solid fa-xmark"></i></button>
+            <button class="lightbox-prev" id="lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="lightbox-next" id="lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="lightbox-content">
+                <img class="lightbox-img" id="lightbox-img" src="" alt="Project Preview">
+            </div>
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+            <div class="lightbox-counter" id="lightbox-counter"></div>
+        </div>
+    </div>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

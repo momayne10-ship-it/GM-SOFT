@@ -657,6 +657,357 @@ startAutoplay(0);
 console.log('GM SOFT — Client Messages with Voice Input loaded.');
 
 // ============================================================
+// WORK SECTION — DESKTOP FINDER PORTFOLIO
+// ============================================================
+(function () {
+    if (!document.getElementById('work')) return;
+
+    var wl = (document.documentElement.lang || 'en').toLowerCase();
+    var WT = {
+        en: {
+            brandCrumb: 'Portfolio /', brand: 'Work',
+            available: 'Available for work',
+            caption: 'Portfolio / Work — click a folder to open',
+            folders: 'Folders',
+            all: 'All Projects', website: 'Web Sites', webapp: 'Web Apps', desktop: 'Desktop Apps', mpss: 'MPSS',
+            itemWord: 'item', itemWordPlural: 'items',
+            preview: 'Preview', goTo: 'Go to project', close: 'Close',
+            viewGrid: 'Grid view', viewList: 'List view'
+        },
+        fr: {
+            brandCrumb: 'Portfolio /', brand: 'Travaux',
+            available: 'Disponible pour des projets',
+            caption: 'Portfolio / Travaux — cliquez sur un dossier pour l\u2019ouvrir',
+            folders: 'Dossiers',
+            all: 'Tous les projets', website: 'Sites web', webapp: 'Apps web', desktop: 'Apps bureau', mpss: 'MPSS',
+            itemWord: '\u00e9l\u00e9ment', itemWordPlural: '\u00e9l\u00e9ments',
+            preview: 'Aper\u00e7u', goTo: 'Voir le projet', close: 'Fermer',
+            viewGrid: 'Vue grille', viewList: 'Vue liste'
+        },
+        ar: {
+            brandCrumb: '\u0627\u0644\u0623\u0639\u0645\u0627\u0644 /', brand: '\u0645\u0634\u0627\u0631\u064a\u0639',
+            available: '\u0645\u062a\u0627\u062d \u0644\u0644\u0639\u0645\u0644',
+            caption: '\u0627\u0644\u0623\u0639\u0645\u0627\u0644 \u2014 \u0627\u0636\u063a\u0637 \u0639\u0644\u0649 \u0645\u062c\u0644\u062f \u0644\u0641\u062a\u062d\u0647',
+            folders: '\u0627\u0644\u0645\u062c\u0644\u062f\u0627\u062a',
+            all: '\u0643\u0644 \u0627\u0644\u0645\u0634\u0627\u0631\u064a\u0639', website: '\u0645\u0648\u0627\u0642\u0639 \u0627\u0644\u0648\u064a\u0628', webapp: '\u062a\u0637\u0628\u064a\u0642\u0627\u062a \u0627\u0644\u0648\u064a\u0628', desktop: '\u062a\u0637\u0628\u064a\u0642\u0627\u062a \u0627\u0644\u062d\u0627\u0633\u0648\u0628', mpss: 'MPSS',
+            itemWord: '\u0639\u0646\u0635\u0631', itemWordPlural: '\u0639\u0646\u0627\u0635\u0631',
+            preview: '\u0645\u0639\u0627\u064a\u0646\u0629', goTo: '\u0641\u062a\u062d \u0627\u0644\u0645\u0634\u0631\u0648\u0639', close: '\u0625\u063a\u0644\u0627\u0642',
+            viewGrid: '\u0639\u0631\u0636 \u0634\u0628\u0643\u064a', viewList: '\u0639\u0631\u0636 \u0642\u0627\u0626\u0645\u0629'
+        }
+    };
+    var T = WT[wl] || WT.en;
+    var itemsLabel = function (n) { return '\u2014 ' + n + ' ' + (n !== 1 ? T.itemWordPlural : T.itemWord); };
+    var itemsShort = function (n) { return n + ' ' + (n !== 1 ? T.itemWordPlural : T.itemWord); };
+    var brandHTML = function (crumb, name) { return '<span class="crumb">' + crumb + '</span> ' + name; };
+    var defaultBrand = brandHTML(T.brandCrumb, T.brand);
+
+    var ic = function (c) { return '<i class="fa-solid fa-' + c + '"></i>'; };
+    var RAWIMG = 'https://raw.githubusercontent.com/momayne10-ship-it/Gmayne/main/';
+
+    var FOLDERS = [
+        { id: 'all', name: T.all, icon: ic('folder-open'), color: '#c9a53a', badge: 14, dockIcon: ic('folder-open') },
+        { id: 'website', name: T.website, icon: ic('earth'), color: '#0ea5e9', badge: 8, dockIcon: ic('earth') },
+        { id: 'webapp', name: T.webapp, icon: ic('globe'), color: '#2ecc71', badge: 1, dockIcon: ic('globe') },
+        { id: 'desktop', name: T.desktop, icon: ic('desktop'), color: '#3a6bd6', badge: 4, dockIcon: ic('desktop') },
+        { id: 'mpss', name: T.mpss, icon: ic('layer-group'), color: '#8b5cf6', badge: 1, dockIcon: ic('layer-group') }
+    ];
+
+    var PROJECTS = [
+        { title: 'Iron Man \u2014 3D Interactive Website', client: 'Iron Man', year: 2026, cat: 'website', color: '#e50914',
+            icon: ic('robot'), url: 'https://iron-man-puce.vercel.app/',
+            image: 'https://image.thum.io/get/width/400/crop/600/https://iron-man-puce.vercel.app/' },
+        { title: 'Burger House \u2014 \u0645\u0637\u0639\u0645 \u0628\u0631\u063a\u0631 \u0641\u0627\u062e\u0631', client: 'Burger House', year: 2026, cat: 'website', color: '#ff4d00',
+            icon: ic('burger'), url: 'https://burger-house-plum.vercel.app/',
+            image: 'https://image.thum.io/get/width/400/crop/600/https://burger-house-plum.vercel.app/' },
+        { title: 'CinePulse \u2014 Movies & TV Shows', client: 'CinePulse', year: 2026, cat: 'website', color: '#e50914',
+            icon: ic('film'), url: 'https://momayne10-ship-it.github.io/-CinePulse/',
+            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/-CinePulse/' },
+        { title: 'Golden Taste \u2014 \u0645\u0637\u0639\u0645 \u0641\u0627\u062e\u0631', client: 'Golden Taste', year: 2026, cat: 'website', color: '#d4a017',
+            icon: ic('utensils'), url: 'https://momayne10-ship-it.github.io/Golden-Taste/',
+            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/Golden-Taste/' },
+        { title: 'Sweet Delight \u2014 \u062d\u0644\u0648\u064a\u0627\u062a \u0641\u0627\u062e\u0631\u0629', client: 'Sweet Delight', year: 2026, cat: 'website', color: '#e91e8c',
+            icon: ic('cake-candles'), url: 'https://momayne10-ship-it.github.io/Sweet-Delight/',
+            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/Sweet-Delight/' },
+        { title: 'Black Brew \u2014 Specialty Coffee', client: 'Specialty Coffee', year: 2026, cat: 'website', color: '#3d2314',
+            icon: ic('mug-hot'), url: 'https://momayne10-ship-it.github.io/Specialty-Coffee/',
+            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/Specialty-Coffee/' },
+        { title: 'Muse \u2014 Women\'s Fashion', client: 'Muse', year: 2026, cat: 'website', color: '#c41e3a',
+            icon: ic('shirt'), url: 'https://momayne10-ship-it.github.io/Muse/',
+            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/Muse/' },
+        { title: 'MediSys \u2014 \u0646\u0638\u0627\u0645 \u0625\u062f\u0627\u0631\u0629 \u0627\u0644\u0639\u064a\u0627\u062f\u0627\u062a', client: 'MediSys', year: 2026, cat: 'mpss', color: '#10b981',
+            icon: ic('hospital'), url: 'https://momayne10-ship-it.github.io/MediSys/',
+            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/MediSys/' },
+        { title: 'Ain Lexicon \u2014 \u0645\u0639\u0645\u062c \u0627\u0644\u0639\u064a\u0646', client: 'Ain Lexicon', year: 2026, cat: 'webapp', color: '#2ecc71',
+            icon: ic('book-open'), url: 'https://momayne10-ship-it.github.io/Ain-Lexicon/',
+            image: 'https://image.thum.io/get/width/400/crop/600/https://momayne10-ship-it.github.io/Ain-Lexicon/' },
+        { title: 'Medisys \u2014 Medical System', client: 'Medisys', year: 2025, cat: 'desktop', color: '#1a8a6a',
+            icon: ic('laptop-medical'),
+            image: RAWIMG + 'MD1.png',
+            gallery: [RAWIMG + 'MD1.png', RAWIMG + 'MD2.png', RAWIMG + 'MD3.png', RAWIMG + 'MD4.png', RAWIMG + 'MD5.png', RAWIMG + 'MD6.png', RAWIMG + 'MD7.png'] },
+        { title: 'Dar Al Oud \u2014 Perfume Store', client: 'Dar Al Oud', year: 2025, cat: 'desktop', color: '#c49a3a',
+            icon: ic('bottle-droplet'),
+            image: RAWIMG + 'DO1.png',
+            gallery: [RAWIMG + 'DO1.png', RAWIMG + 'DO2.png', RAWIMG + 'DO3.png', RAWIMG + 'DO4.png', RAWIMG + 'DO5.png', RAWIMG + 'DO6.png', RAWIMG + 'DO7.png'] },
+        { title: 'Glasses Outlet \u2014 Eyewear Store', client: 'Glasses Outlet', year: 2025, cat: 'desktop', color: '#4a7ad6',
+            icon: ic('glasses'),
+            image: RAWIMG + 'GO1.png',
+            gallery: [RAWIMG + 'GO1.png', RAWIMG + 'GO2.png', RAWIMG + 'GO3.png', RAWIMG + 'GO4.png', RAWIMG + 'GO5.png', RAWIMG + 'GO6.png'] },
+        { title: 'Nursery Rhymes \u2014 Kids Garden', client: 'Nursery Rhymes', year: 2025, cat: 'desktop', color: '#e06a9a',
+            icon: ic('children'),
+            image: RAWIMG + 'NR1.png',
+            gallery: [RAWIMG + 'NR1.png', RAWIMG + 'NR2.png', RAWIMG + 'NR3.png', RAWIMG + 'NR4.png', RAWIMG + 'NR5.png', RAWIMG + 'NR6.png', RAWIMG + 'NR7.png'] },
+        { title: 'Astronomia Luxe \u2014 3D Luxury Watch', client: 'Astronomia Luxe', year: 2026, cat: 'website', color: '#C9A05C',
+            icon: ic('clock'), url: 'https://astronomia-luxe-kohl.vercel.app/',
+            image: RAWIMG + 'astronomia-preview.png' }
+    ].map(function (p) { return p; });
+
+    var currentCat = 'all';
+    var viewMode = 'grid';
+
+    var iconGrid = document.getElementById('icon-grid');
+    var fwSidebar = document.getElementById('fw-sidebar');
+    var fwGrid = document.getElementById('fw-grid');
+    var finderWindow = document.getElementById('finder-window');
+    var desktopLayer = document.getElementById('desktop-layer');
+    var mbBrand = document.getElementById('mb-brand');
+    var dock = document.getElementById('dock');
+
+    function projectsFor(cat) {
+        return cat === 'all' ? PROJECTS : PROJECTS.filter(function (p) { return p.cat === cat; });
+    }
+
+    FOLDERS.forEach(function (f) {
+        var el = document.createElement('div');
+        el.className = 'desk-folder';
+        el.innerHTML = '<div class="ficon" style="background:' + f.color + '">' + f.icon +
+            (f.badge ? '<span class="fbadge">' + f.badge + '</span>' : '') + '</div>' +
+            '<div class="fname">' + f.name.toUpperCase() + '</div>';
+        el.addEventListener('click', function () { openFinder(f.id, el); });
+        iconGrid.appendChild(el);
+    });
+
+    FOLDERS.forEach(function (f) {
+        var el = document.createElement('div');
+        el.className = 'dock-icon';
+        el.dataset.cat = f.id;
+        el.title = f.name;
+        el.innerHTML = f.dockIcon;
+        el.addEventListener('click', function () {
+            if (finderWindow.classList.contains('open') && currentCat === f.id) {
+                closeFinder();
+            } else if (finderWindow.classList.contains('open')) {
+                switchFolder(f.id);
+                updateDockActive();
+            } else {
+                openFinder(f.id, el);
+                updateDockActive();
+            }
+        });
+        dock.appendChild(el);
+    });
+
+    function updateDockActive() {
+        document.querySelectorAll('.dock-icon').forEach(function (d) {
+            d.classList.toggle('active', finderWindow.classList.contains('open') && d.dataset.cat === currentCat);
+        });
+    }
+
+    fwSidebar.insertAdjacentHTML('afterbegin', '<div class="fw-sidebar-label">' + T.folders + '</div>');
+    FOLDERS.forEach(function (f) {
+        var el = document.createElement('div');
+        el.className = 'fw-side-item' + (f.id === 'all' ? ' active' : '');
+        el.dataset.cat = f.id;
+        el.innerHTML = '<span class="sic">' + f.icon + '</span><span>' + f.name + '</span><span class="scount">' + f.badge + '</span>';
+        el.addEventListener('click', function () { switchFolder(f.id); updateDockActive(); });
+        fwSidebar.appendChild(el);
+    });
+
+    function renderGrid(cat) {
+        fwGrid.innerHTML = '';
+        var list = projectsFor(cat);
+        list.forEach(function (p, i) {
+            var c = document.createElement('div');
+            c.className = 'card';
+            c.style.animationDelay = (i * 35) + 'ms';
+            c.innerHTML = '<div class="thumb" style="background-image:url(\'' + p.image + '\')">' +
+                '<span class="cat-badge" style="color:' + p.color + '">' + p.icon + '</span>' +
+                (p.url ? '<div class="link-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>' : '') +
+                (p.video ? '<div class="play">\u25b6</div>' : '') + '</div>' +
+                '<div class="meta"><div class="ctitle">' + p.title + '</div>' +
+                '<div class="csub">' + p.client + ' \u00b7 ' + p.year + '</div></div>';
+            c.addEventListener('contextmenu', function (e) { e.preventDefault(); openContextMenu(e, p); });
+            if (p.url) {
+                c.addEventListener('click', function () { window.open(p.url, '_blank'); });
+            } else {
+                c.addEventListener('click', function () { openLightbox(p); });
+            }
+            fwGrid.appendChild(c);
+        });
+    }
+
+    function switchFolder(cat) {
+        if (cat === currentCat) return;
+        currentCat = cat;
+        var f = FOLDERS.find(function (x) { return x.id === cat; });
+
+        document.querySelectorAll('.fw-side-item').forEach(function (x) { x.classList.toggle('active', x.dataset.cat === cat); });
+
+        var spinner = document.getElementById('fw-spinner');
+        spinner.classList.add('show');
+        fwGrid.classList.add('loading');
+
+        setTimeout(function () {
+            renderGrid(cat);
+            document.getElementById('fw-title-icon').innerHTML = f.icon;
+            document.getElementById('fw-title-text').textContent = f.name;
+            document.getElementById('crumb-icon').innerHTML = f.icon;
+            document.getElementById('crumb-name').textContent = f.name;
+            var n = projectsFor(cat).length;
+            document.getElementById('crumb-count').textContent = itemsLabel(n);
+            document.getElementById('status-count').textContent = itemsShort(n);
+            document.getElementById('status-crumb').textContent = '\u25a0 ' + f.name;
+            mbBrand.innerHTML = brandHTML(T.brandCrumb, f.name);
+            spinner.classList.remove('show');
+            fwGrid.classList.remove('loading');
+            closeContextMenu();
+            updateDockActive();
+        }, 260);
+    }
+
+    function openFinder(cat, iconEl) {
+        var stage = document.getElementById('stage');
+        var stageRect = stage.getBoundingClientRect();
+        var iconRect = iconEl.getBoundingClientRect();
+        var ox = ((iconRect.left + iconRect.width / 2) - stageRect.left) / stageRect.width * 100;
+        var oy = ((iconRect.top + iconRect.height / 2) - stageRect.top) / stageRect.height * 100;
+        finderWindow.style.transformOrigin = ox + '% ' + oy + '%';
+        desktopLayer.classList.add('dimmed');
+        finderWindow.classList.add('open');
+        currentCat = null;
+        switchFolder(cat);
+    }
+
+    function closeFinder() {
+        finderWindow.classList.remove('open');
+        desktopLayer.classList.remove('dimmed');
+        mbBrand.innerHTML = defaultBrand;
+        closeContextMenu();
+        updateDockActive();
+    }
+    document.getElementById('fw-close').addEventListener('click', closeFinder);
+
+    document.getElementById('view-grid').addEventListener('click', function () {
+        viewMode = 'grid';
+        fwGrid.classList.remove('list');
+        document.getElementById('view-grid').classList.add('active');
+        document.getElementById('view-list').classList.remove('active');
+    });
+    document.getElementById('view-list').addEventListener('click', function () {
+        viewMode = 'list';
+        fwGrid.classList.add('list');
+        document.getElementById('view-list').classList.add('active');
+        document.getElementById('view-grid').classList.remove('active');
+    });
+
+    var ctxMenu = document.getElementById('ctx-menu');
+
+    function openContextMenu(e, project, centered) {
+        e.preventDefault && e.preventDefault();
+        var bodyRect = document.querySelector('.fw-body').getBoundingClientRect();
+        var x, y;
+        if (centered) {
+            var r = e.currentTarget.getBoundingClientRect();
+            x = r.left - bodyRect.left + r.width / 2 - 100;
+            y = r.top - bodyRect.top + 20;
+        } else {
+            x = e.clientX - bodyRect.left;
+            y = e.clientY - bodyRect.top;
+        }
+        x = Math.max(6, Math.min(x, bodyRect.width - 216));
+        y = Math.max(6, Math.min(y, bodyRect.height - 140));
+        ctxMenu.style.left = x + 'px';
+        ctxMenu.style.top = y + 'px';
+        ctxMenu.innerHTML = '<div class="ctx-head"><div class="cthumb" style="background-image:url(\'' + project.image + '\')"></div>' +
+            '<div class="cinfo"><div class="n">' + project.title + '</div></div></div>' +
+            '<div class="ctx-item" data-a="preview"><i class="fa-solid fa-play"></i> ' + T.preview + '</div>' +
+            (project.url ? '<div class="ctx-item" data-a="open"><i class="fa-solid fa-arrow-up-right-from-square"></i> ' + T.goTo + '</div>' : '') +
+            '<div class="ctx-sep"></div>' +
+            '<div class="ctx-item danger" data-a="close"><i class="fa-solid fa-xmark"></i> ' + T.close + '</div>';
+        ctxMenu.classList.add('show');
+        ctxMenu.querySelectorAll('.ctx-item').forEach(function (it) {
+            it.addEventListener('click', function () {
+                var action = it.dataset.a;
+                closeContextMenu();
+                if (action === 'preview') {
+                    if (project.url) window.open(project.url, '_blank');
+                    else openLightbox(project);
+                }
+                if (action === 'open' && project.url) window.open(project.url, '_blank');
+            });
+        });
+    }
+
+    function closeContextMenu() { ctxMenu.classList.remove('show'); }
+    document.addEventListener('click', function (e) {
+        if (!ctxMenu.contains(e.target) && !e.target.closest('.card')) closeContextMenu();
+    });
+    document.addEventListener('scroll', closeContextMenu, true);
+
+    /* ---- IMAGE LIGHTBOX ---- */
+    var lightboxOverlay = document.getElementById('lightbox-overlay');
+    var lightboxImg = document.getElementById('lightbox-img');
+    var lightboxCaption = document.getElementById('lightbox-caption');
+    var lightboxCounter = document.getElementById('lightbox-counter');
+    var lightboxGallery = [];
+    var lightboxIndex = 0;
+    var currentProject = null;
+
+    function openLightbox(project) {
+        currentProject = project;
+        lightboxGallery = project.gallery || [project.image];
+        lightboxIndex = 0;
+        updateLightbox();
+        lightboxOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function updateLightbox() {
+        var src = lightboxGallery[lightboxIndex];
+        lightboxImg.src = src;
+        lightboxCaption.textContent = currentProject ? currentProject.title : '';
+        lightboxCounter.textContent = lightboxGallery.length > 1
+            ? (lightboxIndex + 1) + ' / ' + lightboxGallery.length
+            : '';
+    }
+
+    function closeLightbox() {
+        lightboxOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function lightboxNav(dir) {
+        lightboxIndex = (lightboxIndex + dir + lightboxGallery.length) % lightboxGallery.length;
+        updateLightbox();
+    }
+
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-prev').addEventListener('click', function () { lightboxNav(-1); });
+    document.getElementById('lightbox-next').addEventListener('click', function () { lightboxNav(1); });
+    lightboxOverlay.addEventListener('click', function (e) {
+        if (e.target === lightboxOverlay) closeLightbox();
+    });
+    document.addEventListener('keydown', function (e) {
+        if (!lightboxOverlay.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') lightboxNav(-1);
+        if (e.key === 'ArrowRight') lightboxNav(1);
+    });
+
+    renderGrid('all');
+})();
+
+
+// ============================================================
 // TRUSTED CLIENTS — WALL OF LOVE (voice testimonials)
 // ============================================================
 const trustEN = [

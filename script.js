@@ -657,6 +657,47 @@ startAutoplay(0);
 console.log('GM SOFT — Client Messages with Voice Input loaded.');
 
 // ============================================================
+// ABOUT US — STAT COUNT-UP
+// ============================================================
+(function () {
+    var aboutSec = document.getElementById('about');
+    if (!aboutSec) return;
+    var nums = aboutSec.querySelectorAll('.about-num[data-count]');
+
+    function revealFinal() {
+        nums.forEach(function (el) {
+            el.textContent = el.getAttribute('data-count');
+        });
+    }
+
+    if (!('IntersectionObserver' in window)) {
+        revealFinal();
+        return;
+    }
+
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            io.disconnect();
+            nums.forEach(function (el) {
+                var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+                var start = null;
+                var dur = 1400;
+                function step(ts) {
+                    if (start === null) start = ts;
+                    var p = Math.min((ts - start) / dur, 1);
+                    var eased = 1 - Math.pow(1 - p, 3);
+                    el.textContent = Math.round(target * eased);
+                    if (p < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            });
+        });
+    }, { threshold: 0.35 });
+    io.observe(aboutSec);
+})();
+
+// ============================================================
 // WORK SECTION — DESKTOP FINDER PORTFOLIO (MIXED OPEN / NDA)
 // ============================================================
 (function () {

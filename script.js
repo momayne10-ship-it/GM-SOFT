@@ -912,7 +912,7 @@ console.log('GM SOFT — Client Messages with Voice Input loaded.');
             confirmButtonText: T.caseConfirm,
             cancelButtonText: '\u0625\u063a\u0644\u0627\u0642',
             confirmButtonColor: '#10b981',
-            cancelButtonColor: '#e8ebf2',
+                    cancelButtonColor: '#1a2634',
             background: '#ffffff',
             color: '#1f2430',
             customClass: { popup: 'nda-case', cancelButton: 'nda-case-cancel' }

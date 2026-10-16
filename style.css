@@ -2299,12 +2299,31 @@ ul {
 }
 .swal2-popup.nda-case .swal2-confirm,
 .swal2-popup.nda-case .swal2-cancel {
-    border-radius: 12px !important;
+    border-radius: 50px !important;
     font-family: 'Amiri', 'Inter', sans-serif;
     font-weight: 700;
     font-size: .98rem;
-    padding: .65rem 1.5rem;
+    padding: .7rem 1.8rem;
     box-shadow: none !important;
+    border: none !important;
+    transition: filter var(--transition-fast), transform var(--transition-fast);
+}
+.swal2-popup.nda-case .swal2-confirm {
+    background-color: #10b981 !important;
+    color: #ffffff !important;
+}
+.swal2-popup.nda-case .swal2-cancel {
+    background-color: #1a2634 !important;
+    color: #ffffff !important;
+}
+.swal2-popup.nda-case .swal2-confirm:hover,
+.swal2-popup.nda-case .swal2-cancel:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+.swal2-popup.nda-case .swal2-confirm:focus,
+.swal2-popup.nda-case .swal2-cancel:focus {
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.22) !important;
 }
 
 /* ---- WORK: RESPONSIVE ---- */

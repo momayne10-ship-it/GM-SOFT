@@ -717,7 +717,8 @@ console.log('GM SOFT — Client Messages with Voice Input loaded.');
             ribbon: 'CONFIDENTIAL',
             caseTitle: 'Case Study \u2014 Confidential',
             caseHtml: 'We don\u2019t showcase full project details publicly to protect our clients\u2019 privacy.<br><b>Contact us</b> \u2014 we\u2019ll walk you through relevant work at every level.',
-            caseConfirm: 'Contact us'
+            caseConfirm: 'Contact us',
+            caseClose: 'Close'
         },
         fr: {
             brandCrumb: 'Portfolio /', brand: 'Travaux',
@@ -731,7 +732,8 @@ console.log('GM SOFT — Client Messages with Voice Input loaded.');
             ribbon: 'SOUS NDA',
             caseTitle: '\u00c9tude de cas \u2014 Confidentiel',
             caseHtml: 'Nous ne publions pas les d\u00e9tails complets des projets afin de prot\u00e9ger la confidentialit\u00e9 de nos clients.<br><b>Contactez-nous</b> \u2014 nous vous pr\u00e9senterons des r\u00e9alisations pertinentes \u00e0 tous les niveaux.',
-            caseConfirm: 'Nous contacter'
+            caseConfirm: 'Nous contacter',
+            caseClose: 'Fermer'
         },
         ar: {
             brandCrumb: '\u0627\u0644\u0623\u0644\u0639\u0645\u0627\u062f /', brand: '\u0623\u0639\u0645\u0627\u0644\u0646\u0627',
@@ -745,7 +747,8 @@ console.log('GM SOFT — Client Messages with Voice Input loaded.');
             ribbon: '\u0633\u0631\u064a',
             caseTitle: '\u062f\u0631\u0627\u0633\u0629 \u062d\u0627\u0644\u0629 \u2014 \u0633\u0631\u064a',
             caseHtml: '\u0646\u062d\u0641\u0636 \u0639\u0644\u0649 \u0639\u0631\u0636 \u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0645\u0634\u0631\u0648\u0639\u0627\u062a \u0628\u0634\u0643\u0644 \u0639\u0627\u0645 \u062d\u0641\u0627\u0638\u0627\u064b \u0639\u0644\u0649 \u062e\u0635\u0648\u0635\u064a\u0629 \u0639\u0645\u0644\u0627\u0626\u0646\u0627.<br><b>\u062a\u0648\u0627\u0635\u0644 \u0645\u0639\u0646\u0627</b> \u2014 \u0633\u0646\u0639\u0631\u0636\u0643 \u0623\u0639\u0645\u0627\u0644\u0646\u0627 \u0639\u0646\u062f \u0643\u0644 \u0627\u0644\u0645\u0633\u062a\u0648\u064a\u0627\u062a.',
-            caseConfirm: '\u062a\u0648\u0627\u0635\u0644 \u0645\u0639\u0646\u0627'
+            caseConfirm: '\u062a\u0648\u0627\u0635\u0644 \u0645\u0639\u0646\u0627',
+            caseClose: '\u0625\u063a\u0644\u0627\u0642'
         }
     };
     var T = WT[wl] || WT.en;
@@ -910,7 +913,7 @@ console.log('GM SOFT — Client Messages with Voice Input loaded.');
             html: T.caseHtml,
             showCancelButton: true,
             confirmButtonText: T.caseConfirm,
-            cancelButtonText: '\u0625\u063a\u0644\u0627\u0642',
+                    cancelButtonText: T.caseClose,
             confirmButtonColor: '#10b981',
                     cancelButtonColor: '#1a2634',
             background: '#ffffff',

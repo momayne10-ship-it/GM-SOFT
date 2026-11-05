@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formation Développement Web avec l'IA — GM SOFT</title>
+<meta name="description" content="Formation pratique GM SOFT : développez des sites web avec l'IA et créez votre revenu indépendant — 100% en ligne.">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Main Styles (header + footer) -->
+<link rel="stylesheet" href="style.css" />
+
+<style>
+/* ============================================================
+   COURSE SECTION — identité FAQ + timeline en zig-zag (desktop)
+   ============================================================ */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Amiri', serif;
+    background: #f6f8fb;
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
+}
+
+.course-page {
+    padding: calc(var(--header-height) + 4rem) 2rem 5rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+    direction: ltr;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.course-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.course-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.course-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #047857;
+    padding: 0.4rem 1.6rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.course-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #111827;
+    margin: 0 0 0.8rem;
+    line-height: 1.2;
+}
+
+.course-title span { color: #10b981; }
+
+.course-subtitle {
+    color: #6b7280;
+    font-size: 1rem;
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ===== Timeline ===== */
+.course-timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+/* ===== Each Course Item ===== */
+.course-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 90px 1fr;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 2.2rem;
+    z-index: 1;
+
+    opacity: 0;
+    transition:
+        opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+.course-item--right { transform: translateX(70px); }
+.course-item--left  { transform: translateX(-70px); }
+.course-item.visible { opacity: 1; transform: translateX(0); }
+
+.course-item--right .course-card { grid-column: 1; grid-row: 1; }
+.course-item--left  .course-card { grid-column: 3; grid-row: 1; }
+
+.course-item--right .course-node,
+.course-item--left  .course-node {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+}
+
+/* ---- Node (numéro de leçon) ---- */
+.course-node {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 22px rgba(16, 185, 129, 0.35), 0 0 0 6px #ffffff;
+    border: 2px solid #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================================
+   Ligne verticale entre les nœuds (desktop uniquement)
+   ============================================================ */
+@media (min-width: 769px) {
+    .course-item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 60px;
+        bottom: -2.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        background: linear-gradient(180deg, #10b981 0%, #059669 100%);
+        border-radius: 3px;
+        z-index: 0;
+        pointer-events: none;
+    }
+}
+
+/* ============================================================
+   CARD — même design que la FAQ
+   ============================================================ */
+.course-card {
+    background: #ffffff;
+    border: 1px solid #e6eaf0;
+    border-radius: 50px;
+    box-shadow: 0 6px 18px rgba(17, 24, 39, 0.05);
+    overflow: hidden;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        border-radius 0.35s ease;
+}
+
+.course-card:hover {
+    border-color: #d5dbe4;
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+}
+
+.course-card.open {
+    border-color: rgba(16, 185, 129, 0.45);
+    border-radius: 20px;
+    box-shadow: 0 10px 26px rgba(16, 185, 129, 0.1);
+}
+
+/* ---- Bouton question ---- */
+.course-q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 1.6rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: #1f2937;
+    text-align: start;
+    transition: color 0.3s ease;
+}
+
+.course-card.open .course-q { color: #047857; }
+
+.course-q i {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.course-card.open .course-q i {
+    transform: rotate(45deg);
+    color: #10b981;
+}
+
+/* ---- Réponse ---- */
+.course-a {
+    display: grid;
+    grid-template-rows: minmax(0, 0fr);
+    transition: grid-template-rows 0.35s ease;
+}
+
+.course-card.open .course-a {
+    grid-template-rows: minmax(0, 1fr);
+}
+
+.course-a-inner {
+    overflow: hidden;
+    min-height: 0;
+    padding: 0 1.6rem 1.3rem;
+}
+
+.course-a-inner p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+.course-a-inner ul {
+    list-style: none;
+    margin: 0.55rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.course-a-inner li {
+    position: relative;
+    padding-inline-start: 1.4rem;
+    color: #4b5563;
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+.course-a-inner li::before {
+    content: '\2713';
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    color: #10b981;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+/* ---- Badges d'information ---- */
+.course-meta {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.course-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    background: rgba(16, 185, 129, 0.08);
+    color: #047857;
+    border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.course-meta i { font-size: 0.7rem; }
+
+/* ---- Textes du titre ---- */
+.course-q-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    text-align: start;
+    min-width: 0;
+}
+
+.course-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #10b981;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.course-name {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: inherit;
+}
+
+/* ============================================================
+   RESPONSIVE — mobile : look FAQ + texte sur une ligne
+   ============================================================ */
+@media (max-width: 768px) {
+    .course-page { padding: calc(var(--header-height) + 2rem) 1rem 3rem; }
+    .course-title { font-size: 1.9rem; }
+    .course-subtitle { font-size: 0.9rem; }
+
+    .course-item::after { display: none !important; }
+
+    .course-item {
+        display: flex;
+        flex-direction: row;
+        gap: 0.9rem;
+        margin-bottom: 1rem;
+        align-items: flex-start;
+        grid-template-columns: none;
+        transform: translateY(30px);
+    }
+
+    .course-item--right,
+    .course-item--left {
+        transform: translateY(30px);
+    }
+
+    .course-item.visible { transform: translateY(0); }
+
+    .course-node {
+        width: 42px;
+        height: 42px;
+        font-size: 0.8rem;
+        flex-shrink: 0;
+        box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+        border-width: 2px;
+        position: static;
+        grid-column: auto;
+        grid-row: auto;
+        margin-top: 0.6rem;
+    }
+
+    .course-card {
+        flex: 1;
+        min-width: 0;
+        grid-column: auto;
+    }
+
+    .course-q-text {
+        flex-direction: row !important;
+        align-items: baseline !important;
+        gap: 0.35rem !important;
+        flex-wrap: wrap;
+    }
+
+    .course-label {
+        font-size: 0.68rem !important;
+    }
+
+    .course-label::after {
+        content: ':';
+        margin-inline-start: 0.1rem;
+    }
+
+    .course-name {
+        font-size: 0.95rem !important;
+    }
+
+    .course-q {
+        padding: 1rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .course-a-inner {
+        padding: 0 1.2rem 1.1rem;
+    }
+
+    .course-a-inner li { font-size: 0.88rem; }
+}
+
+@media (max-width: 480px) {
+    .course-page { padding: calc(var(--header-height) + 1.5rem) 0.8rem 2.5rem; }
+    .course-title { font-size: 1.6rem; }
+
+    .course-node {
+        width: 36px;
+        height: 36px;
+        font-size: 0.7rem;
+        margin-top: 0.7rem;
+    }
+
+    .course-q {
+        padding: 0.9rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .course-a-inner { padding: 0 1rem 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .course-item,
+    .course-item--left,
+    .course-item--right {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+</style>
+</head>
+<body class="course-body">
+
+    <!-- ============================================================
+    HEADER
+    ============================================================ -->
+    <header class="gm-header" id="gmHeader">
+        <div class="gm-header-inner">
+            <a href="index-fr.html" class="gm-logo">
+                GM SOFT <span class="gm-logo-tag">agency</span>
+            </a>
+
+            <nav class="gm-nav" id="gmNav">
+                <ul class="gm-nav-list">
+                    <li><a href="index-fr.html#what-we-build" class="gm-nav-link">Services</a></li>
+                    <li><a href="index-fr.html#how-we-work" class="gm-nav-link">Processus</a></li>
+                    <li><a href="cours-fr.html" class="gm-nav-link" aria-current="page">Cours</a></li>
+                    <li><a href="index-fr.html#terms" class="gm-nav-link">Engagements</a></li>
+                    <li><a href="index-fr.html#presence" class="gm-nav-link">Présence</a></li>
+                    <li><a href="index-fr.html#contact" class="gm-nav-link">Contact</a></li>
+                </ul>
+
+                <div class="gm-nav-lang">
+                    <div class="lang-switcher">
+                        <a href="cours.html" class="lang-link" data-lang="ar">
+                            <span class="lang-flag">🇸🇦</span> AR
+                        </a>
+                        <span class="lang-divider">|</span>
+                        <a href="cours-en.html" class="lang-link" data-lang="en">
+                            <span class="lang-flag">🇬🇧</span> EN
+                        </a>
+                        <span class="lang-divider">|</span>
+                        <a href="cours-fr.html" class="lang-link active" data-lang="fr">
+                            <span class="lang-flag">🇫🇷</span> FR
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="gm-header-actions">
+                <div class="lang-switcher gm-header-lang">
+                    <a href="cours.html" class="lang-link" data-lang="ar">
+                        <span class="lang-flag">🇸🇦</span> AR
+                    </a>
+                    <span class="lang-divider">|</span>
+                    <a href="cours-en.html" class="lang-link" data-lang="en">
+                        <span class="lang-flag">🇬🇧</span> EN
+                    </a>
+                    <span class="lang-divider">|</span>
+                    <a href="cours-fr.html" class="lang-link active" data-lang="fr">
+                        <span class="lang-flag">🇫🇷</span> FR
+                    </a>
+                </div>
+                <button class="gm-header-menu" id="menuToggle" aria-label="Basculer le menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <a class="wa-float" href="https://api.whatsapp.com/send/?phone=%2B21360700567&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+<section class="course-page" id="course">
+    <div class="course-container">
+
+        <!-- ===== Header ===== -->
+        <div class="course-header">
+            <span class="course-badge">✦ Formation pratique GM SOFT</span>
+            <h2 class="course-title">Développez des sites web avec l'IA <span>&amp; créez votre revenu indépendant</span></h2>
+            <p class="course-subtitle">
+                Une formation 100% en ligne et pratique en 10 sessions — des bases de la programmation et des types de sites au pilotage de l'IA, puis la création d'un projet complet en deux étapes, jusqu'au freelancing.
+            </p>
+        </div>
+
+        <!-- ===== Timeline ===== -->
+        <div class="course-timeline">
+
+            <!-- Session 1 -->
+            <div class="course-item course-item--right">
+                <div class="course-node">01</div>
+                <div class="course-card">
+                    <button class="course-q" type="button" aria-expanded="false">
+                        <div class="course-q-text">
+                            <span class="course-label">Session un</span>
+                            <span class="course-name"><span class="course-name-full">Introduction à la programmation & au développement web</span><span class="course-name-short">Intro à la programmation</span></span>
+                        </div>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="course-a">
+                        <div class="course-a-inner">
+                            <p>Nous partons de zéro : ce qu'est la programmation et comment le code devient un site web qui fonctionne en ligne.</p>
+                            <ul>
+                                <li>Le concept de la programmation et son fonctionnement</li>
+                                <li>Découvrir le domaine du développement web</li>
+                                <li>Comment créer un site web ?</li>
+                                <li>Le rôle des développeurs front-end et back-end</li>
+                            </ul>
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-book-open"></i> Intro</span>
+                                <span><i class="fa-solid fa-brain"></i> Fondamentaux</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session 2 -->
+            <div class="course-item course-item--left">
+                <div class="course-node">02</div>
+                <div class="course-card">
+                    <button class="course-q" type="button" aria-expanded="false">
+                        <div class="course-q-text">
+                            <span class="course-label">Session deux</span>
+                            <span class="course-name"><span class="course-name-full">Types de sites web & leurs composants essentiels</span><span class="course-name-short">Types de sites web</span></span>
+                        </div>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="course-a">
+                        <div class="course-a-inner">
+                            <p>Nous découvrons les différentes familles de sites et les composants essentiels de tout site réussi avant de commencer à construire.</p>
+                            <ul>
+                                <li>Sites vitrines et sites d'entreprise</li>
+                                <li>Boutiques en ligne</li>
+                                <li>Plateformes et applications web</li>
+                                <li>Systèmes de gestion de contenu (CMS)</li>
+                                <li>Les composants essentiels de tout site</li>
+                            </ul>
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-layer-group"></i> Types de sites</span>
+                                <span><i class="fa-solid fa-sitemap"></i> Composants</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session 3 -->
+            <div class="course-item course-item--right">
+                <div class="course-node">03</div>
+                <div class="course-card">
+                    <button class="course-q" type="button" aria-expanded="false">
+                        <div class="course-q-text">
+                            <span class="course-label">Session trois</span>
+                            <span class="course-name"><span class="course-name-full">IA générale & agents de programmation</span><span class="course-name-short">IA & agents de code</span></span>
+                        </div>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="course-a">
+                        <div class="course-a-inner">
+                            <p>Nous comprenons la différence entre les outils d'IA généraux et les agents spécialisés, et quand utiliser chacun.</p>
+                            <ul>
+                                <li>Qu'est-ce que l'intelligence artificielle ?</li>
+                                <li>La différence entre outils d'IA généraux et agents de programmation</li>
+                                <li>Découvrir les outils et leurs usages dans le développement web</li>
+                            </ul>
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-robot"></i> IA</span>
+                                <span><i class="fa-solid fa-code"></i> Agents</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session 4 -->
+            <div class="course-item course-item--left">
+                <div class="course-node">04</div>
+                <div class="course-card">
+                    <button class="course-q" type="button" aria-expanded="false">
+                        <div class="course-q-text">
+                            <span class="course-label">Session quatre</span>
+                            <span class="course-name"><span class="course-name-full">Fondamentaux de la pensée logique & algorithmique</span><span class="course-name-short">Pensée logique</span></span>
+                        </div>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="course-a">
+                        <div class="course-a-inner">
+                            <p>Avant d'écrire du code, nous apprenons à penser : analyser un problème et transformer une idée en plan exécutable.</p>
+                            <ul>
+                                <li>La pensée logique</li>
+                                <li>L'analyse de problèmes</li>
+                                <li>L'analyse des besoins du projet</li>
+                                <li>Les algorithmes et les schémas</li>
+                                <li>Transformer l'idée en plan exécutable</li>
+                            </ul>
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-brain"></i> Logique</span>
+                                <span><i class="fa-solid fa-diagram-project"></i> Analyse</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session 5 -->
+            <div class="course-item course-item--right">
+                <div class="course-node">05</div>
+                <div class="course-card">
+                    <button class="course-q" type="button" aria-expanded="false">
+                        <div class="course-q-text">
+                            <span class="course-label">Session cinq</span>
+                            <span class="course-name"><span class="course-name-full">Les étapes de création d'un site web de zéro</span><span class="course-name-short">Créer un site web</span></span>
+                        </div>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="course-a">
+                        <div class="course-a-inner">
+                            <p>Nous parcourons les étapes réelles d'un projet, une par une — de l'idée jusqu'à la mise en ligne.</p>
+                            <ul>
+                                <li>Étudier l'idée et analyser les besoins</li>
+                                <li>Planification et structuration du projet</li>
+                                <li>Conception UI/UX</li>
+                                <li>Choisir les technologies et les outils</li>
+                                <li>Développement et mise en œuvre</li>
+                                <li>Tests et correction des erreurs</li>
+                                <li>Publication, hébergement et connexion du domaine</li>
+                            </ul>
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-list-check"></i> Étapes</span>
+                                <span><i class="fa-solid fa-gears"></i> Pratique</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session 6 -->
+            <div class="course-item course-item--left">
+                <div class="course-node">06</div>
+                <div class="course-card">
+                    <button class="course-q" type="button" aria-expanded="false">
+                        <div class="course-q-text">
+                            <span class="course-label">Session six</span>
+                            <span class="course-name"><span class="course-name-full">Compétences de communication & pilotage efficace de l'IA</span><span class="course-name-short">Piloter l'IA</span></span>
+                        </div>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="course-a">
+                        <div class="course-a-inner">
+                            <p>La compétence clé : guider l'IA pour qu'elle travaille avec précision et efficacité dans votre projet.</p>
+                            <ul>
+                                <li>Prompt Engineering</li>
+                                <li>Context Engineering</li>
+                                <li>Loop Engineering</li>
+                                <li>Décomposer les tâches et diriger les agents</li>
+                                <li>Réviser les résultats et corriger les erreurs</li>
+                                <li>Gérer le contexte du projet</li>
+                            </ul>
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-comment-dots"></i> Communication</span>
+                                <span><i class="fa-solid fa-robot"></i> IA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session 7 -->
+            <div class="course-item course-item--right">
+                <div class="course-node">07</div>
+                <div class="course-card">
+                    <button class="course-q" type="button" aria-expanded="false">
+                        <div class="course-q-text">
+                            <span class="course-label">Session sept</span>
+                            <span class="course-name"><span class="course-name-full">Projet pratique complet — lancement & fondations</span><span class="course-name-short">Projet pratique — Partie 1</span></span>
+                        </div>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="course-a">
+                        <div class="course-a-inner">
+                            <p>Nous commençons la réalisation du projet réel : de l'idée et des besoins à la planification, au design et à la structure de base du site — première partie de la construction.</p>
+                            <ul>
+                                <li>Choisir l'idée du projet et analyser ses besoins</li>
+                                <li>Planification et structuration du projet</li>
+                                <li>Conception UI/UX</li>
+                                <li>Préparer l'environnement de travail et les outils</li>
+                                <li>Construire les pages principales et la structure générale</li>
+                            </ul>
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-rocket"></i> Projet — Partie 1</span>
+                                <span><i class="fa-solid fa-code"></i> Première étape</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session 8 -->
+            <div class="course-item course-item--left">
+                <div class="course-node">08</div>
+                <div class="course-card">
+                    <button class="course-q" type="button" aria-expanded="false">
+                        <div class="course-q-text">
+                            <span class="course-label">Session huit</span>
+                            <span class="course-name"><span class="course-name-full">Finaliser un site web complet — réalisation & lancement</span><span class="course-name-short">Finaliser le site — Partie 2</span></span>
+                        </div>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="course-a">
+                        <div class="course-a-inner">
+                            <p>Nous terminons ce que nous avons commencé à la session sept : finaliser les pages et fonctionnalités restantes, ajouter le contenu, puis tester et publier en ligne — deuxième partie de la construction.</p>
+                            <ul>
+                                <li>Finaliser les pages et fonctionnalités restantes</li>
+                                <li>Ajouter le contenu et les images et connecter les données</li>
+                                <li>Ajouter les fonctionnalités interactives selon le type de projet</li>
+                                <li>Tests, correction des erreurs et optimisation des performances</li>
+                                <li>Publication, hébergement et connexion du domaine</li>
+                            </ul>
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-layer-group"></i> Projet — Partie 2</span>
+                                <span><i class="fa-solid fa-rocket"></i> Lancement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session 9 -->
+            <div class="course-item course-item--right">
+                <div class="course-node">09</div>
+                <div class="course-card">
+                    <button class="course-q" type="button" aria-expanded="false">
+                        <div class="course-q-text">
+                            <span class="course-label">Session neuf</span>
+                            <span class="course-name"><span class="course-name-full">Défi du projet créatif</span><span class="course-name-short">Défi créatif</span></span>
+                        </div>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="course-a">
+                        <div class="course-a-inner">
+                            <p>Les apprenants doivent créer un site web à partir d'une idée de leur choix, avec évaluation de la qualité d'exécution, du design, des fonctionnalités et de l'expérience utilisateur.</p>
+                            <ul>
+                                <li>Choisir et présenter une idée créative</li>
+                                <li>Réaliser le site de manière autonome</li>
+                                <li>Évaluer la qualité d'exécution et le design</li>
+                                <li>Évaluer les fonctionnalités et l'expérience utilisateur</li>
+                            </ul>
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-lightbulb"></i> Créativité</span>
+                                <span><i class="fa-solid fa-trophy"></i> Défi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session 10 -->
+            <div class="course-item course-item--left">
+                <div class="course-node">10</div>
+                <div class="course-card">
+                    <button class="course-q" type="button" aria-expanded="false">
+                        <div class="course-q-text">
+                            <span class="course-label">Session dix</span>
+                            <span class="course-name"><span class="course-name-full">Freelance — transformer ses compétences en revenus</span><span class="course-name-short">Freelance</span></span>
+                        </div>
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <div class="course-a">
+                        <div class="course-a-inner">
+                            <p>Vos compétences sont prêtes — nous apprenons maintenant à les transformer en revenu indépendant grâce au freelancing.</p>
+                            <ul>
+                                <li>Le concept du freelancing</li>
+                                <li>Les plateformes de freelancing</li>
+                                <li>Comment trouver des clients</li>
+                                <li>Comment présenter ses services et offres</li>
+                                <li>Tarification et négociation avec les clients</li>
+                                <li>Gérer ses projets et générer un revenu indépendant</li>
+                            </ul>
+                            <div class="course-meta">
+                                <span><i class="fa-solid fa-briefcase"></i> Freelance</span>
+                                <span><i class="fa-solid fa-coins"></i> Revenus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer class="gm-footer" id="gm-footer">
+        <div class="gm-footer-inner">
+            <div class="gm-footer-top">
+                <div class="gm-footer-brand">
+                    <a href="index-fr.html" class="gm-footer-logo"><span class="gm-footer-logo-text">GM SOFT</span><span class="gm-footer-logo-tag">agency</span></a>
+                    <p class="gm-footer-desc">Nous concevons et construisons des produits numériques — web, mobile et tout ce qui se trouve entre les deux — pour des clients à travers l'Algérie et au-delà.</p>
+                    <div class="gm-footer-socials">
+                        <a href="https://api.whatsapp.com/send/?phone=%2B21360700567&text&type=phone_number&app_absent=0" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://t.me/gmsoft" aria-label="Telegram" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="tel:+213667123987" aria-label="Téléphone"><i class="fa-solid fa-phone"></i></a>
+                        <a href="mailto:gmsoftagency@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="gm-footer-col">
+                    <h4>Naviguer</h4>
+                    <ul>
+                        <li><a href="index-fr.html#what-we-build">Services</a></li>
+                        <li><a href="index-fr.html#how-we-work">Processus</a></li>
+                        <li><a href="cours-fr.html">Cours</a></li>
+                        <li><a href="index-fr.html#presence">Présence</a></li>
+                        <li><a href="index-fr.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="gm-footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index-fr.html#what-we-build">Développement Web</a></li>
+                        <li><a href="index-fr.html#what-we-build">Applications Mobiles</a></li>
+                        <li><a href="index-fr.html#what-we-build">Design UI/UX</a></li>
+                        <li><a href="index-fr.html#what-we-build">Maintenance &amp; Support</a></li>
+                    </ul>
+                </div>
+                <div class="gm-footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:gmsoftagency@gmail.com"><i class="fa-solid fa-envelope"></i> gmsoftagency@gmail.com</a></li>
+                        <li><a href="tel:+213667123987"><i class="fa-solid fa-phone"></i> +213 667 123 987</a></li>
+                        <li><a href="#"><i class="fa-solid fa-location-dot"></i> M'Sila, Algérie</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gm-footer-divider"></div>
+            <div class="gm-footer-bottom">
+                <p>&copy; <span id="footerYear">2026</span> GM SOFT. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+
+<script>
+// ===== Accordion — même comportement que la FAQ =====
+document.querySelectorAll('.course-timeline').forEach(timeline => {
+    timeline.querySelectorAll('.course-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.course-card');
+            const isOpen = card.classList.contains('open');
+
+            timeline.querySelectorAll('.course-card.open').forEach(c => {
+                c.classList.remove('open');
+                c.querySelector('.course-q').setAttribute('aria-expanded', 'false');
+            });
+
+            if (!isOpen) {
+                card.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+});
+
+// ===== Reveal on Scroll =====
+const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('.course-item').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

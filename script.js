@@ -54,7 +54,7 @@ document.addEventListener('keydown', (e) => {
 // ============================================================
 // HERO SWIPER INITIALIZATION
 // ============================================================
-const heroSwiper = new Swiper('.heroSwiper', {
+const heroSwiper = document.querySelector('.heroSwiper') ? new Swiper('.heroSwiper', {
     loop: true,
     autoplay: {
         delay: 6000,
@@ -76,7 +76,7 @@ const heroSwiper = new Swiper('.heroSwiper', {
     },
     speed: 900,
     watchSlidesProgress: true,
-});
+}) : null;
 
 console.log('GM SOFT — Header & Hero (Simple Backgrounds + Orbs) loaded.');
 

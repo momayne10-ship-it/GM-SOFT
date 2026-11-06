@@ -557,3 +557,119 @@ document.addEventListener('DOMContentLoaded', function() {
         yearSpan.textContent = new Date().getFullYear();
     }
 });
+
+// ============================================================
+// CLEAN URLS - hide index.html and #section from the address bar
+// ============================================================
+(function () {
+    var STORE_KEY = 'gm-soft-scroll-target';
+
+    function headerOffset() {
+        var header = document.querySelector('.gm-header');
+        return header ? header.offsetHeight + 8 : 0;
+    }
+
+    function scrollToSection(id, smooth) {
+        if (!id) return false;
+        var el = document.getElementById(id);
+        if (!el) return false;
+        var top = el.getBoundingClientRect().top + window.pageYOffset - headerOffset();
+        if ('scrollBehavior' in document.documentElement.style) {
+            window.scrollTo({ top: top, behavior: smooth ? 'smooth' : 'auto' });
+        } else {
+            window.scrollTo(0, top);
+        }
+        return true;
+    }
+
+    function stripHash() {
+        if (!location.hash) return;
+        try {
+            history.replaceState(null, '', location.pathname + location.search);
+        } catch (err) {}
+    }
+
+    function stripIndexName() {
+        if (!/\/index\.html$/.test(location.pathname)) return;
+        try {
+            history.replaceState(null, '', location.pathname.replace(/index\.html$/, '') + location.search);
+        } catch (err) {}
+    }
+
+    stripIndexName();
+
+    function handleInitialHash() {
+        if (location.hash && location.hash.length > 1) {
+            var id = decodeURIComponent(location.hash.slice(1));
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    scrollToSection(id, false);
+                    stripHash();
+                });
+            });
+        } else {
+            stripHash();
+        }
+    }
+
+    document.addEventListener('click', function (event) {
+        var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!anchor) return;
+
+        var href = anchor.getAttribute('href');
+        if (!href) return;
+        if (href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0 ||
+            href.indexOf('javascript:') === 0) return;
+
+        if (href === '#') {
+            event.preventDefault();
+            return;
+        }
+
+        if (href.charAt(0) === '#') {
+            event.preventDefault();
+            scrollToSection(href.slice(1), true);
+            stripHash();
+            return;
+        }
+
+        if (/^([a-z]+:)?\/\//i.test(href)) return;
+
+        var hashIndex = href.indexOf('#');
+        if (hashIndex === -1) return;
+
+        var targetId = href.slice(hashIndex + 1);
+        var destination = href.slice(0, hashIndex) || location.pathname;
+        try {
+            sessionStorage.setItem(STORE_KEY, targetId);
+        } catch (err) {}
+        event.preventDefault();
+        window.location.href = destination;
+    });
+
+    function restoreSection() {
+        var targetId = null;
+        try {
+            targetId = sessionStorage.getItem(STORE_KEY);
+        } catch (err) {}
+        if (targetId) {
+            try {
+                sessionStorage.removeItem(STORE_KEY);
+            } catch (err) {}
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    scrollToSection(targetId, false);
+                    stripHash();
+                });
+            });
+            return;
+        }
+        handleInitialHash();
+    }
+
+    if (document.readyState === 'complete') {
+        restoreSection();
+    } else {
+        window.addEventListener('load', restoreSection);
+    }
+})();

@@ -623,6 +623,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (href === '#') {
             event.preventDefault();
+            if ('scrollBehavior' in document.documentElement.style) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                window.scrollTo(0, 0);
+            }
+            stripHash();
             return;
         }
 
